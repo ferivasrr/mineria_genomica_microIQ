@@ -1,5 +1,5 @@
 # Este codigo es para el alineamiento multiple y generacion de arboles filogeneticos 
-# de las secuencias fasta obtenidas de YcaO y [4+2] cicloadición a partir de INTERPRO
+# de las secuencias fasta obtenidas de YcaO ya filtradas a partir de InterPro
 
 #Paquetes que se necesitan:
 if (!require("BiocManager", quietly = TRUE))
@@ -24,74 +24,61 @@ library(DECIPHER)
 
 #Leer las secuencias fasta
 
-#####################################
-############# GE2270A ###############
-#####################################
+#############################################
+############# SECUENCIA FASTA ###############
+#############################################
 
-GE2270A_tpdB <- readAAStringSet("raw-data/fasta/fasta-parametros_amplios/GE2270A-tpdB.txt")
-GE2270A_tpdB #para visualizarlo 
-summary(width(GE2270A_tpdB)) #ver los datos generales de la longitud de secuencias 
+secuencias_unicas_YcaO <- readAAStringSet("raw-data/YcaO-selection/blast-YcaO/secuencias-unicas-YcaO.fasta")
+secuencias_unicas_YcaO #para visualizarlo 
+summary(width(secuencias_unicas_YcaO)) #ver los datos generales de la longitud de secuencias 
 
 # COMPLETARLO CON LAS DEMÁS 
 
-#####################################
-###### ALINEAMIENTOS MÚLTIPLES ######
-#####################################
+#############################################
+######## ALINEAMIENTO MÚLTIPLE (MSA) ########
+#############################################
 
 ?msa() #ver los parámetros que puedes usar 
-msa_GE2270A_tpdB <- msa(GE2270A_tpdB, method = 'Muscle') #alineamiento
+msa_secuencias_unicas_YcaO <- msa(secuencias_unicas_YcaO, method = 'Muscle') #alineamiento
 
-#visualizacion y descarga del msa
-msa_GE2270A_tpdB_compatible <- unmasked(msa_GE2270A_tpdB)
-BrowseSeqs(msa_GE2270A_tpdB_compatible)
+# Visualizacion y descarga del MSA, se usa unmasked para hacer el archivo compatible
+msa_secuencias_unicas_YcaO_compatible <- unmasked(msa_secuencias_unicas_YcaO)
+BrowseSeqs(msa_secuencias_unicas_YcaO_compatible)
 
-writeXStringSet(msa_GE2270A_tpdB_compatible, "resultados/alineamientos-crudos/msa_GE2270A_tpdB_original.fasta")
-
-#### Para clipkit en la terminal antes de cargarlo aquí para el arbol
-# conda activate MSA_conda
-# clipkit ruta/al/archivo -o /ruta/nuevo/archivo/y/su/nuevo/nombre
+writeXStringSet(msa_secuencias_unicas_YcaO_compatible, "resultados/YcaO/msa_secuencias_unicas_YcaO.fasta")
 
 #############################################
 ####### ALINEAMIENTOS CURADOS CLIPKIT #######
 #############################################
 
-msa_GE2270A_tpdB_curada <- readAAMultipleAlignment("resultados/alineamientos-crudos/msa_GE2270A_tpdB_curadas_clipkit.fasta")
-msa_GE2270A_tpdB_curada_compatible <- unmasked(msa_GE2270A_tpdB_curada)
-BrowseSeqs(msa_GE2270A_tpdB_curada_compatible)
+# ANTES DE CARGAR EL ARCHIVO:
+# Tienes que ir a la terminal y poner estos comandos
+# conda activate MSA_conda
+# clipkit ruta/al/archivo.fasta -o /ruta/nuevo/archivo/y/su/nuevo/nombre.fasta
+
+# DESPUES DE LA CURACIÓN DE ALINEAMIENTO CON CLIPKIT
+# Cargar el nuevo archivo curado 
+clipkit_secuencias_curadas_YcaO <- readAAMultipleAlignment("resultados/YcaO/clipkit_secuencias_unicas_YcaO.fasta")
+clipkit_secuencias_curadas_YcaO_compatible <- unmasked(clipkit_secuencias_curadas_YcaO)
+BrowseSeqs(clipkit_secuencias_curadas_YcaO_compatible)
 
 ###########################################################
 ########### MATRICES DE DISTANCIA PARA ARBOL NJ ###########
 ###########################################################
 
 #Cambiar la clase del objeto con el que vamos a trabajar, de AAMultipleAlignment/Biostrings a Alignment
-tree_msa_GE2270A_tpdB_curada <- msaConvert(msa_GE2270A_tpdB_curada, type = "seqinr::alignment")
+tree_clipkit_sequnicas_YcaO <- msaConvert(clipkit_secuencias_curadas_YcaO, type = "seqinr::alignment")
 
 #Matriz de distancia para NeightborJoining
-matriz_distancia_msa_GE2270A <- dist.alignment(tree_msa_GE2270A_tpdB_curada, matrix = "identity")
+matriz_distancia_clipkit_sequnicas_YcaO <- dist.alignment(tree_clipkit_sequnicas_YcaO, matrix = "identity")
 
 #################################
 ###########  ARBOL NJ ###########
 #################################
 
-library(ggtree)
-library(ape)
-library(ggplot2)
+nj_tree_sequnicas_YcaO <- nj(matriz_distancia_clipkit_sequnicas_YcaO) 
 
-nj_tree_GE2270A <- nj(matriz_distancia_msa_GE2270A) 
-
-p <- ggtree(nj_tree_GE2270A) +
-  # Ajuste del tamaño de las letras
-  # Reduce font size and adjust positioning of tip labels
-  geom_tiplab(size = 1.5, color = "darkblue", offset = 0.005) + 
-  theme_tree2() +
-  # Add margin space on the right so tip text doesn't clip
-  xlim(0, 0.6)
-
-ggsave("phylogeny_tree.pdf", plot = p, width = 30, height = 30, limitsize = FALSE)
-
-# Otra forma de hacer un árbol 
-tree <- TreeLine(msa_GE2270A_tpdB_curada_compatible,
-method = "ML",
-model = MODELS,
-showPlot = TRUE,
-processors = NULL)
+ggtree(nj_tree_sequnicas_YcaO, layout = "circular", size = 1) +
+  geom_tiplab(size = 2, aes(angle=angle)) +
+  geom_nodelab(geom = "label") +
+  hexpand(0.05)
