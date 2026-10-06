@@ -12,8 +12,7 @@ library(tidyverse)
 library(Biostrings)
 
 # =========================== SUBIR DOCUMENTOS ===============================
-tabla_interpro_YcaO <- read.csv(file = "raw-data/YcaO-selection/YcaO-all-PF02624.tsv",
-sep = "\t")
+tabla_interpro_YcaO <- read.csv(file = "raw-data/YcaO-selection/YcaO-all-PF02624.tsv", sep = "\t")
 
 # ========================== FILTRADO SECUENCIAS =============================
 # Identificar la distribución de las longitudes
@@ -22,20 +21,29 @@ summary(tabla_interpro_YcaO$Length)
 # Filtrado de secuencias 
 candidatos_filtrados <- tabla_interpro_YcaO %>%
   as.data.frame() %>%
+  mutate(Length = as.integer(Length)) %>%
   filter(Length >= 512 & Length <= 753) %>%
   group_by(Tax.Name) %>%
-  arrange(desc(Length)) %>%
-  slice(1) %>%
+  slice_max(order_by = Length, n = 1, with_ties = FALSE) %>%
   ungroup()
 
 tabla_candidatos_filtrados <- as.data.frame(candidatos_filtrados)
 
 # Seleccion de 3 candidatos representativos 
 candidatos_finales <- candidatos_filtrados %>%
-  slice_sample(n = min(3, nrow(candidatos_filtrados)))
+  slice_sample(n = min(5, nrow(candidatos_filtrados)))
 
 # Mostrar los candidatos seleccionados
 print(candidatos_finales %>% select(Accession, Tax.Name, Length))
+
+# Fijar los candidatos que ya se seleccionan para evitar que salgan distintos 
+# cada vez que se corra el código. Sólo necesitas correr las lineas 43-45 si quieres 
+# los candidatos que ya se seleccionaron para la búsqueda en BLASTp 
+
+saveRDS(candidatos_finales, "raw-data/YcaO-selection/candidatos-seleccionados-YcaO.rsd")
+candidatos_finales_fijos <- readRDS("raw-data/YcaO-selection/candidatos-seleccionados-YcaO.rsd")
+view(candidatos_finales_fijos)
+
 
 # ========================== FILTRADO FASTA =============================
 # Extraer del documento .fasta los candidatos que se usaran para el blastp
