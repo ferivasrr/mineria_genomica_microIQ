@@ -21,15 +21,16 @@ summary(tabla_interpro_YcaO$Length)
 
 # Filtrado de secuencias 
 candidatos_filtrados <- tabla_interpro_YcaO %>%
-  filter(Length >= 512 & Length <= 647) %>% # filtrado de secuencias por tamaño
-  group_by(Tax.Name) %>% # agrupar por especies para evitar cepas redundantes
-  arrange(desc(Length)) %>% # dentro de cada especie elegir la más representativa
+  as.data.frame() %>%
+  filter(Length >= 512 & Length <= 753) %>%
+  group_by(Tax.Name) %>%
+  arrange(desc(Length)) %>%
   slice(1) %>%
   ungroup()
 
 tabla_candidatos_filtrados <- as.data.frame(candidatos_filtrados)
-# Seleccion de 3-5 candidatos representativos 
-set.seed(42)
+
+# Seleccion de 3 candidatos representativos 
 candidatos_finales <- candidatos_filtrados %>%
   slice_sample(n = min(3, nrow(candidatos_filtrados)))
 
