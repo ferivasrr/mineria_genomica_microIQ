@@ -32,4 +32,31 @@ writeXStringSet(secuencias_unicas_cicloadicion, filepath = "resultados/cicloadic
 
 #######################################################
 # SEGUNDA PARTE: EXTRACCIÓN DE LA PRIMERA FILA FASTA
- 
+
+library(dplyr)
+library(tidyverse)
+library(stringr)
+
+# 1. Leer el FASTA y obtener los encabezados completos (los rownames)
+metadatos_ciclacion <- readAAStringSet("resultados/cicloadicion/secuencias_cicloadicion_metadata.fasta")
+cabeceras <- names(metadatos_ciclacion) # Usar names() en lugar de rownames() es más directo para Biostrings
+
+# 2. Extraer WP, Nombre de la proteína y Especie
+# Estructura típica de un FASTA NCBI: WP_XXXXX.1 protein name [Organism name]
+df_metadatos <- data.frame(cabecera = cabeceras) %>%
+  extract(
+    col = cabecera,
+    into = c("WP_ID", "Proteina", "Especie"),
+    regex = "^(\\S+)\\s+(.*?)\\s*\\[(.*)\\]$",
+    remove = FALSE
+  )
+
+# 3. Separar de la especie la sepa para aquellas que sí aplique
+df_metadatos <- df_metadatos %>%
+  mutate(
+    # Capturar los códigos de la cepa
+    Cepa = str_extract(Especie, "(?<=sp\\.\\s|strain\\s)[A-Za-z0-9_-]+.*$"),
+    # Limpia la especie quitando el código de cepa
+    Especie = ifelse(!is.na(Cepa), str_remove(Especie, paste0("\\s*", str_escape(Cepa))), Especie)
+  ) %>%
+  select(WP_ID, Proteina, Especie, Cepa)
