@@ -1,0 +1,809 @@
+IQ-TREE multicore version 2.0.7 for Linux 64-bit built Nov 30 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    iquimica21-04 (AVX2, FMA3, 7 GB RAM)
+Command: iqtree2 -s clipkit_secuencias_unicas_YcaO.fasta -m MFP -bb 1000 -nt AUTO
+Seed:    978176 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Oct  7 10:21:08 2026
+Kernel:  AVX+FMA - auto-detect threads (16 CPU cores detected)
+
+Reading alignment file clipkit_secuencias_unicas_YcaO.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 560 sequences with 716 columns, 692 distinct patterns
+606 parsimony-informative, 63 singleton sites, 47 constant sites
+                Gap/Ambiguity  Composition  p-value
+   1  WP_026577011.1    9.64%    passed     30.04%
+   2  WP_244712289.1   10.75%    passed     41.86%
+   3  WP_014642915.1    9.50%    passed     99.58%
+   4  WP_089751961.1    9.50%    passed     96.13%
+   5  WP_224894603.1    9.50%    passed     99.32%
+   6  WP_082233113.1    9.50%    passed     68.16%
+   7  WP_220583459.1    9.50%    passed     74.57%
+   8  WP_206946261.1    9.50%    passed     31.12%
+   9  WP_160917664.1    9.50%    passed     67.60%
+  10  WP_406946048.1    9.50%    passed     67.05%
+  11  WP_474962257.1    9.50%    passed     87.93%
+  12  WP_226588834.1    9.50%    passed     64.07%
+  13  WP_411789310.1    9.50%    passed     40.22%
+  14  WP_224884942.1   10.89%    passed     61.53%
+  15  WP_098442791.1   10.89%    passed     60.09%
+  16  WP_430241152.1    9.50%    passed     84.15%
+  17  WP_283152618.1   10.47%    passed     89.85%
+  18  WP_427408972.1    9.92%    passed     44.67%
+  19  WP_347551326.1    9.50%    passed     59.88%
+  20  WP_206894827.1    9.50%    passed     69.15%
+  21  WP_085028540.1    9.50%    passed     28.68%
+  22  WP_173918172.1    9.50%    passed     76.63%
+  23  WP_035545486.1    9.50%    passed     76.26%
+  24  WP_156288261.1    9.50%    passed     12.28%
+  25  WP_408011515.1    9.78%    passed     91.20%
+  26  WP_199622513.1    9.64%    passed     98.19%
+  27  WP_091588174.1    9.64%    passed     96.77%
+  28  MGM0878827.1      9.64%    passed     99.98%
+  29  WP_367752922.1    9.64%    passed     97.89%
+  30  WP_135151542.1    9.64%    passed     98.64%
+  31  WP_259618740.1    9.78%    failed      0.00%
+  32  WP_028553027.1    9.78%    passed     47.85%
+  33  WP_282937888.1    9.64%    passed     11.73%
+  34  WP_113028978.1    9.64%    failed      4.03%
+  35  WP_409340749.1    9.50%    passed     75.08%
+  36  WP_442600569.1    9.64%    passed     99.36%
+  37  WP_477555794.1   10.06%    passed     98.85%
+  38  WP_159886549.1    9.36%    passed     30.44%
+  39  WP_209975946.1    9.08%    passed     90.35%
+  40  WP_238191226.1    9.64%    passed     88.81%
+  41  WP_197936813.1    9.64%    passed     98.30%
+  42  WP_090824024.1    9.64%    passed     91.86%
+  43  WP_079409246.1    9.64%    passed     96.23%
+  44  WP_379302740.1    9.64%    passed     80.20%
+  45  WP_414858904.1   10.34%    passed     98.59%
+  46  WP_060647049.1    9.64%    passed     95.91%
+  47  WP_307439492.1    9.64%    passed     97.93%
+  48  WP_106769287.1    9.64%    passed     99.84%
+  49  WP_120110419.1    9.64%    passed     85.75%
+  50  WP_116047351.1    9.64%    passed     90.36%
+  51  WP_087567509.1    9.64%    passed     94.87%
+  52  WP_433945045.1    9.64%    passed     46.88%
+  53  WP_009676366.1    9.64%    passed     81.97%
+  54  WP_046681616.1    9.64%    passed     88.91%
+  55  WP_481856752.1   10.06%    passed     81.57%
+  56  WP_340006100.1    9.64%    passed     76.81%
+  57  WP_271342263.1   10.47%    passed     15.19%
+  58  WP_006636650.1   10.06%    passed     96.99%
+  59  WP_046129743.1   10.06%    passed     65.29%
+  60  WP_409445018.1    9.78%    passed     99.32%
+  61  WP_307893770.1   10.34%    passed     94.87%
+  62  WP_095289919.1   10.06%    passed     78.69%
+  63  WP_326142141.1   19.13%    passed     99.31%
+  64  WP_421652894.1   11.31%    passed     29.98%
+  65  WP_155113495.1   11.17%    passed     19.75%
+  66  WP_338780278.1   10.34%    passed     79.55%
+  67  WP_123913988.1   10.06%    passed      7.72%
+  68  WP_256233886.1    9.78%    passed     80.32%
+  69  WP_308173812.1    9.78%    passed     46.25%
+  70  MDP4154369.1      9.78%    passed     10.81%
+  71  WP_342488814.1   10.34%    passed     86.15%
+  72  MIG9749637.1     10.34%    passed     87.80%
+  73  WP_428912341.1    9.78%    passed     98.29%
+  74  WP_251556452.1    9.92%    passed     97.96%
+  75  MFZ0443857.1      9.92%    passed     95.45%
+  76  WP_338472432.1    9.78%    passed     99.49%
+  77  WP_216831344.1    9.78%    passed     97.28%
+  78  WP_230896616.1    9.78%    passed     86.90%
+  79  WP_373648050.1    9.78%    passed     81.61%
+  80  MBU8907506.1      9.78%    passed     81.39%
+  81  WP_335963767.1    9.78%    passed     99.25%
+  82  WP_078427656.1    9.78%    passed     69.00%
+  83  WP_441422930.1    9.78%    passed     99.16%
+  84  WP_048824044.1    9.78%    passed     94.12%
+  85  WP_316571384.1    9.78%    passed     65.76%
+  86  WP_118919025.1    9.78%    passed     96.94%
+  87  WP_095313795.1    9.78%    passed     95.51%
+  88  MHC0037995.1      9.78%    passed     97.84%
+  89  RDU38064.1        9.78%    passed     99.68%
+  90  WP_059173150.1    9.78%    passed     93.32%
+  91  WP_409274892.1    9.78%    passed     80.76%
+  92  WP_066202683.1    9.78%    passed     96.82%
+  93  WP_075980571.1    9.78%    passed     97.09%
+  94  WP_240257101.1    9.78%    passed     99.30%
+  95  WP_307409558.1    9.78%    passed     67.36%
+  96  WP_416826221.1    9.78%    passed     54.95%
+  97  WP_379968269.1    9.78%    passed     80.64%
+  98  WP_166026058.1    9.78%    passed     41.24%
+  99  WP_097160670.1    9.78%    passed     99.74%
+ 100  WP_243355304.1    9.78%    passed     93.61%
+ 101  WP_203557025.1    9.92%    passed     63.05%
+ 102  WP_377878078.1    9.78%    passed     99.45%
+ 103  WP_338448435.1    9.78%    passed     99.95%
+ 104  WP_117326912.1    9.78%    passed     99.66%
+ 105  HYK73881.1        9.78%    passed     65.17%
+ 106  WP_488313931.1    9.78%    passed     98.67%
+ 107  WP_403071455.1    9.78%    passed     97.09%
+ 108  WP_015591994.1    9.78%    passed     99.37%
+ 109  NEU32503.1        9.78%    passed     99.85%
+ 110  WP_328231265.1    9.78%    passed     99.37%
+ 111  WP_256240891.1    9.78%    passed     99.79%
+ 112  WP_342431230.1    9.78%    passed     98.43%
+ 113  WP_066255848.1    9.78%    passed     99.98%
+ 114  WP_119116690.1    9.64%    passed    100.00%
+ 115  WP_252295250.1    9.50%    passed     93.37%
+ 116  WP_464507387.1    9.78%    passed     97.67%
+ 117  WP_262304841.1    9.78%    passed     99.57%
+ 118  WP_066308054.1    9.78%    passed    100.00%
+ 119  WP_462412891.1    9.78%    passed     99.81%
+ 120  WP_042461349.1    9.78%    passed     99.92%
+ 121  WP_307286092.1    9.78%    passed     99.95%
+ 122  WP_173068079.1    9.78%    passed     98.06%
+ 123  WP_310177614.1    9.78%    passed     99.96%
+ 124  WP_071355272.1    9.78%    passed     99.63%
+ 125  WP_133335353.1    9.78%    passed     92.10%
+ 126  WP_458413335.1    9.78%    passed     98.92%
+ 127  GHI00462.1        9.78%    passed     99.95%
+ 128  WP_127484440.1    9.78%    passed     99.94%
+ 129  WP_378582455.1    9.78%    passed     99.30%
+ 130  WP_024030399.1    9.78%    passed     99.96%
+ 131  WP_129729220.1    9.78%    passed     99.83%
+ 132  WP_144568270.1    9.78%    passed     99.59%
+ 133  WP_335503957.1    9.64%    passed     96.30%
+ 134  WP_488128489.1    9.78%    passed     98.63%
+ 135  WP_207450710.1    9.78%    passed     75.25%
+ 136  WP_209973508.1    9.78%    passed     86.15%
+ 137  WP_269411479.1    9.78%    passed     96.70%
+ 138  WP_213139593.1    9.78%    passed     95.98%
+ 139  WP_335713934.1    9.78%    passed     79.09%
+ 140  WP_380772463.1    9.50%    passed     99.72%
+ 141  WP_126051897.1    9.78%    passed     99.59%
+ 142  WP_191815135.1    9.64%    passed     97.26%
+ 143  WP_144463642.1    9.78%    passed     99.97%
+ 144  WP_018709274.1    9.78%    passed     99.87%
+ 145  WP_120116116.1    9.78%    passed     99.96%
+ 146  WP_464499899.1    9.78%    passed     92.09%
+ 147  WP_090635197.1    9.78%    passed     97.89%
+ 148  WP_435556161.1    9.78%    passed     90.18%
+ 149  WP_309866557.1    9.78%    passed     89.00%
+ 150  WP_213126922.1    9.78%    passed     92.93%
+ 151  WP_409972123.1    9.78%    passed     96.10%
+ 152  WP_221847011.1    9.78%    passed     79.15%
+ 153  WP_251571072.1    9.78%    passed     98.88%
+ 154  WP_476028277.1    9.78%    passed     99.28%
+ 155  WP_308109758.1    9.92%    passed     99.47%
+ 156  WP_251472053.1    9.78%    passed     97.24%
+ 157  WP_149871263.1    9.92%    passed     91.94%
+ 158  WP_490210862.1    9.78%    passed     96.26%
+ 159  WP_310192601.1    9.92%    passed     99.19%
+ 160  WP_236331319.1    9.92%    passed     93.04%
+ 161  WP_439299325.1   10.47%    passed     25.95%
+ 162  WP_349409935.1   10.47%    passed     84.71%
+ 163  WP_261129756.1    9.50%    passed     93.27%
+ 164  WP_221568249.1    9.50%    passed     85.39%
+ 165  WP_408009875.1    9.50%    passed     64.12%
+ 166  WP_236312721.1    9.50%    passed     88.27%
+ 167  WP_073152071.1    9.92%    passed     38.73%
+ 168  WP_034640188.1   10.34%    passed     15.58%
+ 169  MIL9396648.1     10.34%    passed     67.01%
+ 170  WP_209406991.1   10.34%    passed     32.23%
+ 171  WP_289371338.1   10.47%    passed     18.01%
+ 172  MFD3449695.1      9.64%    passed     68.44%
+ 173  WP_020060407.1    9.64%    passed     34.20%
+ 174  WP_035431194.1    9.64%    passed     33.52%
+ 175  WP_090914672.1    9.64%    passed     50.23%
+ 176  WP_430510494.1    9.64%    passed     14.06%
+ 177  WP_088044239.1    9.64%    passed     22.01%
+ 178  WP_088072815.1    9.64%    failed      3.01%
+ 179  WP_331222624.1    9.64%    failed      0.32%
+ 180  WP_098118052.1    9.78%    failed      2.03%
+ 181  WP_210366632.1    9.50%    passed     99.53%
+ 182  WP_488594293.1    9.36%    passed     99.99%
+ 183  WP_335378743.1    9.50%    passed     99.90%
+ 184  WP_251483494.1    9.50%    passed     97.30%
+ 185  WP_335430990.1    9.50%    passed     99.99%
+ 186  WP_226672163.1    9.50%    passed     99.97%
+ 187  WP_201714665.1    9.64%    passed     98.39%
+ 188  WP_113969670.1    9.50%    passed     99.37%
+ 189  WP_397549458.1    9.64%    passed     85.26%
+ 190  WP_044339349.1    9.50%    passed     94.68%
+ 191  WP_060671304.1    9.50%    passed     99.81%
+ 192  WP_098439503.1    9.78%    passed     99.58%
+ 193  WP_224874912.1    9.50%    passed     97.64%
+ 194  WP_411160090.1    9.50%    passed     98.89%
+ 195  WP_334215938.1    9.50%    passed     99.86%
+ 196  WP_071617396.1    9.50%    passed     99.33%
+ 197  WP_341980201.1    9.50%    passed     99.41%
+ 198  WP_283905176.1    9.36%    passed     84.26%
+ 199  WP_415813475.1    9.36%    passed     98.49%
+ 200  WP_226087572.1    9.22%    passed     72.97%
+ 201  WP_102262494.1    9.36%    passed     81.17%
+ 202  WP_215022250.1    9.36%    passed     96.55%
+ 203  WP_079508713.1    9.50%    passed     96.45%
+ 204  WP_476430737.1    9.36%    passed     99.31%
+ 205  WP_125478656.1    9.50%    passed     99.98%
+ 206  WP_475096464.1    9.50%    passed     95.52%
+ 207  WP_475427769.1    9.36%    passed     92.16%
+ 208  WP_379596765.1    9.64%    passed     98.70%
+ 209  WP_336253096.1    9.50%    passed     99.47%
+ 210  WP_121524854.1    9.50%    passed     98.41%
+ 211  WP_419394361.1   11.03%    passed     99.65%
+ 212  WP_430107234.1    9.50%    passed     99.89%
+ 213  WP_115749690.1    9.64%    passed     97.84%
+ 214  WP_379053633.1    9.50%    passed     96.92%
+ 215  WP_476138694.1    9.50%    passed     95.01%
+ 216  WP_175639347.1    9.50%    passed     90.04%
+ 217  WP_368657027.1    9.50%    passed     85.97%
+ 218  MGM0901813.1      9.50%    passed     99.31%
+ 219  WP_046589905.1    9.50%    passed     89.41%
+ 220  WP_396652556.1    9.22%    passed     90.38%
+ 221  WP_150438572.1    9.50%    passed     51.37%
+ 222  WP_454817849.1    9.50%    passed     98.43%
+ 223  WP_411257161.1    9.50%    passed     98.89%
+ 224  WP_034677067.1    9.50%    passed     96.97%
+ 225  WP_464867902.1    9.50%    passed     96.96%
+ 226  WP_402622449.1   10.06%    passed     98.11%
+ 227  WP_420489575.1   10.06%    passed     78.40%
+ 228  WP_283860343.1    9.50%    passed     94.99%
+ 229  WP_484673442.1    9.50%    passed     99.05%
+ 230  WP_483295242.1   10.06%    passed     98.56%
+ 231  WP_045516632.1    9.50%    passed     87.86%
+ 232  WP_179595939.1    9.50%    passed     99.80%
+ 233  WP_090831756.1    9.50%    passed     70.80%
+ 234  WP_163099783.1    9.50%    passed     83.56%
+ 235  WP_218349955.1    9.50%    passed     98.99%
+ 236  MFL6555187.1     21.65%    passed     96.52%
+ 237  WP_251462521.1    9.36%    passed     94.34%
+ 238  WP_410895171.1    9.50%    passed     94.49%
+ 239  WP_335693847.1    9.36%    passed     93.48%
+ 240  WP_335380356.1    9.50%    passed     81.87%
+ 241  WP_375842047.1    9.50%    passed     91.44%
+ 242  WP_430139450.1    9.50%    passed     99.96%
+ 243  WP_124565724.1   10.61%    passed     86.95%
+ 244  WP_042347136.1    9.64%    passed     73.74%
+ 245  MGM9927791.1      9.64%    passed     81.71%
+ 246  WP_201648119.1   10.20%    passed     75.36%
+ 247  MGM9923677.1      9.92%    passed     95.46%
+ 248  WP_402961649.1   10.06%    passed     92.49%
+ 249  WP_403124651.1   10.06%    passed     88.32%
+ 250  WP_335508823.1    9.64%    passed     63.92%
+ 251  WP_377363636.1    9.64%    passed     99.94%
+ 252  WP_285767349.1    9.64%    passed     99.90%
+ 253  WP_427676494.1    9.78%    passed     99.82%
+ 254  WP_340372058.1    9.64%    passed     99.56%
+ 255  WP_328115606.1    9.64%    passed     99.15%
+ 256  WP_377429048.1    9.64%    passed     98.31%
+ 257  WP_410861556.1    9.64%    passed     96.58%
+ 258  WP_230160735.1    9.64%    passed     99.97%
+ 259  WP_406627522.1    9.50%    passed     99.97%
+ 260  WP_202078830.1    9.50%    passed     59.36%
+ 261  WP_046525541.1    9.78%    passed     99.14%
+ 262  WP_184525239.1    9.78%    passed     99.08%
+ 263  WP_136351696.1    9.78%    passed     99.82%
+ 264  WP_343800368.1    9.78%    passed     99.51%
+ 265  MGM0852453.1      9.78%    passed     99.78%
+ 266  WP_203555391.1    9.78%    passed     93.48%
+ 267  WP_205186330.1    9.78%    passed     99.87%
+ 268  WP_251525773.1    9.78%    passed     73.71%
+ 269  WP_439251850.1    9.78%    passed     99.64%
+ 270  WP_417899701.1    9.78%    passed     85.45%
+ 271  WP_338753039.1    9.78%    passed     99.44%
+ 272  WP_209149902.1    9.78%    passed     99.81%
+ 273  WP_191158009.1    9.78%    passed     98.79%
+ 274  USK33104.1        9.78%    passed     98.24%
+ 275  WP_378935837.1    9.78%    passed     99.98%
+ 276  WP_101569076.1    9.92%    passed     98.96%
+ 277  WP_304978657.1    9.64%    passed     94.56%
+ 278  WP_251284200.1    9.64%    passed     97.01%
+ 279  WP_404354919.1    9.64%    passed     99.70%
+ 280  WP_264737799.1    9.64%    passed     93.53%
+ 281  WP_370222952.1    9.64%    passed     99.98%
+ 282  WP_264806830.1    9.64%    passed     99.56%
+ 283  WP_394138974.1    9.64%    passed     97.74%
+ 284  WP_214722636.1    9.64%    passed     99.09%
+ 285  WP_141432734.1    9.64%    passed     97.88%
+ 286  WP_307228611.1    9.64%    passed     99.84%
+ 287  WP_209123616.1    9.64%    passed     94.19%
+ 288  WP_205174600.1    9.64%    passed     99.58%
+ 289  MGM0877780.1      9.64%    passed     97.52%
+ 290  MBO8178592.1      9.64%    passed     98.86%
+ 291  WP_190997881.1    9.92%    passed     33.47%
+ 292  WP_050614951.1    9.64%    passed     95.12%
+ 293  WP_019240802.1    9.78%    passed     33.36%
+ 294  WP_077114160.1    9.64%    passed     99.86%
+ 295  WP_239432773.1    9.78%    passed     99.55%
+ 296  WP_060206736.1    9.78%    passed     98.81%
+ 297  WP_381439362.1    9.64%    passed     97.78%
+ 298  WP_342598111.1    9.64%    passed     98.49%
+ 299  CAG9607584.1      9.64%    passed     97.03%
+ 300  WP_151532787.1    9.64%    passed     99.58%
+ 301  WP_217038403.1    9.64%    passed     99.92%
+ 302  WP_066300398.1    9.64%    passed     93.32%
+ 303  WP_335353722.1    9.64%    passed     99.91%
+ 304  WP_335424268.1    9.64%    passed     90.86%
+ 305  WP_335704340.1    9.64%    passed     97.61%
+ 306  WP_335395742.1    9.64%    passed     86.47%
+ 307  WP_335370013.1   22.63%    passed     99.32%
+ 308  WP_091587821.1    9.92%    passed     98.08%
+ 309  WP_066198254.1    9.78%    passed     95.64%
+ 310  WP_132004928.1   11.31%    passed     98.76%
+ 311  WP_213106905.1    9.64%    passed     99.79%
+ 312  MDQ0216070.1      9.64%    passed     98.40%
+ 313  WP_213104404.1    9.64%    passed     95.98%
+ 314  MDQ0268595.1      9.78%    passed     99.97%
+ 315  WP_375006222.1    9.64%    passed     99.71%
+ 316  WP_053602024.1    9.64%    passed     98.53%
+ 317  MBP3040987.1      9.64%    passed    100.00%
+ 318  WP_374720823.1    9.64%    passed     99.81%
+ 319  WP_117321389.1    9.64%    passed     99.94%
+ 320  WP_340915254.1    9.64%    passed     99.84%
+ 321  WP_230126401.1    9.64%    passed     99.79%
+ 322  WP_152151021.1    9.64%    passed     99.99%
+ 323  WP_101585583.1    9.64%    passed     92.21%
+ 324  WP_101665729.1    9.64%    passed     94.17%
+ 325  WP_004434480.1    9.50%    passed     99.30%
+ 326  WP_078410373.1    9.64%    passed     99.56%
+ 327  MDQ0246819.1      9.50%    passed     94.52%
+ 328  WP_004436721.1    9.50%    passed     97.12%
+ 329  WP_028399816.1    9.64%    passed     90.31%
+ 330  WP_377915070.1    9.64%    passed     98.43%
+ 331  HWO95046.1        9.64%    passed     96.98%
+ 332  WP_091734471.1    9.50%    passed     95.01%
+ 333  WP_091835046.1    9.64%    passed     95.66%
+ 334  WP_262734323.1    9.50%    passed     18.96%
+ 335  WP_328262002.1    9.64%    failed      0.26%
+ 336  WP_129478023.1    9.78%    passed     96.24%
+ 337  WP_095117755.1    9.64%    failed      2.11%
+ 338  WP_248251299.1    9.78%    passed     91.43%
+ 339  WP_310759810.1    9.78%    passed     26.10%
+ 340  WP_251322856.1    9.92%    passed     60.16%
+ 341  WP_310256373.1    9.78%    passed     56.84%
+ 342  WP_205726466.1    9.78%    passed     13.69%
+ 343  WP_198767423.1    9.78%    passed     28.44%
+ 344  WP_197221039.1    9.78%    passed     20.33%
+ 345  WP_473724875.1    9.78%    passed     30.70%
+ 346  WP_251311815.1    9.78%    passed     67.42%
+ 347  WP_379833095.1    9.78%    passed     87.12%
+ 348  WP_130296300.1    9.78%    passed     64.72%
+ 349  WP_377943444.1    9.22%    passed      7.41%
+ 350  WP_268005956.1    9.08%    passed     63.95%
+ 351  WP_328147832.1    9.78%    passed     79.09%
+ 352  WP_122903867.1    9.78%    passed     38.34%
+ 353  WP_440242499.1    9.78%    passed     58.92%
+ 354  WP_122953408.1    9.78%    passed     23.04%
+ 355  WP_412914753.1    9.78%    passed     92.89%
+ 356  WP_173617751.1    9.78%    passed     98.29%
+ 357  WP_376909552.1   11.87%    passed     86.09%
+ 358  WP_429833080.1    9.78%    passed     98.64%
+ 359  WP_139998519.1    9.92%    passed     90.70%
+ 360  WP_475744720.1    9.78%    passed     96.08%
+ 361  MBD3922247.1      9.78%    passed     77.34%
+ 362  WP_076269249.1    9.78%    passed     97.79%
+ 363  WP_336789552.1    9.92%    passed     95.83%
+ 364  WP_387805392.1    9.92%    passed     72.60%
+ 365  WP_090573441.1    9.36%    passed     73.59%
+ 366  WP_054028899.1    9.78%    passed     98.42%
+ 367  WP_049869145.1    9.78%    passed     82.42%
+ 368  WP_477559495.1    9.78%    passed     85.31%
+ 369  WP_161695972.1    9.78%    passed     63.57%
+ 370  WP_076336010.1    9.92%    passed     93.31%
+ 371  WP_424765659.1    9.78%    passed     99.37%
+ 372  WP_475824833.1    9.78%    passed     91.91%
+ 373  WP_056637392.1    9.78%    passed     98.55%
+ 374  WP_169082993.1    9.64%    passed     98.34%
+ 375  WP_065384123.1    9.64%    passed     92.19%
+ 376  WP_251651437.1    9.64%    passed     97.79%
+ 377  WP_062493101.1    9.22%    failed      0.22%
+ 378  WP_379322404.1    9.08%    passed     51.70%
+ 379  WP_405452270.1    9.22%    passed     56.73%
+ 380  WP_019419012.1    9.36%    passed     77.42%
+ 381  WP_475797351.1    9.64%    passed     99.59%
+ 382  WP_102713148.1    9.64%    passed     97.92%
+ 383  WP_477544559.1   18.02%    passed     91.97%
+ 384  WP_379269293.1    9.64%    passed     79.82%
+ 385  WP_220348659.1    9.64%    passed     93.38%
+ 386  WP_125653880.1    9.64%    passed     86.99%
+ 387  WP_114383179.1    9.64%    passed     97.68%
+ 388  MIF9978659.1      9.64%    passed     87.13%
+ 389  MDF2683787.1      9.64%    passed     67.30%
+ 390  WP_136775662.1    9.36%    passed     27.89%
+ 391  MDB4866102.1      9.50%    passed     46.09%
+ 392  WP_276352366.1    8.94%    failed      0.00%
+ 393  WP_219639481.1    9.64%    failed      0.79%
+ 394  WP_123040293.1    9.64%    passed     15.54%
+ 395  WP_241815991.1    9.36%    passed     18.53%
+ 396  WP_098594832.1    9.36%    failed      0.25%
+ 397  WP_279671336.1    9.22%    passed      6.60%
+ 398  WP_033677876.1    9.36%    failed      0.13%
+ 399  WP_400571157.1    9.22%    failed      3.10%
+ 400  WP_144568500.1    9.36%    passed      6.50%
+ 401  WP_026591451.1    9.36%    passed     25.25%
+ 402  WP_042982557.1    9.36%    failed      0.24%
+ 403  WP_325805767.1    9.64%    failed      2.16%
+ 404  WP_098962164.1    9.36%    failed      0.29%
+ 405  WP_472873237.1    9.36%    failed      0.26%
+ 406  WP_477000386.1    9.36%    failed      0.44%
+ 407  WP_131229755.1    9.36%    failed      0.50%
+ 408  WP_431184321.1    9.36%    failed      3.38%
+ 409  WP_429691016.1    9.36%    failed      3.21%
+ 410  WP_256757903.1    9.64%    passed     59.28%
+ 411  WP_169280064.1    9.64%    passed     38.03%
+ 412  WP_135152360.1    9.64%    passed     82.00%
+ 413  WP_378128465.1    9.64%    passed     98.57%
+ 414  WP_378110046.1    9.64%    passed     98.50%
+ 415  WP_232188990.1    9.64%    passed     84.49%
+ 416  WP_201637248.1    9.22%    failed      3.74%
+ 417  WP_038086146.1    6.01%    passed     37.88%
+ 418  WP_240041135.1   11.17%    failed      0.41%
+ 419  WP_332074911.1    9.64%    passed     38.97%
+ 420  WP_138883804.1    9.64%    passed     12.84%
+ 421  WP_139602672.1    9.64%    passed     98.12%
+ 422  WP_426452717.1    9.64%    passed     13.98%
+ 423  WP_270879558.1    9.64%    passed     54.02%
+ 424  WP_144702989.1    9.64%    passed      9.71%
+ 425  WP_379455811.1    9.64%    passed     76.44%
+ 426  WP_094018107.1    9.64%    passed     87.36%
+ 427  WP_341417155.1    9.64%    passed     88.05%
+ 428  WP_147951619.1    9.64%    passed     49.10%
+ 429  WP_131015618.1    9.50%    passed     62.05%
+ 430  WP_216539374.1    9.64%    passed      9.75%
+ 431  WP_377473303.1    9.64%    passed     43.75%
+ 432  WP_213522261.1    9.78%    passed     22.03%
+ 433  MII2459208.1      9.36%    passed     98.41%
+ 434  WP_274365841.1    9.64%    passed     99.61%
+ 435  WP_079912207.1    9.64%    passed     35.46%
+ 436  WP_090792359.1    9.64%    passed     96.03%
+ 437  WP_218090145.1    9.78%    failed      0.33%
+ 438  WP_028550282.1    9.64%    passed     99.35%
+ 439  WP_282937361.1    9.64%    passed     98.76%
+ 440  WP_218096585.1    9.78%    passed     85.15%
+ 441  WP_248926019.1    9.64%    passed     89.58%
+ 442  WP_166153030.1    9.78%    passed     99.97%
+ 443  WP_341156358.1    9.50%    passed     99.26%
+ 444  WP_238178155.1    9.64%    passed     99.66%
+ 445  WP_133227702.1    9.64%    passed     91.16%
+ 446  WP_379368056.1    9.64%    passed     98.43%
+ 447  WP_409340376.1    9.64%    passed     99.74%
+ 448  WP_464655800.1    9.64%    passed     94.21%
+ 449  WP_474678985.1   10.06%    passed     99.08%
+ 450  WP_488437141.1    9.64%    passed     31.15%
+ 451  WP_210021420.1    9.36%    passed     98.45%
+ 452  WP_488980864.1    9.50%    passed     96.49%
+ 453  WP_174350539.1    9.36%    passed     92.36%
+ 454  MEX2462397.1      9.50%    passed     95.03%
+ 455  WP_155701669.1    9.50%    passed     53.84%
+ 456  WP_166153998.1    9.50%    passed     99.32%
+ 457  WP_065855974.1   11.73%    passed     83.29%
+ 458  WP_407871652.1   11.73%    passed     92.75%
+ 459  MIF9986139.1     11.73%    passed     99.41%
+ 460  WP_161405329.1   11.73%    passed     97.88%
+ 461  WP_171628412.1   11.59%    passed     84.45%
+ 462  WP_171681600.1   11.73%    passed     79.11%
+ 463  WP_167056766.1   11.73%    passed     96.83%
+ 464  WP_310186656.1   11.73%    passed     94.17%
+ 465  WP_056619250.1   11.73%    passed     96.00%
+ 466  WP_238171584.1   11.73%    passed     94.58%
+ 467  WP_270881127.1   11.59%    passed     84.74%
+ 468  WP_379304933.1   10.06%    passed     99.63%
+ 469  WP_163954142.1   11.59%    passed     97.29%
+ 470  SDP19349.1       11.31%    passed     79.15%
+ 471  MHR4576084.1      9.92%    passed     97.49%
+ 472  WP_240414842.1    9.64%    passed     64.99%
+ 473  WP_091171297.1    9.64%    passed     70.07%
+ 474  WP_074952966.1   10.06%    failed      0.00%
+ 475  MBX5437334.1     10.06%    failed      0.01%
+ 476  WP_029420075.1   10.06%    failed      0.00%
+ 477  WP_477543072.1    9.50%    passed     48.96%
+ 478  WP_464655807.1   10.20%    passed     81.60%
+ 479  WP_188387358.1    9.64%    passed     59.98%
+ 480  MCL6626766.1      9.64%    failed      0.01%
+ 481  WP_230045353.1    9.92%    passed     55.38%
+ 482  WP_142066943.1    9.92%    passed     68.74%
+ 483  WP_063179227.1    9.64%    passed     23.76%
+ 484  WP_144851136.1    9.08%    passed     56.69%
+ 485  WP_188530354.1    9.78%    passed     99.35%
+ 486  WP_249730408.1   11.17%    passed     93.18%
+ 487  WP_036581690.1    9.50%    passed     11.82%
+ 488  WP_313998428.1    5.59%    failed      0.11%
+ 489  WP_269880234.1    9.50%    passed     33.99%
+ 490  WP_262734329.1    9.78%    passed     48.24%
+ 491  PFX61598.1        9.78%    passed     31.69%
+ 492  WP_041067727.1    9.50%    passed     60.71%
+ 493  WP_233696727.1    9.36%    passed     95.55%
+ 494  WP_127486385.1    9.64%    passed     98.91%
+ 495  WP_144932641.1    9.50%    passed     28.16%
+ 496  GIM47697.1        9.64%    passed     45.30%
+ 497  WP_230460689.1    9.92%    passed     96.98%
+ 498  WP_108021762.1    9.36%    failed      1.72%
+ 499  WP_474676105.1    9.50%    passed     51.42%
+ 500  WP_213583967.1    9.50%    passed     33.20%
+ 501  WP_072327887.1    9.64%    passed     98.04%
+ 502  WP_135555307.1    9.64%    passed     35.71%
+ 503  WP_201318857.1    9.78%    passed     79.77%
+ 504  WP_376880293.1    9.64%    passed     34.54%
+ 505  WP_411502621.1    9.64%    passed     98.02%
+ 506  WP_203354254.1    9.64%    passed     99.96%
+ 507  WP_327992999.1    9.64%    passed     98.61%
+ 508  WP_380704826.1   10.06%    passed     67.82%
+ 509  WP_108022050.1    9.64%    passed     48.46%
+ 510  WP_309860707.1   10.47%    passed     23.00%
+ 511  WP_198055245.1    9.64%    passed     72.98%
+ 512  WP_026965462.1    9.64%    passed     26.43%
+ 513  WP_310766258.1    9.50%    passed     37.33%
+ 514  WP_107725770.1    9.92%    passed     11.11%
+ 515  WP_251870361.1    9.64%    passed     99.92%
+ 516  WP_210022903.1    9.50%    passed     73.46%
+ 517  WP_488977595.1   10.34%    passed     52.97%
+ 518  WP_474324192.1    9.50%    passed     50.62%
+ 519  WP_430067414.1    9.92%    passed     49.61%
+ 520  TYR78616.1        9.64%    passed     65.43%
+ 521  OYD06880.1        9.64%    passed     35.77%
+ 522  WP_280209077.1    9.64%    passed     98.14%
+ 523  WP_408108662.1    9.64%    passed     88.51%
+ 524  WP_127605224.1    9.64%    passed     70.63%
+ 525  WP_347436267.1    9.64%    passed     98.00%
+ 526  WP_019123411.1    9.64%    passed     94.14%
+ 527  WP_408108273.1    9.64%    passed     95.23%
+ 528  WP_277547866.1    9.64%    passed     99.98%
+ 529  WP_023555514.1    9.64%    passed     96.00%
+ 530  WP_035299371.1    9.64%    passed     48.26%
+ 531  WP_304415071.1    9.64%    passed     74.89%
+ 532  WP_188530979.1    9.64%    passed     98.32%
+ 533  WP_019003927.1    9.64%    passed     19.32%
+ 534  WP_138788096.1    9.64%    passed     12.33%
+ 535  WP_290401984.1    9.64%    passed     98.67%
+ 536  WP_122917628.1    9.64%    passed     98.54%
+ 537  WP_441071149.1    9.64%    passed     76.11%
+ 538  WP_425653140.1    9.64%    passed     96.19%
+ 539  MGE5702986.1      9.22%    passed     97.40%
+ 540  WP_426927781.1    9.64%    passed     99.44%
+ 541  GAC2544471.1      9.78%    passed     31.95%
+ 542  WP_175245556.1    9.64%    passed     97.32%
+ 543  WP_132949104.1    9.64%    passed     99.93%
+ 544  WP_200759780.1    9.64%    passed     99.90%
+ 545  WP_044899156.1    9.64%    passed     82.06%
+ 546  WP_165207533.1    9.64%    passed     22.22%
+ 547  MFY0543892.1      9.64%    passed     89.47%
+ 548  WP_379865287.1   10.06%    passed     86.19%
+ 549  WP_272441491.1    9.92%    passed     99.15%
+ 550  WP_181752642.1    9.64%    passed     89.40%
+ 551  WP_378432723.1    9.64%    passed     96.66%
+ 552  WP_096183859.1    9.64%    passed     87.38%
+ 553  MDQ0339720.1      9.64%    passed     97.30%
+ 554  WP_181740007.1    9.50%    passed     99.92%
+ 555  WP_146811972.1    9.64%    passed     88.96%
+ 556  WP_057899132.1    9.64%    passed     85.23%
+ 557  WP_212774699.1    9.64%    passed     89.78%
+ 558  MBN2909913.1      9.64%    passed     97.07%
+ 559  GGE24238.1        9.50%    passed     93.27%
+ 560  WP_379883240.1   15.08%    passed     80.73%
+****  TOTAL             9.82%  30 sequences failed composition chi2 test (p-value<5%; df=19)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.366 seconds
+Measuring multi-threading efficiency up to 16 CPU cores
+Increase to 10 rounds for branch lengths
+3 trees examined
+Threads: 1 / Time: 17.447 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -389990
+Threads: 2 / Time: 11.808 sec / Speedup: 1.478 / Efficiency: 74% / LogL: -389990
+Threads: 3 / Time: 8.200 sec / Speedup: 2.128 / Efficiency: 71% / LogL: -389990
+Threads: 4 / Time: 7.087 sec / Speedup: 2.462 / Efficiency: 62% / LogL: -389990
+Threads: 5 / Time: 6.849 sec / Speedup: 2.547 / Efficiency: 51% / LogL: -389990
+Threads: 6 / Time: 6.074 sec / Speedup: 2.873 / Efficiency: 48% / LogL: -389990
+BEST NUMBER OF THREADS: 4
+
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -252398.146
+Optimal log-likelihood: -252397.827
+Proportion of invariable sites: 0.062
+Gamma shape alpha: 0.998
+Parameters optimization took 1 rounds (0.777 sec)
+Time for fast ML tree search: 7.813 seconds
+
+NOTE: ModelFinder requires 618 MB RAM!
+ModelFinder will test up to 546 protein models (sample size: 716) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            271864.869   1117 545963.738   3043575.738  551072.539
+  2  LG+I          269114.026   1118 540464.053   3042548.053  545577.427
+  3  LG+G4         252640.674   1118 507517.348   3009601.348  512630.722
+  4  LG+I+G4       252387.942   1119 507013.884   3013573.884  512131.832
+  5  LG+R2         256726.906   1119 515691.812   3022251.812  520809.760
+  6  LG+R3         253540.143   1121 509322.285   3024846.285  514449.381
+  7  LG+R4         252450.336   1123 507146.672   3031650.672  512282.915
+  8  LG+R5         251868.016   1125 505986.032   3039486.032  511131.422
+  9  LG+R6         251569.873   1127 505393.746   3047905.746  510548.283
+ 10  LG+R7         251420.704   1129 505099.408   3056639.408  510263.093
+ 11  LG+R8         251309.172   1131 504880.344   3065464.344  510053.177
+ 12  LG+R9         251270.294   1133 504806.588   3074450.588  509988.567
+ 13  LG+R10        251256.989   1135 504783.979   3083503.979  509975.106
+ 26  LG+F+R10      251350.738   1154 505009.477   3170749.477  510287.503
+ 39  WAG+R10       251455.464   1135 505180.929   3083900.929  510372.056
+ 52  WAG+F+R10     251517.967   1154 505343.934   3171083.934  510621.961
+ 65  JTT+R10       249086.104   1135 500442.208   3079162.208  505633.335
+ 78  JTT+F+R10     249545.316   1154 501398.632   3167138.632  506676.659
+ 91  JTTDCMut+R10  249197.651   1135 500665.302   3079385.302  505856.429
+104  JTTDCMut+F+R10 249627.575   1154 501563.149   3167303.149  506841.176
+117  DCMut+R10     254557.729   1135 511385.459   3090105.459  516576.586
+130  DCMut+F+R10   254466.524   1154 511241.049   3176981.049  516519.075
+143  VT+R10        252785.525   1135 507841.050   3086561.050  513032.177
+156  VT+F+R10      253283.230   1154 508874.459   3174614.459  514152.486
+169  PMB+R10       257202.233   1135 516674.466   3095394.466  521865.593
+182  PMB+F+R10     257747.791   1154 517803.582   3183543.582  523081.609
+195  Blosum62+R10  257453.185   1135 517176.370   3095896.370  522367.497
+208  Blosum62+F+R10 257936.342   1154 518180.684   3183920.684  523458.711
+221  Dayhoff+R10   254530.794   1135 511331.589   3090051.589  516522.716
+234  Dayhoff+F+R10 254441.466   1154 511190.931   3176930.931  516468.958
+247  mtREV+R10     261016.593   1135 524303.186   3103023.186  529494.313
+260  mtREV+F+R10   252988.457   1154 508284.914   3174024.914  513562.941
+273  mtART+R10     269138.355   1135 540546.710   3119266.710  545737.837
+286  mtART+F+R10   260875.426   1154 524058.851   3189798.851  529336.878
+299  mtZOA+R10     260404.734   1135 523079.467   3101799.467  528270.594
+312  mtZOA+F+R10   255085.356   1154 512478.713   3178218.713  517756.740
+325  mtMet+R10     258831.830   1135 519933.660   3098653.660  525124.787
+338  mtMet+F+R10   251432.879   1154 505173.758   3170913.758  510451.785
+351  mtVer+R10     258647.574   1135 519565.148   3098285.148  524756.275
+364  mtVer+F+R10   252596.638   1154 507501.277   3173241.277  512779.304
+377  mtInv+R10     262066.033   1135 526402.065   3105122.065  531593.192
+390  mtInv+F+R10   252262.776   1154 506833.552   3172573.552  512111.579
+403  mtMAM+R10     264492.122   1135 531254.243   3109974.243  536445.370
+416  mtMAM+F+R10   256864.544   1154 516037.088   3181777.088  521315.114
+429  HIVb+R10      251281.450   1135 504832.900   3083552.900  510024.027
+442  HIVb+F+R10    250869.521   1154 504047.042   3169787.042  509325.069
+455  HIVw+R10      260213.065   1135 522696.131   3101416.131  527887.258
+468  HIVw+F+R10    257742.503   1154 517793.007   3183533.007  523071.034
+481  FLU+R10       252842.453   1135 507954.907   3086674.907  513146.034
+494  FLU+F+R10     251524.364   1154 505356.728   3171096.728  510634.755
+507  rtREV+R10     255389.610   1135 513049.221   3091769.221  518240.348
+520  rtREV+F+R10   254606.802   1154 511521.604   3177261.604  516799.631
+533  cpREV+R10     252259.924   1135 506789.847   3085509.847  511980.974
+546  cpREV+F+R10   251891.034   1154 506090.069   3171830.069  511368.096
+Akaike Information Criterion:           JTT+R10
+Corrected Akaike Information Criterion: LG+G4
+Bayesian Information Criterion:         JTT+R10
+Best-fit model: JTT+R10 chosen according to BIC
+
+All model information printed to clipkit_secuencias_unicas_YcaO.fasta.model.gz
+CPU time for ModelFinder: 9217.271 seconds (2h:33m:37s)
+Wall-clock time for ModelFinder: 2454.757 seconds (0h:40m:54s)
+Generating 1000 samples for ultrafast bootstrap (seed: 978176)...
+
+NOTE: 618 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -249086.104
+Optimal log-likelihood: -249086.075
+Site proportion and rates:  (0.090,0.008) (0.088,0.079) (0.117,0.214) (0.098,0.410) (0.117,0.633) (0.098,0.908) (0.103,1.255) (0.116,1.681) (0.112,2.216) (0.061,3.147)
+Parameters optimization took 1 rounds (3.749 sec)
+Computing ML distances based on estimated model parameters... 51.391 sec
+Computing BIONJ tree...
+0.320 seconds
+Log-likelihood of BIONJ tree: -250089.735
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 35.344 second
+Computing log-likelihood of 98 initial trees ... 51.794 seconds
+Current best score: -249086.075
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -248997.957
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -248795.944
+Iteration 10 / LogL: -248979.097 / Time: 0h:3m:53s
+Iteration 20 / LogL: -249015.093 / Time: 0h:5m:32s
+Finish initializing candidate tree set (20)
+Current best tree score: -248795.944 / CPU time: 307.989
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 25: -248781.040
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 27: -248755.706
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 30: -248748.619
+Iteration 30 / LogL: -248748.619 / Time: 0h:8m:15s (0h:28m:28s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 34: -248737.703
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 37: -248735.702
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 38: -248710.663
+Iteration 40 / LogL: -248747.219 / Time: 0h:10m:36s (0h:26m:39s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 41: -248702.466
+Iteration 50 / LogL: -248715.459 / Time: 0h:12m:59s (0h:24m:6s left)
+Log-likelihood cutoff on original alignment: -248957.204
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 54: -248700.214
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 59: -248659.518
+Iteration 60 / LogL: -248707.209 / Time: 0h:15m:23s (0h:25m:49s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 63: -248655.546
+Iteration 70 / LogL: -248695.430 / Time: 0h:17m:50s (0h:24m:2s left)
+Iteration 80 / LogL: -248681.450 / Time: 0h:19m:58s (0h:20m:59s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 84: -248641.405
+Iteration 90 / LogL: -248646.449 / Time: 0h:22m:24s (0h:23m:40s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 100: -248634.302
+Iteration 100 / LogL: -248634.302 / Time: 0h:24m:36s (0h:24m:51s left)
+Log-likelihood cutoff on original alignment: -248912.822
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.956
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 108: -248626.467
+Iteration 110 / LogL: -248894.761 / Time: 0h:26m:50s (0h:24m:8s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 115: -248623.107
+Iteration 120 / LogL: -248698.665 / Time: 0h:29m:9s (0h:23m:17s left)
+Iteration 130 / LogL: -248672.736 / Time: 0h:31m:15s (0h:20m:35s left)
+Iteration 140 / LogL: -248648.672 / Time: 0h:33m:30s (0h:18m:4s left)
+Iteration 150 / LogL: -248683.549 / Time: 0h:35m:37s (0h:15m:32s left)
+Log-likelihood cutoff on original alignment: -248808.642
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 155: -248617.067
+Iteration 160 / LogL: -248641.314 / Time: 0h:37m:59s (0h:22m:42s left)
+Iteration 170 / LogL: -248695.276 / Time: 0h:40m:6s (0h:20m:10s left)
+Iteration 180 / LogL: -248628.530 / Time: 0h:42m:8s (0h:17m:39s left)
+Iteration 190 / LogL: -248644.530 / Time: 0h:44m:19s (0h:15m:14s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 193: -248608.369
+Iteration 200 / LogL: -248616.383 / Time: 0h:46m:39s (0h:21m:48s left)
+Log-likelihood cutoff on original alignment: -248786.403
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.983
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 210 / LogL: -248647.644 / Time: 0h:48m:42s (0h:20m:58s left)
+Iteration 220 / LogL: -248667.547 / Time: 0h:50m:45s (0h:18m:32s left)
+Iteration 230 / LogL: -248619.405 / Time: 0h:52m:50s (0h:16m:9s left)
+Iteration 240 / LogL: -248665.992 / Time: 0h:55m:0s (0h:13m:48s left)
+Iteration 250 / LogL: -248649.072 / Time: 0h:57m:4s (0h:11m:27s left)
+Log-likelihood cutoff on original alignment: -248786.403
+Iteration 260 / LogL: -248643.290 / Time: 0h:59m:19s (0h:9m:9s left)
+Iteration 270 / LogL: -248668.222 / Time: 1h:1m:27s (0h:6m:51s left)
+Iteration 280 / LogL: -248629.572 / Time: 1h:3m:35s (0h:4m:33s left)
+Iteration 290 / LogL: -248645.484 / Time: 1h:5m:39s (0h:2m:16s left)
+Iteration 300 / LogL: -248632.806 / Time: 1h:7m:54s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -248786.403
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+TREE SEARCH COMPLETED AFTER 300 ITERATIONS / Time: 1h:7m:56s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -248608.369
+Optimal log-likelihood: -248608.368
+Site proportion and rates:  (0.090,0.008) (0.087,0.078) (0.121,0.215) (0.098,0.419) (0.103,0.621) (0.099,0.880) (0.107,1.225) (0.123,1.666) (0.113,2.238) (0.058,3.185)
+Parameters optimization took 1 rounds (2.205 sec)
+BEST SCORE FOUND : -248608.368
+Creating bootstrap support values...
+Split supports printed to NEXUS file clipkit_secuencias_unicas_YcaO.fasta.splits.nex
+Total tree length: 103.483
+
+Total number of iterations: 300
+CPU time used for tree search: 15850.852 sec (4h:24m:10s)
+Wall-clock time used for tree search: 4051.770 sec (1h:7m:31s)
+Total CPU time used: 15953.501 sec (4h:25m:53s)
+Total wall-clock time used: 4080.868 sec (1h:8m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file clipkit_secuencias_unicas_YcaO.fasta.splits.nex...
+560 taxa and 2433 splits.
+Consensus tree written to clipkit_secuencias_unicas_YcaO.fasta.contree
+Reading input trees file clipkit_secuencias_unicas_YcaO.fasta.contree
+Log-likelihood of consensus tree: -248603.624
+
+Analysis results written to: 
+  IQ-TREE report:                clipkit_secuencias_unicas_YcaO.fasta.iqtree
+  Maximum-likelihood tree:       clipkit_secuencias_unicas_YcaO.fasta.treefile
+  Likelihood distances:          clipkit_secuencias_unicas_YcaO.fasta.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          clipkit_secuencias_unicas_YcaO.fasta.splits.nex
+  Consensus tree:                clipkit_secuencias_unicas_YcaO.fasta.contree
+  Screen log file:               clipkit_secuencias_unicas_YcaO.fasta.log
+
+Date and Time: Wed Oct  7 12:10:13 2026
