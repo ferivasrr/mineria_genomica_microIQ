@@ -60,3 +60,6 @@ df_metadatos <- df_metadatos %>%
     Especie = ifelse(!is.na(Cepa), str_remove(Especie, paste0("\\s*", str_escape(Cepa))), Especie)
   ) %>%
   select(WP_ID, Proteina, Especie, Cepa)
+
+# Descarga 
+write.csv(df_metadatos, file = "resultados/cicloadicion/metadata_cicloadicion_parte1.csv")
