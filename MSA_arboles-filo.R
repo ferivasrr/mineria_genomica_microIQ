@@ -5,6 +5,7 @@
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
+install.packages("devtools")
 install.packages("seqinr") #manejar secuencias 
 BiocManager::install("msa") #Hacer el alineamiento
 BiocManager::install("ggmsa") #Visualizacion del alineamiento
@@ -12,6 +13,8 @@ BiocManager::install("Biostrings") #Manejar secuencias
 install.packages("ape") #Realizar el arbol filogenetico
 BiocManager::install("ggtree") #Visualizar el arbol filogenetico
 BiocManager::install("DECIPHER") #Hacer alineamiento y curacion 
+BiocManager::install("microseq")
+devtools::install_github('grunwaldlab/heattree')
 
 #Cargar los paquetes instalados
 library(Biostrings)
@@ -21,6 +24,8 @@ library(ggmsa)
 library(ape)
 library(ggtree)
 library(DECIPHER)
+library(microseq)
+library(heattree)
 
 #Leer las secuencias fasta
 
@@ -66,19 +71,37 @@ BrowseSeqs(clipkit_secuencias_curadas_YcaO_compatible)
 ########### MATRICES DE DISTANCIA PARA ARBOL NJ ###########
 ###########################################################
 
-#Cambiar la clase del objeto con el que vamos a trabajar, de AAMultipleAlignment/Biostrings a Alignment
-tree_clipkit_sequnicas_YcaO <- msaConvert(clipkit_secuencias_curadas_YcaO, type = "seqinr::alignment")
+# USA ESTE CÓGIDO SI TUS ÁRBOLES SON PEQUEÑOS
+# Cambiar la clase del objeto con el que vamos a trabajar, de AAMultipleAlignment/Biostrings a Alignment
+# tree_clipkit_sequnicas_YcaO <- msaConvert(clipkit_secuencias_curadas_YcaO, type = "seqinr::alignment")
 
 #Matriz de distancia para NeightborJoining
-matriz_distancia_clipkit_sequnicas_YcaO <- dist.alignment(tree_clipkit_sequnicas_YcaO, matrix = "identity")
+# matriz_distancia_clipkit_sequnicas_YcaO <- dist.alignment(tree_clipkit_sequnicas_YcaO, matrix = "identity")
 
 #################################
 ###########  ARBOL NJ ###########
 #################################
 
-nj_tree_sequnicas_YcaO <- nj(matriz_distancia_clipkit_sequnicas_YcaO) 
+# nj_tree_sequnicas_YcaO <- nj(matriz_distancia_clipkit_sequnicas_YcaO) 
 
-ggtree(nj_tree_sequnicas_YcaO, layout = "circular", size = 1) +
-  geom_tiplab(size = 2, aes(angle=angle)) +
-  geom_nodelab(geom = "label") +
-  hexpand(0.05)
+# ggtree(nj_tree_sequnicas_YcaO, layout = "circular", size = 1) +
+  #geom_tiplab(size = 2, aes(angle=angle)) +
+  #geom_nodelab(geom = "label") +
+  #hexpand(0.05)
+
+####################################
+########### ARBOL IQTREE ###########
+####################################
+
+YcaO_iqtree <- read.tree("resultados/YcaO/IQtree-arbol/clipkit_secuencias_unicas_YcaO.fasta.treefile")
+
+# Visualización del árbol 
+plot(YcaO_iqtree, main = "Árbol ML de YcaO ciclodehidratasa de tiocilina del grupo Bacilli a partir de InterPro")
+YcaO_tree_ML <- ggtree(YcaO_iqtree, layout = "circular") +
+  geom_tiplab(size = 0.5, aes(angle = angle))
+
+pdf("resultados/YcaO/IQtree-arbol/arbol_iqtree_YcaO.pdf", width = 500, height = 500)
+print(YcaO_tree_ML)
+dev.off()
+
+heat_tree(tree = YcaO_iqtree,  layout = 'circular')
