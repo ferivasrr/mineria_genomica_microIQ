@@ -98,5 +98,13 @@ YcaO_iqtree <- read.tree("resultados/YcaO/IQtree-arbol/clipkit_secuencias_unicas
 heat_tree(tree = YcaO_iqtree,  layout = 'circular')
 
 # Si tienes la metadata de tu árbol, corre este código
-# metadata_ncbi_completa_YcaO <- read.csv(file = "resultados/YcaO/metadata_ncbi_completa_YcaO.csv", header = "TRUE")
-# heat_tree(tree = YcaO_iqtree, metadata = metadata_ncbi_completa_YcaO, layout = 'circular')
+metadata_ncbi_completa_YcaO <- read.csv(file = "resultados/YcaO/metadata_ncbi_completa_YcaO.csv", header = TRUE)
+heat_tree(tree = YcaO_iqtree, metadata = metadata_query, layout = 'circular')
+
+# Señalar las secuencias query en el árbol 
+secuencias_query <- readRDS(file = "raw-data/YcaO-selection/candidatos-seleccionados-YcaO.rsd")
+secuencias_query
+
+metadata_query <- metadata_ncbi_completa_YcaO |>
+  mutate(query = if_else(metadata_ncbi_completa_YcaO$accession %in% c("MBN2909913.1", "WP_310192601.1", "WP_053602024.1", "WP_173617751.1", "WP_411789310.1"), 'query', 'no'))
+
