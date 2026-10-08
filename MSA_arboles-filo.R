@@ -95,13 +95,8 @@ BrowseSeqs(clipkit_secuencias_curadas_YcaO_compatible)
 
 YcaO_iqtree <- read.tree("resultados/YcaO/IQtree-arbol/clipkit_secuencias_unicas_YcaO.fasta.treefile")
 
-# Visualización del árbol 
-plot(YcaO_iqtree, main = "Árbol ML de YcaO ciclodehidratasa de tiocilina del grupo Bacilli a partir de InterPro")
-YcaO_tree_ML <- ggtree(YcaO_iqtree, layout = "circular") +
-  geom_tiplab(size = 0.5, aes(angle = angle))
-
-pdf("resultados/YcaO/IQtree-arbol/arbol_iqtree_YcaO.pdf", width = 500, height = 500)
-print(YcaO_tree_ML)
-dev.off()
-
 heat_tree(tree = YcaO_iqtree,  layout = 'circular')
+
+# Si tienes la metadata de tu árbol, corre este código
+# metadata_ncbi_completa_YcaO <- read.csv(file = "resultados/YcaO/metadata_ncbi_completa_YcaO.csv", header = "TRUE")
+# heat_tree(tree = YcaO_iqtree, metadata = metadata_ncbi_completa_YcaO, layout = 'circular')

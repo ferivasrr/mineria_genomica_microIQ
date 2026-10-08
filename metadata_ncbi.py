@@ -29,7 +29,7 @@ Entrez.email = "ferivas.r99@gmail.com"   # REQUIRED by NCBI: put your real email
 Entrez.api_key = None                      # optional: paste NCBI API key for 10 req/s
 DELAY = 0.11 if Entrez.api_key else 0.34   # stay under NCBI rate limits
 WINDOW = 25_000                            # bp on each side of the gene
-NEIGHBORHOOD_DIR = "resultados/cicloadicion/neighborhoods"
+NEIGHBORHOOD_DIR = "resultados/YcaO/neighborhoods"
 
 BIOSAMPLE_KEYS = [
     "isolation_source", "host", "env_broad_scale", "env_local_scale",
@@ -189,9 +189,9 @@ def process(acc):
 
 def main():
     args = sys.argv[1:]
-    in_csv = args[0] if len(args) > 0 else "resultados/cicloadicion/metadata_cicloadicion_parte1.csv"
+    in_csv = args[0] if len(args) > 0 else "resultados/YcaO/metadata_YcaO_parte1.csv"
     col = args[1] if len(args) > 1 else "WP_ID"
-    out_csv = args[2] if len(args) > 2 else "resultados/cicloadicion/metadata_ncbi_completa.csv"
+    out_csv = args[2] if len(args) > 2 else "resultados/YcaO/metadata_ncbi_completa_YcaO.csv"
     df = pd.read_csv(in_csv)
     accs = df[col].dropna().astype(str).str.strip().unique()
 
