@@ -108,3 +108,18 @@ secuencias_query
 metadata_query <- metadata_ncbi_completa_YcaO |>
   mutate(query = if_else(metadata_ncbi_completa_YcaO$accession %in% c("MBN2909913.1", "WP_310192601.1", "WP_053602024.1", "WP_173617751.1", "WP_411789310.1"), 'query', 'no'))
 
+####################################
+############ CANDIDADOS ############
+####################################
+
+#Selección de candidatos del clado A
+clado_a_candidatos <- c("Brevibacillus aydinogluensis", "Paenibacillus cymbidii", "Paenibacillus sp. J2R1T-4",
+"Paenibacillus sp. P4_E11", "Paenibacillus sp. PL91", "Paenibacillus sp. Soil522", "Paenibacillus paridis", "Paenibacillus sp. P4_A7",
+"Cohnella kolymensis", "Cohnella pontilimi", "Cohnella candida")
+
+#Filtrar las filas de esos candidatos
+genomas_filtrados <- metadata_ncbi_completa_YcaO %>%
+  filter(scientific_name %in% clado_a_candidatos) %>%
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+
+write.csv(genomas_filtrados, file = "resultados/YcaO/candidatos/clado_A/candidatos_clado_A.csv", row.names = FALSE )
