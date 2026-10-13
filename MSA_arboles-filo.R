@@ -112,6 +112,7 @@ metadata_query <- metadata_ncbi_completa_YcaO |>
 ############ CANDIDADOS ############
 ####################################
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Selección de candidatos del clado A
 clado_a_candidatos <- c("Brevibacillus aydinogluensis", "Paenibacillus cymbidii", "Paenibacillus sp. J2R1T-4",
 "Paenibacillus sp. P4_E11", "Paenibacillus sp. PL91", "Paenibacillus sp. Soil522", "Paenibacillus paridis", "Paenibacillus sp. P4_A7",
@@ -123,3 +124,53 @@ genomas_filtrados <- metadata_ncbi_completa_YcaO %>%
   select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
 
 write.csv(genomas_filtrados, file = "resultados/YcaO/candidatos/clado_A/candidatos_clado_A.csv", row.names = FALSE )
+#Para extraer los genomas directo de la terminal 
+ids_accession_clado_A <- genomas_filtrados$accession
+writeLines(ids_accession_clado_A, "resultados/YcaO/candidatos/clado_A/ids_accession_clado_A.txt")
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Selección de candidatos del clado B
+clado_b_candidatos <- c("Paenibacillus sp. F024", "Paenibacillus thalictri", "Paenibacillus sp. MSJ-34", "Paenibacillus sp. GYB004",
+"Paenibacillus sp. XY282", "Cohnella terricola")
+
+genomas_filtrados_clado_B <- metadata_ncbi_completa_YcaO %>%
+  filter(scientific_name %in% clado_b_candidatos) %>%
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+
+genomas_filtrados_clado_B <- genomas_filtrados_clado_B[c(1:7)[-6], ]
+
+write.csv(genomas_filtrados_clado_B, file = "resultados/YcaO/candidatos/clado_B/candidatos_clado_B.csv", row.names = FALSE )
+#Para extraer los genomas directo de la terminal 
+ids_accession_clado_B <- genomas_filtrados_clado_B$accession
+writeLines(ids_accession_clado_B, "resultados/YcaO/candidatos/clado_B/ids_accession_clado_B.txt")
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Selección de candidatos del clado C
+clado_c_candidatos <- c("Paenibacillus larvae subsp. larvae", "Paenibacillus periandrae", "Paenibacillus sp. P4_E11",
+"Paenibacillus sp. F024", "Paenibacillus sp. Soil750", "Paenibacillus sp. J22R160", "Cohnella herbarum", "Cohnella soli",
+"Cohnella sp. WQ 127256")
+
+genomas_filtrados_clado_C <- metadata_ncbi_completa_YcaO %>%
+  filter(scientific_name %in% clado_c_candidatos) %>%
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+
+genomas_filtrados_clado_C <- genomas_filtrados_clado_C[-c(1, 11), ]
+
+write.csv(genomas_filtrados_clado_C, file = "resultados/YcaO/candidatos/clado_C/candidatos_clado_C.csv", row.names = FALSE )
+#Para extraer los genomas directo de la terminal 
+ids_accession_clado_C <- genomas_filtrados_clado_C$accession
+writeLines(ids_accession_clado_C, "resultados/YcaO/candidatos/clado_C/ids_accession_clado_C.txt")
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Selección de candidatos del clado D
+clado_d_candidatos <- c("Bacillus sp. JJ1609", "Bacillus sp. JJ1122", "Rossellomorea oryzaecorticis", "Rossellomorea vietnamensis",
+"Rossellomorea aquimaris")
+
+genomas_filtrados_clado_D <- metadata_ncbi_completa_YcaO %>%
+  filter(scientific_name %in% clado_d_candidatos) %>%
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+
+write.csv(genomas_filtrados_clado_D, file = "resultados/YcaO/candidatos/clado_D/candidatos_clado_D.csv", row.names = FALSE )
+#Para extraer los genomas directo de la terminal 
+ids_accession_clado_D <- genomas_filtrados_clado_D$accession
+writeLines(ids_accession_clado_D, "resultados/YcaO/candidatos/clado_D/ids_accession_clado_D.txt")
