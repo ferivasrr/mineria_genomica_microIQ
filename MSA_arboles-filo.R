@@ -121,12 +121,12 @@ clado_a_candidatos <- c("Brevibacillus aydinogluensis", "Paenibacillus cymbidii"
 #Filtrar las filas de esos candidatos
 genomas_filtrados <- metadata_ncbi_completa_YcaO %>%
   filter(scientific_name %in% clado_a_candidatos) %>%
-  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host,assembly)
 
 write.csv(genomas_filtrados, file = "resultados/YcaO/candidatos/clado_A/candidatos_clado_A.csv", row.names = FALSE )
 #Para extraer los genomas directo de la terminal 
-ids_accession_clado_A <- genomas_filtrados$accession
-writeLines(ids_accession_clado_A, "resultados/YcaO/candidatos/clado_A/ids_accession_clado_A.txt")
+ids_assembly_clado_A <- genomas_filtrados$assembly
+writeLines(ids_assembly_clado_A, "resultados/YcaO/candidatos/clado_A/ids_assembly_clado_A.txt")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Selección de candidatos del clado B
@@ -135,14 +135,14 @@ clado_b_candidatos <- c("Paenibacillus sp. F024", "Paenibacillus thalictri", "Pa
 
 genomas_filtrados_clado_B <- metadata_ncbi_completa_YcaO %>%
   filter(scientific_name %in% clado_b_candidatos) %>%
-  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host,assembly)
 
 genomas_filtrados_clado_B <- genomas_filtrados_clado_B[c(1:7)[-6], ]
 
 write.csv(genomas_filtrados_clado_B, file = "resultados/YcaO/candidatos/clado_B/candidatos_clado_B.csv", row.names = FALSE )
 #Para extraer los genomas directo de la terminal 
-ids_accession_clado_B <- genomas_filtrados_clado_B$accession
-writeLines(ids_accession_clado_B, "resultados/YcaO/candidatos/clado_B/ids_accession_clado_B.txt")
+ids_assembly_clado_B <- genomas_filtrados_clado_B$assembly
+writeLines(ids_assembly_clado_B, "resultados/YcaO/candidatos/clado_B/ids_assembly_clado_B.txt")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Selección de candidatos del clado C
@@ -152,14 +152,14 @@ clado_c_candidatos <- c("Paenibacillus larvae subsp. larvae", "Paenibacillus per
 
 genomas_filtrados_clado_C <- metadata_ncbi_completa_YcaO %>%
   filter(scientific_name %in% clado_c_candidatos) %>%
-  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host,assembly)
 
 genomas_filtrados_clado_C <- genomas_filtrados_clado_C[-c(1, 11), ]
 
 write.csv(genomas_filtrados_clado_C, file = "resultados/YcaO/candidatos/clado_C/candidatos_clado_C.csv", row.names = FALSE )
 #Para extraer los genomas directo de la terminal 
-ids_accession_clado_C <- genomas_filtrados_clado_C$accession
-writeLines(ids_accession_clado_C, "resultados/YcaO/candidatos/clado_C/ids_accession_clado_C.txt")
+ids_assembly_clado_C <- genomas_filtrados_clado_C$assembly
+writeLines(ids_assembly_clado_C, "resultados/YcaO/candidatos/clado_C/ids_assembly_clado_C.txt")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Selección de candidatos del clado D
@@ -168,9 +168,9 @@ clado_d_candidatos <- c("Bacillus sp. JJ1609", "Bacillus sp. JJ1122", "Rossellom
 
 genomas_filtrados_clado_D <- metadata_ncbi_completa_YcaO %>%
   filter(scientific_name %in% clado_d_candidatos) %>%
-  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host)
+  select(accession,protein_name,organism,strain,scientific_name,isolation_source,geo_loc_name,host,assembly)
 
 write.csv(genomas_filtrados_clado_D, file = "resultados/YcaO/candidatos/clado_D/candidatos_clado_D.csv", row.names = FALSE )
 #Para extraer los genomas directo de la terminal 
-ids_accession_clado_D <- genomas_filtrados_clado_D$accession
-writeLines(ids_accession_clado_D, "resultados/YcaO/candidatos/clado_D/ids_accession_clado_D.txt")
+ids_assembly_clado_D <- genomas_filtrados_clado_D$assembly
+writeLines(ids_assembly_clado_D, "resultados/YcaO/candidatos/clado_D/ids_assembly_clado_D.txt")
