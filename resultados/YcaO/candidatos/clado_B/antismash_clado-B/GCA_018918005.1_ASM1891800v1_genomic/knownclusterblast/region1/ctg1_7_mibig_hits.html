@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_013310337.1</td>
+              <td>Gfo/Idh/MocA_family_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>31.0</td>
+              <td>99.1</td>
+              <td>168.0</td>
+              <td>6.84e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABX00611.1</td>
+              <td>LmbZ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000907.5">BGC0000907.5</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>76.4</td>
+              <td>83.0</td>
+              <td>1.76e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ACM79817.1</td>
+              <td>KabC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>23.0</td>
+              <td>101.5</td>
+              <td>76.0</td>
+              <td>6.46e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74286.1</td>
+              <td>TxnB8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>100.6</td>
+              <td>72.0</td>
+              <td>1.06e-13</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37889.1</td>
+              <td>dTDP-hexose_3-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001979.4">BGC0001979.4</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>98.5</td>
+              <td>69.0</td>
+              <td>1.17e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35031.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>57.7</td>
+              <td>67.0</td>
+              <td>5.81e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABA41510.1</td>
+              <td>oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000722.5">BGC0000722.5</a></td>
+              <td>other:cyclitol+saccharide</td>
+              <td>33.0</td>
+              <td>44.6</td>
+              <td>64.0</td>
+              <td>4.27e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AEU17888.1</td>
+              <td>putative_3-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001072.5">BGC0001072.5</a></td>
+              <td>PKS:Type I+saccharide+other:aminocoumarin</td>
+              <td>25.0</td>
+              <td>62.7</td>
+              <td>62.0</td>
+              <td>1.34e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAF73453.1</td>
+              <td>putative_3-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000193.3">BGC0000193.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>77.3</td>
+              <td>60.0</td>
+              <td>1.08e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59100.1</td>
+              <td>NDP-hexose-3-reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001619.5">BGC0001619.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>32.1</td>
+              <td>54.0</td>
+              <td>6.53e-08</td>
+          </tr>
+    
+          <tr>
+              <td>QDG00816.1</td>
+              <td>dNDP-hexose_3-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002028.4">BGC0002028.4</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>53.4</td>
+              <td>53.0</td>
+              <td>1.76e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76500.2</td>
+              <td>putative_NDP-3-keto-6-deoxyhexose_3-ketoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000085.5">BGC0000085.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>63.8</td>
+              <td>49.0</td>
+              <td>4.43e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

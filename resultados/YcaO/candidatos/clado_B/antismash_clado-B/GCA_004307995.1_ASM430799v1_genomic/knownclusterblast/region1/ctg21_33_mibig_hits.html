@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAM27540.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000784.3">BGC0000784.3</a></td>
+              <td>saccharide</td>
+              <td>50.0</td>
+              <td>94.6</td>
+              <td>428.0</td>
+              <td>1.22e-147</td>
+          </tr>
+    
+          <tr>
+              <td>BAP34704.1</td>
+              <td>UDP-glucose/GDP-mannose_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000078.5">BGC0000078.5</a></td>
+              <td>PKS</td>
+              <td>41.0</td>
+              <td>90.6</td>
+              <td>295.0</td>
+              <td>3.18e-95</td>
+          </tr>
+    
+          <tr>
+              <td>AWR88391.1</td>
+              <td>putative_nucleotide_sugar_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001522.5">BGC0001522.5</a></td>
+              <td>PKS</td>
+              <td>43.0</td>
+              <td>78.3</td>
+              <td>288.0</td>
+              <td>1.73e-93</td>
+          </tr>
+    
+          <tr>
+              <td>sipS2</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001452.5">BGC0001452.5</a></td>
+              <td>PKS</td>
+              <td>43.0</td>
+              <td>78.3</td>
+              <td>285.0</td>
+              <td>2.73e-92</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83830.1</td>
+              <td>Gna</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001947.2">BGC0001947.2</a></td>
+              <td>saccharide</td>
+              <td>36.0</td>
+              <td>92.4</td>
+              <td>256.0</td>
+              <td>8.25e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AAF23997.1</td>
+              <td>WbpO</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000781.3">BGC0000781.3</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>93.1</td>
+              <td>256.0</td>
+              <td>1.34e-80</td>
+          </tr>
+    
+          <tr>
+              <td>AAA64651.1</td>
+              <td>type_1_capsule_synthesis_gene</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000758.4">BGC0000758.4</a></td>
+              <td>saccharide:exopolysaccharide</td>
+              <td>34.0</td>
+              <td>96.0</td>
+              <td>253.0</td>
+              <td>1.11e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40718.1</td>
+              <td>putative_UDP-glucose-6_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001412.3">BGC0001412.3</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>88.4</td>
+              <td>235.0</td>
+              <td>1.09e-72</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57197.1</td>
+              <td>putative_NDP-N-acetyl-D-galactosaminuronic_acid_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000760.5">BGC0000760.5</a></td>
+              <td>saccharide</td>
+              <td>36.0</td>
+              <td>90.8</td>
+              <td>234.0</td>
+              <td>1.74e-72</td>
+          </tr>
+    
+          <tr>
+              <td>AAF08248.1</td>
+              <td>UDP-N-acetylglucosamine-2-epimerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000736.3">BGC0000736.3</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>91.9</td>
+              <td>228.0</td>
+              <td>9.45e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AAK17910.1</td>
+              <td>UDP-N-acetyl-D-mannosaminuronic_acid_dehydrogenase_EcbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000738.3">BGC0000738.3</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>96.6</td>
+              <td>227.0</td>
+              <td>1.92e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AAF67264.1</td>
+              <td>BcbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000735.3">BGC0000735.3</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>96.4</td>
+              <td>226.0</td>
+              <td>5.05e-69</td>
+          </tr>
+    
+          <tr>
+              <td>ABY66024.1</td>
+              <td>NDP_glucose_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001008.5">BGC0001008.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>34.0</td>
+              <td>88.4</td>
+              <td>205.0</td>
+              <td>5.96e-61</td>
+          </tr>
+    
+          <tr>
+              <td>ATV95598.1</td>
+              <td>NDP-glucose_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001503.4">BGC0001503.4</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>89.3</td>
+              <td>204.0</td>
+              <td>7.79e-60</td>
+          </tr>
+    
+          <tr>
+              <td>QJU69503.1</td>
+              <td>LooS8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002460.3">BGC0002460.3</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>78.3</td>
+              <td>194.0</td>
+              <td>1.04e-56</td>
+          </tr>
+    
+          <tr>
+              <td>ABC02801.1</td>
+              <td>putative_UDP-N-acetyl-D-mannosaminuronic_acid_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000809.3">BGC0000809.3</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>80.1</td>
+              <td>187.0</td>
+              <td>3.24e-54</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

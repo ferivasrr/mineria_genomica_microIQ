@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAK68921.1</td>
+              <td>putative_amino_sugar_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001410.3">BGC0001410.3</a></td>
+              <td>saccharide</td>
+              <td>42.0</td>
+              <td>98.8</td>
+              <td>313.0</td>
+              <td>1.18e-103</td>
+          </tr>
+    
+          <tr>
+              <td>ABL74960.1</td>
+              <td>TlmJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001048.5">BGC0001048.5</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>95.3</td>
+              <td>160.0</td>
+              <td>8.13e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24474.1</td>
+              <td>glutamine-scyllo-inositol_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000806.5">BGC0000806.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>95.8</td>
+              <td>149.0</td>
+              <td>8.71e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ACB46495.1</td>
+              <td>sugar_4-aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000082.5">BGC0000082.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>96.8</td>
+              <td>148.0</td>
+              <td>2.35e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AAG23279.1</td>
+              <td>probable_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000148.3">BGC0000148.3</a></td>
+              <td>PKS:Type I</td>
+              <td>28.0</td>
+              <td>97.3</td>
+              <td>148.0</td>
+              <td>2.45e-40</td>
+          </tr>
+    
+          <tr>
+              <td>CQR60488.1</td>
+              <td>RifK_homologue,_3-amino-5-hydroxy_benzoic_acid_(AHBA)_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001287.5">BGC0001287.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>86.5</td>
+              <td>146.0</td>
+              <td>1.3e-39</td>
+          </tr>
+    
+          <tr>
+              <td>WP_003062304.1</td>
+              <td>3-amino-5-hydroxybenzoate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002009.4">BGC0002009.4</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>95.1</td>
+              <td>146.0</td>
+              <td>1.3e-39</td>
+          </tr>
+    
+          <tr>
+              <td>CAI94689.1</td>
+              <td>putative_AHBA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000141.5">BGC0000141.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>94.9</td>
+              <td>144.0</td>
+              <td>6.74e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ABV83226.1</td>
+              <td>CppDII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000116.5">BGC0000116.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>95.6</td>
+              <td>140.0</td>
+              <td>9.13e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AVX51104.1</td>
+              <td>nysDII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001709.5">BGC0001709.5</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>96.3</td>
+              <td>139.0</td>
+              <td>2.45e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAF71772.1</td>
+              <td>NysDII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000115.5">BGC0000115.5</a></td>
+              <td>PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>96.1</td>
+              <td>137.0</td>
+              <td>9.15e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AEF16041.1</td>
+              <td>NDP-sugar_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000953.5">BGC0000953.5</a></td>
+              <td>saccharide:aminoglycoside</td>
+              <td>27.0</td>
+              <td>94.6</td>
+              <td>137.0</td>
+              <td>1.36e-36</td>
+          </tr>
+    
+          <tr>
+              <td>WP_245193314.1</td>
+              <td>DegT/DnrJ/EryC1/StrS_family_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>86.3</td>
+              <td>137.0</td>
+              <td>2.16e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79669.1</td>
+              <td>AHBA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>86.3</td>
+              <td>137.0</td>
+              <td>2.16e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QJU69501.1</td>
+              <td>LooS13</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002460.3">BGC0002460.3</a></td>
+              <td>other:other</td>
+              <td>30.0</td>
+              <td>83.6</td>
+              <td>134.0</td>
+              <td>1.66e-35</td>
+          </tr>
+    
+          <tr>
+              <td>QSE03588.1</td>
+              <td>Lcm5</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002333.3">BGC0002333.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>95.6</td>
+              <td>134.0</td>
+              <td>2.43e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ABC02793.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000809.3">BGC0000809.3</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>95.8</td>
+              <td>132.0</td>
+              <td>1.25e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AWH12658.1</td>
+              <td>RmpK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001759.3">BGC0001759.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>88.0</td>
+              <td>132.0</td>
+              <td>1.27e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ADM46366.1</td>
+              <td>3-amino-5-hydroxybenzoic_acid_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000106.5">BGC0000106.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>86.0</td>
+              <td>132.0</td>
+              <td>2.35e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ATY46602.1</td>
+              <td>AHBA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001666.3">BGC0001666.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>86.3</td>
+              <td>132.0</td>
+              <td>2.43e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAM54102.1</td>
+              <td>3-amino-5-hydroxybenzoate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000020.3">BGC0000020.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>88.2</td>
+              <td>130.0</td>
+              <td>8.89e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ37112.1</td>
+              <td>lipopolysaccharide_biosynthesis_protein_RffA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001511.5">BGC0001511.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>88.2</td>
+              <td>130.0</td>
+              <td>1.23e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BAC57033.1</td>
+              <td>transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000102.5">BGC0000102.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>98.3</td>
+              <td>128.0</td>
+              <td>4.05e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AHH25589.1</td>
+              <td>AHBA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000957.5">BGC0000957.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>28.0</td>
+              <td>81.6</td>
+              <td>127.0</td>
+              <td>6.13e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QWF78538.1</td>
+              <td>dTDP-3-amino-3,4,6-trideoxy-alpha-D-glucose_transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002142.2">BGC0002142.2</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>92.6</td>
+              <td>127.0</td>
+              <td>1.14e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AFV30265.1</td>
+              <td>AHBA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000075.5">BGC0000075.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>85.5</td>
+              <td>127.0</td>
+              <td>1.18e-32</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32794.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000263.5">BGC0000263.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>93.6</td>
+              <td>126.0</td>
+              <td>1.63e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AGI99500.1</td>
+              <td>sugar_3-aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001004.5">BGC0001004.5</a></td>
+              <td>PKS:Type I</td>
+              <td>27.0</td>
+              <td>95.1</td>
+              <td>125.0</td>
+              <td>6.36e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09481.1</td>
+              <td>LobD3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001183.5">BGC0001183.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>95.1</td>
+              <td>125.0</td>
+              <td>6.36e-32</td>
+          </tr>
+    
+          <tr>
+              <td>QFU80905.1</td>
+              <td>sugar_3-aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002550.2">BGC0002550.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>95.1</td>
+              <td>125.0</td>
+              <td>6.36e-32</td>
+          </tr>
+    
+          <tr>
+              <td>BAV55999.1</td>
+              <td>NDP-sugar_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001597.4">BGC0001597.4</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>98.0</td>
+              <td>124.0</td>
+              <td>8.19e-32</td>
+          </tr>
+    
+          <tr>
+              <td>CCP20043.1</td>
+              <td>divG_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001119.5">BGC0001119.5</a></td>
+              <td>PKS:Type I</td>
+              <td>28.0</td>
+              <td>85.8</td>
+              <td>124.0</td>
+              <td>1.53e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QIE07119.1</td>
+              <td>OvmG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001719.4">BGC0001719.4</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>85.8</td>
+              <td>123.0</td>
+              <td>5.59e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_18</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001931.2">BGC0001931.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>99.0</td>
+              <td>122.0</td>
+              <td>9.13e-31</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57207.1</td>
+              <td>putative_amino-transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000760.5">BGC0000760.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>70.6</td>
+              <td>120.0</td>
+              <td>4e-30</td>
+          </tr>
+    
+          <tr>
+              <td>QLJ99346.1</td>
+              <td>DegT/DnrJ/EryC1/StrS_family_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002088.3">BGC0002088.3</a></td>
+              <td>PKS+saccharide:oligosaccharide</td>
+              <td>26.0</td>
+              <td>94.1</td>
+              <td>120.0</td>
+              <td>4.16e-30</td>
+          </tr>
+    
+          <tr>
+              <td>QES95470.1</td>
+              <td>AHBA_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002453.2">BGC0002453.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>86.3</td>
+              <td>117.0</td>
+              <td>3.83e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83838.1</td>
+              <td>QhbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001947.2">BGC0001947.2</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>70.6</td>
+              <td>114.0</td>
+              <td>6.46e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ACM79815.1</td>
+              <td>KabA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>99.3</td>
+              <td>114.0</td>
+              <td>8.73e-28</td>
+          </tr>
+    
+          <tr>
+              <td>BBM96645.1</td>
+              <td>NDP-hexose_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002452.2">BGC0002452.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>90.7</td>
+              <td>112.0</td>
+              <td>4.12e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAM88356.1</td>
+              <td>NbmG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000899.4">BGC0000899.4</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>93.1</td>
+              <td>110.0</td>
+              <td>9.39e-27</td>
+          </tr>
+    
+          <tr>
+              <td>AAC68680.1</td>
+              <td>transaminase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000898.5">BGC0000898.5</a></td>
+              <td>saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>94.9</td>
+              <td>108.0</td>
+              <td>4.53e-26</td>
+          </tr>
+    
+          <tr>
+              <td>WP_053138498.1</td>
+              <td>DegT/DnrJ/EryC1/StrS_family_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002033.4">BGC0002033.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>95.3</td>
+              <td>106.0</td>
+              <td>3.33e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAE07061.1</td>
+              <td>L-Glutamine:2-deoxy-scyllo-inosose_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000693.5">BGC0000693.5</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>49.8</td>
+              <td>99.0</td>
+              <td>2.18e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ARA90610.1</td>
+              <td>DegT/DnrJ/EryC1/StrS_aminotransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001610.5">BGC0001610.5</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>89.5</td>
+              <td>63.0</td>
+              <td>1.5e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,5 +1,8 @@
 #!/bin/bash
-# Para ejecutarlo en la terminal
+# Para ejecutarlo en la terminal:
+# El 'caffeinate' es para que la terminal de la mac no pause el proceso cuando entra en reposo
+# caffeinate ./run_antismash_clados.sh
+#!/bin/bash
 
 # Parar ejecución en caso de error crítico
 set -e
@@ -9,11 +12,10 @@ THREADS=4
 
 echo "Iniciando análisis masivo con antiSMASH..."
 
-# Recorrer la carpeta de entrada
-for dir in clado_B/fastas_clado_B; do
+# Recorrer la carpeta del clado
+for dir in clado_C/fastas_clado_C; do
     if [ -d "$dir" ]; then
-        # Extraemos el nombre del clado (clado_B)
-        clado_name="clado_B"
+        clado_name="clado_C"
         echo ""
         echo "--------------------------------------------------"
         echo ">>> CLADO ACTUAL: $clado_name"
@@ -25,7 +27,7 @@ for dir in clado_B/fastas_clado_B; do
             sample=$(basename "$fasta" .fna)
             output_path="resultados_antismash/${clado_name}/${sample}"
 
-            # CREAR LA RUTA COMPLETA DE SALIDA ANTES DE CORRER ANTISMASH
+            # Crear carpeta de salida completa
             mkdir -p "$output_path"
 
             if [ -f "${output_path}/index.html" ]; then

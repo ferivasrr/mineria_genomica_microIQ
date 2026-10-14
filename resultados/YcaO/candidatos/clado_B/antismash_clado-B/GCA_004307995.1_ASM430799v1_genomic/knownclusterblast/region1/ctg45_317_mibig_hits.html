@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ANQ31705.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001395.5">BGC0001395.5</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>96.9</td>
+              <td>298.0</td>
+              <td>4.18e-93</td>
+          </tr>
+    
+          <tr>
+              <td>AYJ71715.1</td>
+              <td>multidrug_ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001942.3">BGC0001942.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>89.5</td>
+              <td>244.0</td>
+              <td>1.02e-72</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31837.1</td>
+              <td>putative_hygromycin_B_exporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000699.5">BGC0000699.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>95.4</td>
+              <td>221.0</td>
+              <td>4.86e-64</td>
+          </tr>
+    
+          <tr>
+              <td>WCB70650.1</td>
+              <td>ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002760.2">BGC0002760.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>92.8</td>
+              <td>216.0</td>
+              <td>6.18e-62</td>
+          </tr>
+    
+          <tr>
+              <td>QBF29317.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002294.3">BGC0002294.3</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>90.7</td>
+              <td>215.0</td>
+              <td>2.03e-61</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19059.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000288.5">BGC0000288.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>94.0</td>
+              <td>210.0</td>
+              <td>8.32e-60</td>
+          </tr>
+    
+          <tr>
+              <td>QEG98936.1</td>
+              <td>Ant21</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002042.3">BGC0002042.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>92.6</td>
+              <td>209.0</td>
+              <td>2.42e-59</td>
+          </tr>
+    
+          <tr>
+              <td>CAG38700.1</td>
+              <td>putative_ABC-transporter,_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000708.5">BGC0000708.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>98.6</td>
+              <td>207.0</td>
+              <td>6.88e-59</td>
+          </tr>
+    
+          <tr>
+              <td>BAI23328.1</td>
+              <td>putative_ABC-transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000949.5">BGC0000949.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>97.3</td>
+              <td>206.0</td>
+              <td>4.02e-58</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88629.1</td>
+              <td>putative_netropsin_resistance_protein_subunit_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000327.5">BGC0000327.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>95.0</td>
+              <td>205.0</td>
+              <td>4.07e-58</td>
+          </tr>
+    
+          <tr>
+              <td>AAY93395.1</td>
+              <td>2-phenylethylamine_uptake_protein_PeaH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000413.5">BGC0000413.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>90.4</td>
+              <td>202.0</td>
+              <td>2.73e-57</td>
+          </tr>
+    
+          <tr>
+              <td>CAG34715.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000713.5">BGC0000713.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>81.5</td>
+              <td>197.0</td>
+              <td>1.38e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33315.1</td>
+              <td>putative_ABC_transporter,_ATP-binding_protein,_NeoU</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000709.5">BGC0000709.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>83.0</td>
+              <td>198.0</td>
+              <td>1.45e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAH58693.1</td>
+              <td>putative_exporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000711.5">BGC0000711.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>83.0</td>
+              <td>198.0</td>
+              <td>1.45e-55</td>
+          </tr>
+    
+          <tr>
+              <td>CAF32377.1</td>
+              <td>putative_ABC_transporter,_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000712.5">BGC0000712.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>98.3</td>
+              <td>197.0</td>
+              <td>3.5e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70884.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001693.3">BGC0001693.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>99.0</td>
+              <td>195.0</td>
+              <td>1.26e-54</td>
+          </tr>
+    
+          <tr>
+              <td>BAL15734.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000432.6">BGC0000432.6</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>92.5</td>
+              <td>191.0</td>
+              <td>1.04e-52</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ99291.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001484.3">BGC0001484.3</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>91.6</td>
+              <td>187.0</td>
+              <td>1.17e-51</td>
+          </tr>
+    
+          <tr>
+              <td>WKB55584.1</td>
+              <td>ABC_transporter_ATP-binding_protein/permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002755.2">BGC0002755.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>93.8</td>
+              <td>185.0</td>
+              <td>8.16e-51</td>
+          </tr>
+    
+          <tr>
+              <td>CAI47637.1</td>
+              <td>putative_ABC-type_aminoglycoside_exporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000692.5">BGC0000692.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>94.0</td>
+              <td>184.0</td>
+              <td>3.46e-50</td>
+          </tr>
+    
+          <tr>
+              <td>AEP18658.1</td>
+              <td>efflux_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000461.5">BGC0000461.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>95.9</td>
+              <td>182.0</td>
+              <td>6.76e-50</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf1268</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001752.4">BGC0001752.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>86.3</td>
+              <td>181.0</td>
+              <td>1.4e-49</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3200465.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002409.3">BGC0002409.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>92.8</td>
+              <td>181.0</td>
+              <td>1.51e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AJM89736.1</td>
+              <td>PmxC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001192.5">BGC0001192.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>82.8</td>
+              <td>181.0</td>
+              <td>2.49e-49</td>
+          </tr>
+    
+          <tr>
+              <td>QWP75302.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002126.3">BGC0002126.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>96.2</td>
+              <td>180.0</td>
+              <td>3.56e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ABS50188.1</td>
+              <td>putative_ABC_transporter_permease/ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000410.5">BGC0000410.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>99.3</td>
+              <td>180.0</td>
+              <td>4.01e-49</td>
+          </tr>
+    
+          <tr>
+              <td>AAF71763.1</td>
+              <td>NysG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000115.5">BGC0000115.5</a></td>
+              <td>PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>36.0</td>
+              <td>55.6</td>
+              <td>180.0</td>
+              <td>6.19e-49</td>
+          </tr>
+    
+          <tr>
+              <td>OJF16281.1</td>
+              <td>AceT2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001491.3">BGC0001491.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>87.0</td>
+              <td>180.0</td>
+              <td>8.4e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ACA97578.1</td>
+              <td>PmxC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000408.5">BGC0000408.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>96.6</td>
+              <td>179.0</td>
+              <td>8.88e-49</td>
+          </tr>
+    
+          <tr>
+              <td>ACQ63630.1</td>
+              <td>ABC_multidrug_resistance_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000875.4">BGC0000875.4</a></td>
+              <td>other:nucleoside+saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>82.3</td>
+              <td>183.0</td>
+              <td>9.03e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CAG38699.1</td>
+              <td>putative_ABC-transporter,_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000708.5">BGC0000708.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>95.2</td>
+              <td>179.0</td>
+              <td>1.52e-48</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ05895.1</td>
+              <td>putative_ABC_multidrug_resistance_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000872.5">BGC0000872.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>79.4</td>
+              <td>182.0</td>
+              <td>2.2e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AEZ51518.1</td>
+              <td>PmxC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001153.5">BGC0001153.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>96.6</td>
+              <td>178.0</td>
+              <td>2.3e-48</td>
+          </tr>
+    
+          <tr>
+              <td>APO47824.1</td>
+              <td>multidrug_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002653.2">BGC0002653.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>96.7</td>
+              <td>178.0</td>
+              <td>2.3e-48</td>
+          </tr>
+    
+          <tr>
+              <td>QSE03593.1</td>
+              <td>Lcm9</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002333.3">BGC0002333.3</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>89.4</td>
+              <td>176.0</td>
+              <td>1.7e-47</td>
+          </tr>
+    
+          <tr>
+              <td>MCC5036774.1</td>
+              <td>ABC_transporter_ATP-binding_protein/permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002638.3">BGC0002638.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>93.5</td>
+              <td>176.0</td>
+              <td>1.86e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ALE27499.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001292.5">BGC0001292.5</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>51.8</td>
+              <td>174.0</td>
+              <td>8.77e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ADC96668.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001076.5">BGC0001076.5</a></td>
+              <td>other:nucleoside</td>
+              <td>29.0</td>
+              <td>79.6</td>
+              <td>177.0</td>
+              <td>1.04e-46</td>
+          </tr>
+    
+          <tr>
+              <td>CUX79063.1</td>
+              <td>Putative_multidrug_export_ATP-binding/permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001715.4">BGC0001715.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>83.7</td>
+              <td>172.0</td>
+              <td>4.97e-46</td>
+          </tr>
+    
+          <tr>
+              <td>MBO1317794.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002813.2">BGC0002813.2</a></td>
+              <td>PKS:Trans-AT type I+NRPS:Type I</td>
+              <td>30.0</td>
+              <td>88.9</td>
+              <td>173.0</td>
+              <td>5.95e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AVX51095.1</td>
+              <td>nysG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001709.5">BGC0001709.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>55.2</td>
+              <td>170.0</td>
+              <td>1.71e-45</td>
+          </tr>
+    
+          <tr>
+              <td>CAG34716.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000713.5">BGC0000713.5</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>94.2</td>
+              <td>169.0</td>
+              <td>4.06e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AQZ37089.1</td>
+              <td>ABC_transporter_transmembrane_region_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001511.5">BGC0001511.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>48.9</td>
+              <td>170.0</td>
+              <td>7.06e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ99290.1</td>
+              <td>ABC_transporter,partial</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001484.3">BGC0001484.3</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>86.8</td>
+              <td>168.0</td>
+              <td>7.13e-45</td>
+          </tr>
+    
+          <tr>
+              <td>CAF31838.1</td>
+              <td>putative_hygromycin_B_exporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000699.5">BGC0000699.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>91.9</td>
+              <td>168.0</td>
+              <td>8.01e-45</td>
+          </tr>
+    
+          <tr>
+              <td>CAH58692.1</td>
+              <td>putative_exporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000711.5">BGC0000711.5</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>99.3</td>
+              <td>169.0</td>
+              <td>1.15e-44</td>
+          </tr>
+    
+          <tr>
+              <td>CAF33314.1</td>
+              <td>putative_ABC_transporter,_ATP-binding_protein,_NeoT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000709.5">BGC0000709.5</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>99.3</td>
+              <td>169.0</td>
+              <td>1.18e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ14796.1</td>
+              <td>PlpG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000403.5">BGC0000403.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>84.6</td>
+              <td>167.0</td>
+              <td>1.32e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AAM54082.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000020.3">BGC0000020.3</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>48.9</td>
+              <td>169.0</td>
+              <td>2.37e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ14797.1</td>
+              <td>PlpH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000403.5">BGC0000403.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>91.8</td>
+              <td>165.0</td>
+              <td>9.52e-44</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3202944.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002410.3">BGC0002410.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>97.9</td>
+              <td>165.0</td>
+              <td>1.53e-43</td>
+          </tr>
+    
+          <tr>
+              <td>MBO1319300.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002814.2">BGC0002814.2</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>29.0</td>
+              <td>82.7</td>
+              <td>165.0</td>
+              <td>2.87e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ATW47206.1</td>
+              <td>multidrug_ABC_transporter_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002466.3">BGC0002466.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>96.4</td>
+              <td>164.0</td>
+              <td>2.96e-43</td>
+          </tr>
+    
+          <tr>
+              <td>MCC5036771.1</td>
+              <td>ABC_transporter_ATP-binding_protein/permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002638.3">BGC0002638.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>34.0</td>
+              <td>49.9</td>
+              <td>164.0</td>
+              <td>3e-43</td>
+          </tr>
+    
+          <tr>
+              <td>CBL93714.1</td>
+              <td>ABC_multidrug_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000360.5">BGC0000360.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>32.0</td>
+              <td>50.4</td>
+              <td>163.0</td>
+              <td>4.2e-43</td>
+          </tr>
+    
+          <tr>
+              <td>BAE07080.1</td>
+              <td>possible_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000693.5">BGC0000693.5</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>82.5</td>
+              <td>163.0</td>
+              <td>5.06e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AHF21226.1</td>
+              <td>TriB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000449.5">BGC0000449.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>92.1</td>
+              <td>163.0</td>
+              <td>6.55e-43</td>
+          </tr>
+    
+          <tr>
+              <td>MDU8992563.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002805.2">BGC0002805.2</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>79.2</td>
+              <td>161.0</td>
+              <td>3.03e-42</td>
+          </tr>
+    
+          <tr>
+              <td>BAH43767.1</td>
+              <td>ABC_transporter_ATP_binding/permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000452.5">BGC0000452.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>84.7</td>
+              <td>160.0</td>
+              <td>3.64e-42</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078613549.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001550.3">BGC0001550.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>99.8</td>
+              <td>158.0</td>
+              <td>2.49e-41</td>
+          </tr>
+    
+          <tr>
+              <td>CAP20371.1</td>
+              <td>ABC_transporter_ATP-binding_membrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000347.5">BGC0000347.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>81.5</td>
+              <td>157.0</td>
+              <td>3.8e-41</td>
+          </tr>
+    
+          <tr>
+              <td>QYI86758.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002424.3">BGC0002424.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>95.0</td>
+              <td>156.0</td>
+              <td>9.75e-41</td>
+          </tr>
+    
+          <tr>
+              <td>BAP05577.1</td>
+              <td>CalU</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000967.5">BGC0000967.5</a></td>
+              <td>NRPS:Type I+PKS:Trans-AT type I</td>
+              <td>27.0</td>
+              <td>87.3</td>
+              <td>157.0</td>
+              <td>1.64e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ATG31926.1</td>
+              <td>KocI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001640.3">BGC0001640.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>96.4</td>
+              <td>156.0</td>
+              <td>1.72e-40</td>
+          </tr>
+    
+          <tr>
+              <td>WP_078620925.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001549.3">BGC0001549.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>27.0</td>
+              <td>95.7</td>
+              <td>155.0</td>
+              <td>2.77e-40</td>
+          </tr>
+    
+          <tr>
+              <td>KIH99790.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001176.4">BGC0001176.4</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>24.0</td>
+              <td>100.9</td>
+              <td>155.0</td>
+              <td>3.49e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AHH99931.1</td>
+              <td>ABC_transporter_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000002.5">BGC0000002.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>78.0</td>
+              <td>154.0</td>
+              <td>5.48e-40</td>
+          </tr>
+    
+          <tr>
+              <td>CBG75489.1</td>
+              <td>putative_ABC-transport_system_ATP-binding_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000423.5">BGC0000423.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>93.1</td>
+              <td>154.0</td>
+              <td>1.29e-39</td>
+          </tr>
+    
+          <tr>
+              <td>BBC83962.1</td>
+              <td>P-loop_containing_nucleoside_triphosphate_hydrolase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001636.4">BGC0001636.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>83.2</td>
+              <td>155.0</td>
+              <td>1.59e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ACC84962.1</td>
+              <td>ABC_transporter_related</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002699.2">BGC0002699.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>83.2</td>
+              <td>154.0</td>
+              <td>1.75e-39</td>
+          </tr>
+    
+          <tr>
+              <td>CCC55903.1</td>
+              <td>putative_ABC_transporter,_ATPase_and_permease_component</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000973.5">BGC0000973.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>26.0</td>
+              <td>86.4</td>
+              <td>152.0</td>
+              <td>2.77e-39</td>
+          </tr>
+    
+          <tr>
+              <td>QYA95652.1</td>
+              <td>ABC_transporter_ATP-binding_protein/permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002676.2">BGC0002676.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>63.0</td>
+              <td>151.0</td>
+              <td>8.56e-39</td>
+          </tr>
+    
+          <tr>
+              <td>CAB60262.1</td>
+              <td>MrsT_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000527.5">BGC0000527.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>26.0</td>
+              <td>93.7</td>
+              <td>152.0</td>
+              <td>9.48e-39</td>
+          </tr>
+    
+          <tr>
+              <td>CBW74823.1</td>
+              <td>Multidrug_resistance_ABC_transporter_ATP-binding_and_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000571.3">BGC0000571.3</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>26.0</td>
+              <td>92.1</td>
+              <td>150.0</td>
+              <td>1.2e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AAS92552.1</td>
+              <td>SirA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001044.4">BGC0001044.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>83.4</td>
+              <td>152.0</td>
+              <td>1.6e-38</td>
+          </tr>
+    
+          <tr>
+              <td>WP_020635023.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001211.5">BGC0001211.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>94.0</td>
+              <td>150.0</td>
+              <td>1.92e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAA12529.1</td>
+              <td>ExsA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000802.5">BGC0000802.5</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>84.9</td>
+              <td>149.0</td>
+              <td>3.16e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AXG47408.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002715.2">BGC0002715.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>36.0</td>
+              <td>46.7</td>
+              <td>148.0</td>
+              <td>1.02e-37</td>
+          </tr>
+    
+          <tr>
+              <td>EEM14530.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001210.5">BGC0001210.5</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>24.0</td>
+              <td>93.1</td>
+              <td>149.0</td>
+              <td>1.39e-37</td>
+          </tr>
+    
+          <tr>
+              <td>BAL90289.1</td>
+              <td>putative_ABC_transporter_ATPase_and_permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002021.3">BGC0002021.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>55.1</td>
+              <td>145.0</td>
+              <td>9.37e-37</td>
+          </tr>
+    
+          <tr>
+              <td>BAH43768.1</td>
+              <td>ABC_transporter_ATP-binding/permease_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000452.5">BGC0000452.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>94.9</td>
+              <td>144.0</td>
+              <td>1.85e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QQZ01651.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002497.3">BGC0002497.3</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>99.1</td>
+              <td>145.0</td>
+              <td>2.53e-36</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3200462.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002409.3">BGC0002409.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>79.2</td>
+              <td>144.0</td>
+              <td>2.93e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QUQ72367.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002349.3">BGC0002349.3</a></td>
+              <td>PKS:Type I</td>
+              <td>23.0</td>
+              <td>93.5</td>
+              <td>143.0</td>
+              <td>5.75e-36</td>
+          </tr>
+    
+          <tr>
+              <td>WP_245193312.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>97.6</td>
+              <td>143.0</td>
+              <td>8.53e-36</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79656.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>97.6</td>
+              <td>143.0</td>
+              <td>9.55e-36</td>
+          </tr>
+    
+          <tr>
+              <td>CAM02315.1</td>
+              <td>putative_ABC_transporter_transmembrane</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000349.5">BGC0000349.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>94.0</td>
+              <td>141.0</td>
+              <td>1.58e-35</td>
+          </tr>
+    
+          <tr>
+              <td>BAM09402.1</td>
+              <td>putative_ABC-transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000619.3">BGC0000619.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>97.6</td>
+              <td>142.0</td>
+              <td>2.77e-35</td>
+          </tr>
+    
+          <tr>
+              <td>BBE52944.1</td>
+              <td>putative_ABC-transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001602.3">BGC0001602.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>97.6</td>
+              <td>142.0</td>
+              <td>2.77e-35</td>
+          </tr>
+    
+          <tr>
+              <td>ALX37944.1</td>
+              <td>GaeT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001388.3">BGC0001388.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>97.6</td>
+              <td>141.0</td>
+              <td>3.72e-35</td>
+          </tr>
+    
+          <tr>
+              <td>KAH7877381.1</td>
+              <td>multidrug_resistance-associated_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002747.3">BGC0002747.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>86.3</td>
+              <td>141.0</td>
+              <td>1.05e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ABW70811.1</td>
+              <td>PchH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002475.3">BGC0002475.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>45.6</td>
+              <td>138.0</td>
+              <td>1.76e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AHJ59536.1</td>
+              <td>ABC_transporter_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000502.5">BGC0000502.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>97.6</td>
+              <td>136.0</td>
+              <td>1.7e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AGI92083.1</td>
+              <td>ABC_efflux_pump</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002115.3">BGC0002115.3</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>35.0</td>
+              <td>40.8</td>
+              <td>135.0</td>
+              <td>2.11e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BAB04170.1</td>
+              <td>lantibiotic_mersacidin_transporter_system</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000517.4">BGC0000517.4</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>27.0</td>
+              <td>62.4</td>
+              <td>136.0</td>
+              <td>2.33e-33</td>
+          </tr>
+    
+          <tr>
+              <td>QIZ86016.1</td>
+              <td>NHLP_family_bacteriocin_export_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002330.2">BGC0002330.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>24.0</td>
+              <td>85.4</td>
+              <td>136.0</td>
+              <td>2.49e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf1267</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001752.4">BGC0001752.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>35.0</td>
+              <td>41.7</td>
+              <td>135.0</td>
+              <td>4.52e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ44959.1</td>
+              <td>MchF_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000587.5">BGC0000587.5</a></td>
+              <td>ribosomal:RiPP:Microcin</td>
+              <td>24.0</td>
+              <td>91.1</td>
+              <td>135.0</td>
+              <td>5.11e-33</td>
+          </tr>
+    
+          <tr>
+              <td>CAE55703.1</td>
+              <td>probable_microcin_H47_secretion_ATP-binding_protein_mchF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000589.5">BGC0000589.5</a></td>
+              <td>ribosomal:RiPP:Microcin</td>
+              <td>25.0</td>
+              <td>92.1</td>
+              <td>135.0</td>
+              <td>5.11e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ABW70810.1</td>
+              <td>PchI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002475.3">BGC0002475.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>95.2</td>
+              <td>134.0</td>
+              <td>6.67e-33</td>
+          </tr>
+    
+          <tr>
+              <td>EFY99280.1</td>
+              <td>AtrH_like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002710.2">BGC0002710.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>57.6</td>
+              <td>135.0</td>
+              <td>7.9e-33</td>
+          </tr>
+    
+          <tr>
+              <td>ADM69295.1</td>
+              <td>paenilan_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001727.3">BGC0001727.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>23.0</td>
+              <td>93.8</td>
+              <td>131.0</td>
+              <td>7.14e-32</td>
+          </tr>
+    
+          <tr>
+              <td>EHQ60564.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001356.4">BGC0001356.4</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>22.0</td>
+              <td>94.0</td>
+              <td>130.0</td>
+              <td>8.23e-32</td>
+          </tr>
+    
+          <tr>
+              <td>MBN3579118.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002613.2">BGC0002613.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>33.0</td>
+              <td>35.8</td>
+              <td>128.0</td>
+              <td>4.79e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AAL08400.1</td>
+              <td>MceG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000586.5">BGC0000586.5</a></td>
+              <td>ribosomal:RiPP:Microcin</td>
+              <td>24.0</td>
+              <td>91.3</td>
+              <td>128.0</td>
+              <td>7.33e-31</td>
+          </tr>
+    
+          <tr>
+              <td>WP_009985592.1</td>
+              <td>peptidase_domain-containing_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001311.5">BGC0001311.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>22.0</td>
+              <td>100.7</td>
+              <td>125.0</td>
+              <td>5.86e-30</td>
+          </tr>
+    
+          <tr>
+              <td>MBE3200464.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002409.3">BGC0002409.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>36.0</td>
+              <td>38.4</td>
+              <td>119.0</td>
+              <td>4.64e-28</td>
+          </tr>
+    
+          <tr>
+              <td>CAB01940.1</td>
+              <td>ExpD1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000801.5">BGC0000801.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>51.3</td>
+              <td>119.0</td>
+              <td>5.02e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ACU73106.1</td>
+              <td>ABC_transporter_related</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000501.3">BGC0000501.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>27.0</td>
+              <td>93.7</td>
+              <td>118.0</td>
+              <td>9.31e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ52537.1</td>
+              <td>ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002533.2">BGC0002533.2</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>23.0</td>
+              <td>90.2</td>
+              <td>116.0</td>
+              <td>3.33e-27</td>
+          </tr>
+    
+          <tr>
+              <td>CQR60040.1</td>
+              <td>Uncharacterized_ABC_transporter_ATP-binding_protein_YfiC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002289.2">BGC0002289.2</a></td>
+              <td>ribosomal:RiPP:Lasso peptide</td>
+              <td>29.0</td>
+              <td>71.2</td>
+              <td>114.0</td>
+              <td>2.89e-26</td>
+          </tr>
+    
+          <tr>
+              <td>EEM79980.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001887.3">BGC0001887.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>23.0</td>
+              <td>75.6</td>
+              <td>112.0</td>
+              <td>9.41e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AAG32538.1</td>
+              <td>SalT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000548.4">BGC0000548.4</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>28.0</td>
+              <td>40.0</td>
+              <td>111.0</td>
+              <td>2.44e-25</td>
+          </tr>
+    
+          <tr>
+              <td>QFU91020.1</td>
+              <td>Lipid_A_export_ATP-binding/permease_protein_MsbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002064.2">BGC0002064.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>33.0</td>
+              <td>40.0</td>
+              <td>108.0</td>
+              <td>2.05e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AHI77484.1</td>
+              <td>ABC_transporter_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000572.5">BGC0000572.5</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>28.0</td>
+              <td>57.3</td>
+              <td>107.0</td>
+              <td>2.96e-24</td>
+          </tr>
+    
+          <tr>
+              <td>CAA19962.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000551.5">BGC0000551.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>30.0</td>
+              <td>48.9</td>
+              <td>106.0</td>
+              <td>1.08e-23</td>
+          </tr>
+    
+          <tr>
+              <td>QGN18865.1</td>
+              <td>nsjT_ABC_transporter_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002323.2">BGC0002323.2</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>73.9</td>
+              <td>104.0</td>
+              <td>2.08e-23</td>
+          </tr>
+    
+          <tr>
+              <td>BAG19223.1</td>
+              <td>membrane_translocator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000496.5">BGC0000496.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>34.0</td>
+              <td>37.6</td>
+              <td>102.0</td>
+              <td>1.4e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CBF73441.1</td>
+              <td>ABC_transporter_(Eurofung)</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001515.4">BGC0001515.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>37.2</td>
+              <td>103.0</td>
+              <td>1.55e-22</td>
+          </tr>
+    
+          <tr>
+              <td>CQR60039.1</td>
+              <td>Lactococcin_transport/processing_ATP-binding_protein_LcnC-like</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002289.2">BGC0002289.2</a></td>
+              <td>ribosomal:RiPP:Lasso peptide</td>
+              <td>33.0</td>
+              <td>38.9</td>
+              <td>99.0</td>
+              <td>2.14e-21</td>
+          </tr>
+    
+          <tr>
+              <td>EOO99818.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001861.4">BGC0001861.4</a></td>
+              <td>ribosomal:RiPP:Glycocin</td>
+              <td>25.0</td>
+              <td>49.1</td>
+              <td>99.0</td>
+              <td>2.73e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAR87968.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002674.2">BGC0002674.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>21.0</td>
+              <td>89.9</td>
+              <td>96.0</td>
+              <td>2.54e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAA19963.1</td>
+              <td>putative_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000551.5">BGC0000551.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>31.0</td>
+              <td>38.8</td>
+              <td>96.0</td>
+              <td>2.86e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAC60277.1</td>
+              <td>RumT_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000545.5">BGC0000545.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>25.0</td>
+              <td>37.9</td>
+              <td>86.0</td>
+              <td>4.99e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAY28215.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000074.5">BGC0000074.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>34.8</td>
+              <td>74.0</td>
+              <td>1.86e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AOT85881.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001787.3">BGC0001787.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>28.0</td>
+              <td>42.2</td>
+              <td>76.0</td>
+              <td>4.04e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QYZ85382.1</td>
+              <td>DisT</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002635.2">BGC0002635.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>28.0</td>
+              <td>40.5</td>
+              <td>71.0</td>
+              <td>6.72e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AFO93372.1</td>
+              <td>ABC_transporter,_ATP-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000932.5">BGC0000932.5</a></td>
+              <td>other:other</td>
+              <td>30.0</td>
+              <td>40.3</td>
+              <td>71.0</td>
+              <td>1.95e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AFP87531.1</td>
+              <td>ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001159.5">BGC0001159.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>38.9</td>
+              <td>67.0</td>
+              <td>6.44e-12</td>
+          </tr>
+    
+          <tr>
+              <td>Achr_RS19535</td>
+              <td>cyclic_peptide_export_ABC_transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002001.3">BGC0002001.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>22.0</td>
+              <td>97.4</td>
+              <td>68.0</td>
+              <td>1.54e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABV79989.1</td>
+              <td>ApnE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000301.5">BGC0000301.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>49.4</td>
+              <td>63.0</td>
+              <td>5.01e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAC69557.2</td>
+              <td>ATP_binding_protein_BviB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000486.4">BGC0000486.4</a></td>
+              <td>ribosomal:unmodified</td>
+              <td>25.0</td>
+              <td>33.6</td>
+              <td>54.0</td>
+              <td>1.16e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

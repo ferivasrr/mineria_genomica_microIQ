@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIE54227.1</td>
+              <td>PauY7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>96.7</td>
+              <td>263.0</td>
+              <td>4.82e-88</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54174.1</td>
+              <td>Pau7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>96.7</td>
+              <td>263.0</td>
+              <td>6.83e-88</td>
+          </tr>
+    
+          <tr>
+              <td>AHI59116.1</td>
+              <td>putative_2,5-diketo-D-gluconic_acid_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001005.5">BGC0001005.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>40.0</td>
+              <td>92.8</td>
+              <td>185.0</td>
+              <td>3.77e-57</td>
+          </tr>
+    
+          <tr>
+              <td>EIW83694.1</td>
+              <td>aldo-keto_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002707.2">BGC0002707.2</a></td>
+              <td>terpene</td>
+              <td>37.0</td>
+              <td>95.7</td>
+              <td>184.0</td>
+              <td>5.48e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AVY05504.1</td>
+              <td>alcohol_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001571.3">BGC0001571.3</a></td>
+              <td>terpene</td>
+              <td>35.0</td>
+              <td>99.3</td>
+              <td>159.0</td>
+              <td>5.97e-47</td>
+          </tr>
+    
+          <tr>
+              <td>ATY37595.1</td>
+              <td>BogH</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001532.4">BGC0001532.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>107.2</td>
+              <td>102.0</td>
+              <td>5.34e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ACX83630.1</td>
+              <td>putative_aldo/keto_reductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000221.5">BGC0000221.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>62.3</td>
+              <td>72.0</td>
+              <td>3.03e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

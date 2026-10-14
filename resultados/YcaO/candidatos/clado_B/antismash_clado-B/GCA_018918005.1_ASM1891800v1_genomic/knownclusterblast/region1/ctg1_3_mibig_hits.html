@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>MBV7329461.1</td>
+              <td>glycosyl_transferase_family_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002131.4">BGC0002131.4</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>35.0</td>
+              <td>100.5</td>
+              <td>213.0</td>
+              <td>4.78e-65</td>
+          </tr>
+    
+          <tr>
+              <td>MBV7329457.1</td>
+              <td>glycosyl_transferase_family_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002131.4">BGC0002131.4</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>32.0</td>
+              <td>102.7</td>
+              <td>207.0</td>
+              <td>1.82e-62</td>
+          </tr>
+    
+          <tr>
+              <td>MBV7329456.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002131.4">BGC0002131.4</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>31.0</td>
+              <td>101.7</td>
+              <td>194.0</td>
+              <td>1.09e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AAM70348.1</td>
+              <td>CalG2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>99.3</td>
+              <td>141.0</td>
+              <td>9.92e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AJO72740.1</td>
+              <td>MGT_family_glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001381.5">BGC0001381.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>101.0</td>
+              <td>132.0</td>
+              <td>1.44e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAM70365.1</td>
+              <td>CalG4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>100.0</td>
+              <td>130.0</td>
+              <td>1.34e-33</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76501.1</td>
+              <td>putative_glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000085.5">BGC0000085.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>97.8</td>
+              <td>127.0</td>
+              <td>1.06e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59102.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001619.5">BGC0001619.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>99.3</td>
+              <td>127.0</td>
+              <td>1.22e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AKV71850.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001525.3">BGC0001525.3</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>101.5</td>
+              <td>117.0</td>
+              <td>4.94e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AOH72615.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001526.4">BGC0001526.4</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>48.1</td>
+              <td>108.0</td>
+              <td>7.15e-26</td>
+          </tr>
+    
+          <tr>
+              <td>AZF85915.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001963.2">BGC0001963.2</a></td>
+              <td>PKS:Type I</td>
+              <td>24.0</td>
+              <td>103.5</td>
+              <td>108.0</td>
+              <td>1.01e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAA14125.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000638.3">BGC0000638.3</a></td>
+              <td>terpene</td>
+              <td>24.0</td>
+              <td>103.5</td>
+              <td>107.0</td>
+              <td>3.56e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ARU81128.1</td>
+              <td>CylN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001566.3">BGC0001566.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>49.4</td>
+              <td>103.0</td>
+              <td>7.82e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AVI26396.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001800.4">BGC0001800.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>48.1</td>
+              <td>96.0</td>
+              <td>2.71e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ73147.1</td>
+              <td>zeaxanthin_glucosyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000642.3">BGC0000642.3</a></td>
+              <td>terpene</td>
+              <td>23.0</td>
+              <td>103.2</td>
+              <td>82.0</td>
+              <td>8.46e-17</td>
+          </tr>
+    
+          <tr>
+              <td>QWF78556.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002142.2">BGC0002142.2</a></td>
+              <td>PKS</td>
+              <td>31.0</td>
+              <td>41.6</td>
+              <td>74.0</td>
+              <td>5.69e-14</td>
+          </tr>
+    
+          <tr>
+              <td>QGJ79654.1</td>
+              <td>UDP-glucosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002552.2">BGC0002552.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>68.1</td>
+              <td>72.0</td>
+              <td>1.71e-13</td>
+          </tr>
+    
+          <tr>
+              <td>WP_143267813.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002011.3">BGC0002011.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>68.1</td>
+              <td>70.0</td>
+              <td>1.03e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AHA81982.1</td>
+              <td>Arm12</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000199.5">BGC0000199.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>28.0</td>
+              <td>35.4</td>
+              <td>59.0</td>
+              <td>4.87e-09</td>
+          </tr>
+    
+          <tr>
+              <td>EDY42548.2</td>
+              <td>glycosyltransferase_family_28_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000212.5">BGC0000212.5</a></td>
+              <td>PKS:Type II</td>
+              <td>30.0</td>
+              <td>33.2</td>
+              <td>56.0</td>
+              <td>4.95e-08</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030957341.1</td>
+              <td>DUF1205_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001852.4">BGC0001852.4</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>22.0</td>
+              <td>92.8</td>
+              <td>51.0</td>
+              <td>9.73e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
