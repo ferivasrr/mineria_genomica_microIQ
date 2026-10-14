@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACM07428.1</td>
+              <td>putative_glycosyl_transferase_family_2_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000645.3">BGC0000645.3</a></td>
+              <td>terpene</td>
+              <td>26.0</td>
+              <td>62.0</td>
+              <td>68.0</td>
+              <td>2.57e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAB88895.1</td>
+              <td>putative_glycosyl_transferase_PssF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000762.3">BGC0000762.3</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>24.3</td>
+              <td>50.0</td>
+              <td>1.14e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65926.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000341.5">BGC0000341.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>33.0</td>
+              <td>24.8</td>
+              <td>50.0</td>
+              <td>4.24e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ACO05915.1</td>
+              <td>CpsE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000763.5">BGC0000763.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>43.1</td>
+              <td>49.0</td>
+              <td>5.07e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ARA90614.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001610.5">BGC0001610.5</a></td>
+              <td>other:other</td>
+              <td>40.0</td>
+              <td>25.3</td>
+              <td>48.0</td>
+              <td>7.02e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AAB94868.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000868.5">BGC0000868.5</a></td>
+              <td>other:other</td>
+              <td>31.0</td>
+              <td>25.6</td>
+              <td>47.0</td>
+              <td>9.25e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

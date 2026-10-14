@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAB94865.1</td>
+              <td>UDP-glucose_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000868.5">BGC0000868.5</a></td>
+              <td>other:other</td>
+              <td>53.0</td>
+              <td>97.3</td>
+              <td>461.0</td>
+              <td>2.53e-160</td>
+          </tr>
+    
+          <tr>
+              <td>AAG26472.1</td>
+              <td>putative_UDP-glucose_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001411.3">BGC0001411.3</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>98.0</td>
+              <td>392.0</td>
+              <td>1.51e-133</td>
+          </tr>
+    
+          <tr>
+              <td>AGM05525.1</td>
+              <td>UDPglucose_6-dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002098.2">BGC0002098.2</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>98.9</td>
+              <td>323.0</td>
+              <td>2.43e-106</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44217.2</td>
+              <td>GdhgA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000362.5">BGC0000362.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>51.0</td>
+              <td>68.8</td>
+              <td>312.0</td>
+              <td>1.19e-103</td>
+          </tr>
+    
+          <tr>
+              <td>ADD45308.1</td>
+              <td>nucleotide_sugar_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000807.3">BGC0000807.3</a></td>
+              <td>saccharide</td>
+              <td>40.0</td>
+              <td>101.1</td>
+              <td>302.0</td>
+              <td>4.97e-98</td>
+          </tr>
+    
+          <tr>
+              <td>AAG06928.1</td>
+              <td>GDP-mannose_6-dehydrogenase_AlgD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000725.5">BGC0000725.5</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>80.9</td>
+              <td>207.0</td>
+              <td>1.15e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AWL83841.1</td>
+              <td>Ugd</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001947.2">BGC0001947.2</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>65.0</td>
+              <td>196.0</td>
+              <td>1.52e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ADB92561.1</td>
+              <td>CcbL</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001225.5">BGC0001225.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>97.1</td>
+              <td>143.0</td>
+              <td>9.31e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57197.1</td>
+              <td>putative_NDP-N-acetyl-D-galactosaminuronic_acid_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000760.5">BGC0000760.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>95.3</td>
+              <td>141.0</td>
+              <td>3.39e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAF08248.1</td>
+              <td>UDP-N-acetylglucosamine-2-epimerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000736.3">BGC0000736.3</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>97.5</td>
+              <td>141.0</td>
+              <td>3.76e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AAF67264.1</td>
+              <td>BcbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000735.3">BGC0000735.3</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>98.0</td>
+              <td>133.0</td>
+              <td>3.17e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AAK17910.1</td>
+              <td>UDP-N-acetyl-D-mannosaminuronic_acid_dehydrogenase_EcbB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000738.3">BGC0000738.3</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>93.3</td>
+              <td>129.0</td>
+              <td>1.09e-32</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

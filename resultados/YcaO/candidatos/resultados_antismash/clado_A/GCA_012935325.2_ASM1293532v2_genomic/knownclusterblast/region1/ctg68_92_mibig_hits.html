@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACN80642.1</td>
+              <td>SioE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000611.5">BGC0000611.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>34.0</td>
+              <td>100.5</td>
+              <td>149.0</td>
+              <td>8.92e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ACN52307.1</td>
+              <td>TsrQ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000614.5">BGC0000614.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>31.0</td>
+              <td>99.7</td>
+              <td>144.0</td>
+              <td>8.82e-39</td>
+          </tr>
+    
+          <tr>
+              <td>PYC80209.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001474.4">BGC0001474.4</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>34.0</td>
+              <td>100.8</td>
+              <td>142.0</td>
+              <td>2.79e-38</td>
+          </tr>
+    
+          <tr>
+              <td>QZS07513.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002362.3">BGC0002362.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>99.0</td>
+              <td>139.0</td>
+              <td>2.23e-37</td>
+          </tr>
+    
+          <tr>
+              <td>BAL92977.1</td>
+              <td>alkylresorcinol_hydroxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001077.4">BGC0001077.4</a></td>
+              <td>PKS:Type III</td>
+              <td>32.0</td>
+              <td>97.7</td>
+              <td>137.0</td>
+              <td>2.06e-36</td>
+          </tr>
+    
+          <tr>
+              <td>PYC67532.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001473.4">BGC0001473.4</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>32.0</td>
+              <td>92.7</td>
+              <td>134.0</td>
+              <td>1.98e-35</td>
+          </tr>
+    
+          <tr>
+              <td>WP_177231218.1</td>
+              <td>acyl-CoA_dehydrogenase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001471.5">BGC0001471.5</a></td>
+              <td>ribosomal:RiPP:Thiopeptide</td>
+              <td>32.0</td>
+              <td>101.0</td>
+              <td>132.0</td>
+              <td>1.21e-34</td>
+          </tr>
+    
+          <tr>
+              <td>ACB46491.1</td>
+              <td>FAD-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000082.5">BGC0000082.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>97.1</td>
+              <td>114.0</td>
+              <td>5.77e-28</td>
+          </tr>
+    
+          <tr>
+              <td>QLJ99345.1</td>
+              <td>acyl-CoA/acyl-ACP_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002088.3">BGC0002088.3</a></td>
+              <td>PKS+saccharide:oligosaccharide</td>
+              <td>29.0</td>
+              <td>95.6</td>
+              <td>114.0</td>
+              <td>6.58e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AFD30952.1</td>
+              <td>CrmI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000966.5">BGC0000966.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>87.5</td>
+              <td>96.0</td>
+              <td>2.02e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AFU65918.1</td>
+              <td>DacS6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000216.5">BGC0000216.5</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>95.1</td>
+              <td>96.0</td>
+              <td>2.68e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CCC55923.1</td>
+              <td>putative_acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000973.5">BGC0000973.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>87.3</td>
+              <td>93.0</td>
+              <td>1.77e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AEH41792.1</td>
+              <td>HrmN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000374.5">BGC0000374.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>27.0</td>
+              <td>84.7</td>
+              <td>87.0</td>
+              <td>2.17e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AJY78088.1</td>
+              <td>acyl-CoA_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001902.3">BGC0001902.3</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>88.6</td>
+              <td>72.0</td>
+              <td>1.2e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAU98045.1</td>
+              <td>FMNH2_dependent_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001386.5">BGC0001386.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>87.5</td>
+              <td>62.0</td>
+              <td>4.11e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54206.1</td>
+              <td>Pau39</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>89.9</td>
+              <td>61.0</td>
+              <td>5.42e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54259.1</td>
+              <td>PauY39</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>89.9</td>
+              <td>61.0</td>
+              <td>5.42e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ACI88867.1</td>
+              <td>AlnT_hydroxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000195.5">BGC0000195.5</a></td>
+              <td>PKS:Type II</td>
+              <td>29.0</td>
+              <td>46.0</td>
+              <td>59.0</td>
+              <td>3.33e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CAC44193.1</td>
+              <td>putative_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000194.5">BGC0000194.5</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>28.0</td>
+              <td>55.6</td>
+              <td>54.0</td>
+              <td>1.67e-07</td>
+          </tr>
+    
+          <tr>
+              <td>APR73641.1</td>
+              <td>hydroxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001625.5">BGC0001625.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>87.5</td>
+              <td>52.0</td>
+              <td>3.92e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46628.1</td>
+              <td>HrsG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001960.2">BGC0001960.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>46.5</td>
+              <td>52.0</td>
+              <td>3.92e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37884.1</td>
+              <td>AlnT_hydroxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001979.4">BGC0001979.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>54.5</td>
+              <td>50.0</td>
+              <td>2.13e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74291.1</td>
+              <td>TxnO8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>54.0</td>
+              <td>49.0</td>
+              <td>6.6e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

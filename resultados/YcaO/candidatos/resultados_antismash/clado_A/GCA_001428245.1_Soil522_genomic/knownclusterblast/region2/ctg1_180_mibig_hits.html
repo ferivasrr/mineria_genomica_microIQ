@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>APZ79619.1</td>
+              <td>FisE4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001595.3">BGC0001595.3</a></td>
+              <td>other:other</td>
+              <td>49.0</td>
+              <td>95.2</td>
+              <td>571.0</td>
+              <td>1.04e-197</td>
+          </tr>
+    
+          <tr>
+              <td>AHI58837.1</td>
+              <td>WelD2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000668.5">BGC0000668.5</a></td>
+              <td>terpene:Monoterpene+other:other</td>
+              <td>49.0</td>
+              <td>96.3</td>
+              <td>570.0</td>
+              <td>2.02e-197</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62775.1</td>
+              <td>AmbD2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001126.4">BGC0001126.4</a></td>
+              <td>terpene:Monoterpene+other:other</td>
+              <td>48.0</td>
+              <td>95.2</td>
+              <td>568.0</td>
+              <td>2.3e-196</td>
+          </tr>
+    
+          <tr>
+              <td>APB62261.1</td>
+              <td>1-deoxy-D-xylulose-5-phosphate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001612.3">BGC0001612.3</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>95.2</td>
+              <td>568.0</td>
+              <td>2.3e-196</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79598.1</td>
+              <td>FilE4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001501.5">BGC0001501.5</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>95.2</td>
+              <td>565.0</td>
+              <td>1.85e-195</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79565.1</td>
+              <td>FimE4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001594.3">BGC0001594.3</a></td>
+              <td>other:other</td>
+              <td>48.0</td>
+              <td>95.2</td>
+              <td>565.0</td>
+              <td>1.85e-195</td>
+          </tr>
+    
+          <tr>
+              <td>AGO55051.1</td>
+              <td>1-deoxy-D-xylulose-5-phosphate_synthase_Dxs</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001361.3">BGC0001361.3</a></td>
+              <td>terpene</td>
+              <td>46.0</td>
+              <td>94.5</td>
+              <td>495.0</td>
+              <td>1.6e-168</td>
+          </tr>
+    
+          <tr>
+              <td>RKS65046.1</td>
+              <td>1-deoxy-D-xylulose-5-phosphate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002283.2">BGC0002283.2</a></td>
+              <td>terpene</td>
+              <td>46.0</td>
+              <td>94.5</td>
+              <td>492.0</td>
+              <td>2.57e-167</td>
+          </tr>
+    
+          <tr>
+              <td>ARM20257.1</td>
+              <td>SauM3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002591.2">BGC0002591.2</a></td>
+              <td>PKS+terpene</td>
+              <td>44.0</td>
+              <td>95.5</td>
+              <td>479.0</td>
+              <td>1.22e-161</td>
+          </tr>
+    
+          <tr>
+              <td>CAB39701.1</td>
+              <td>probable_transketolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000663.5">BGC0000663.5</a></td>
+              <td>terpene</td>
+              <td>44.0</td>
+              <td>96.1</td>
+              <td>463.0</td>
+              <td>1.91e-155</td>
+          </tr>
+    
+          <tr>
+              <td>AFK78071.1</td>
+              <td>XiaE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000666.5">BGC0000666.5</a></td>
+              <td>terpene:Sesquiterpene</td>
+              <td>42.0</td>
+              <td>94.9</td>
+              <td>434.0</td>
+              <td>9.85e-145</td>
+          </tr>
+    
+          <tr>
+              <td>CCH63728.1</td>
+              <td>XiaB_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000665.5">BGC0000665.5</a></td>
+              <td>terpene:Sesquiterpene+other:other</td>
+              <td>42.0</td>
+              <td>94.9</td>
+              <td>433.0</td>
+              <td>1.96e-144</td>
+          </tr>
+    
+          <tr>
+              <td>ACO31286.1</td>
+              <td>PtmM3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001140.5">BGC0001140.5</a></td>
+              <td>terpene:Diterpene</td>
+              <td>42.0</td>
+              <td>94.8</td>
+              <td>419.0</td>
+              <td>2.78e-139</td>
+          </tr>
+    
+          <tr>
+              <td>ADD83001.1</td>
+              <td>PtnM3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001156.5">BGC0001156.5</a></td>
+              <td>terpene:Diterpene</td>
+              <td>42.0</td>
+              <td>94.6</td>
+              <td>418.0</td>
+              <td>1.11e-138</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69756.1</td>
+              <td>PlaT6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000654.4">BGC0000654.4</a></td>
+              <td>terpene:Diterpene+saccharide:hybrid/tailoring</td>
+              <td>40.0</td>
+              <td>96.0</td>
+              <td>409.0</td>
+              <td>5.19e-135</td>
+          </tr>
+    
+          <tr>
+              <td>BAF98621.1</td>
+              <td>putative_1-deoxy-D-xylulose-5-phosphate_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000651.5">BGC0000651.5</a></td>
+              <td>terpene</td>
+              <td>39.0</td>
+              <td>73.2</td>
+              <td>321.0</td>
+              <td>3.43e-101</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65921.1</td>
+              <td>DXP_synthase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000341.5">BGC0000341.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>59.2</td>
+              <td>262.0</td>
+              <td>8.22e-81</td>
+          </tr>
+    
+          <tr>
+              <td>ABY83156.1</td>
+              <td>Azi17</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000960.5">BGC0000960.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>42.2</td>
+              <td>95.0</td>
+              <td>9.93e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AQW44883.1</td>
+              <td>phenylpyruvate_dehydrogenase_complex,_E1_component,_subunit_beta</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001761.3">BGC0001761.3</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>37.8</td>
+              <td>81.0</td>
+              <td>2.61e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ANC94991.1</td>
+              <td>AlmDII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001396.5">BGC0001396.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>41.8</td>
+              <td>78.0</td>
+              <td>3.47e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54232.1</td>
+              <td>PauY12</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>41.8</td>
+              <td>74.0</td>
+              <td>6.3e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54179.1</td>
+              <td>Pau12</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>39.9</td>
+              <td>74.0</td>
+              <td>8.42e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52687.1</td>
+              <td>pyruvate_dehydrogenase_beta-subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001073.5">BGC0001073.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>34.4</td>
+              <td>72.0</td>
+              <td>3.57e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AYU66268.1</td>
+              <td>TjhB10</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002461.2">BGC0002461.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>34.7</td>
+              <td>72.0</td>
+              <td>4.77e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74258.1</td>
+              <td>TxnB4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>39.9</td>
+              <td>66.0</td>
+              <td>4.91e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

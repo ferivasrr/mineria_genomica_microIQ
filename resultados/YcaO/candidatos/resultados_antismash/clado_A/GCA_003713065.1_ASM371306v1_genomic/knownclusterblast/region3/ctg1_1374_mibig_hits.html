@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARA90614.1</td>
+              <td>glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001610.5">BGC0001610.5</a></td>
+              <td>other:other</td>
+              <td>29.0</td>
+              <td>75.5</td>
+              <td>100.0</td>
+              <td>2.92e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AAB94868.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000868.5">BGC0000868.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>26.5</td>
+              <td>62.0</td>
+              <td>1.02e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ACO05915.1</td>
+              <td>CpsE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000763.5">BGC0000763.5</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>24.2</td>
+              <td>55.0</td>
+              <td>5.6e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CAD19793.1</td>
+              <td>putative_glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000777.3">BGC0000777.3</a></td>
+              <td>saccharide</td>
+              <td>39.0</td>
+              <td>22.7</td>
+              <td>54.0</td>
+              <td>6.71e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ADG29291.1</td>
+              <td>putative_family_2_glycosyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000796.3">BGC0000796.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>25.0</td>
+              <td>55.0</td>
+              <td>1.29e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAC55140.1</td>
+              <td>EpsJ</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000761.5">BGC0000761.5</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>22.5</td>
+              <td>52.0</td>
+              <td>5.05e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAB88895.1</td>
+              <td>putative_glycosyl_transferase_PssF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000762.3">BGC0000762.3</a></td>
+              <td>saccharide</td>
+              <td>36.0</td>
+              <td>23.2</td>
+              <td>52.0</td>
+              <td>5.36e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

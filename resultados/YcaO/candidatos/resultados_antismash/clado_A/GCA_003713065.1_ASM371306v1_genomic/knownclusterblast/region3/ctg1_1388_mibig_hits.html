@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGZ15444.1</td>
+              <td>MarR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001036.5">BGC0001036.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>41.0</td>
+              <td>89.6</td>
+              <td>84.0</td>
+              <td>4.35e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69766.1</td>
+              <td>PlaR3</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000654.4">BGC0000654.4</a></td>
+              <td>terpene:Diterpene+saccharide:hybrid/tailoring</td>
+              <td>41.0</td>
+              <td>87.7</td>
+              <td>79.0</td>
+              <td>3.17e-20</td>
+          </tr>
+    
+          <tr>
+              <td>QIJ31503.1</td>
+              <td>SgdU8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002545.3">BGC0002545.3</a></td>
+              <td>PKS</td>
+              <td>38.0</td>
+              <td>82.1</td>
+              <td>54.0</td>
+              <td>9.05e-10</td>
+          </tr>
+    
+          <tr>
+              <td>SCL57541.1</td>
+              <td>transcriptional_regulator,_HxlR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002387.2">BGC0002387.2</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>89.6</td>
+              <td>54.0</td>
+              <td>1.65e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ACB47051.1</td>
+              <td>DynU8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001060.5">BGC0001060.5</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>95.3</td>
+              <td>52.0</td>
+              <td>5.77e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94775.1</td>
+              <td>CalU8</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>89.6</td>
+              <td>52.0</td>
+              <td>8.68e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAM78017.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000112.5">BGC0000112.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>30.0</td>
+              <td>90.6</td>
+              <td>45.0</td>
+              <td>1.38e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

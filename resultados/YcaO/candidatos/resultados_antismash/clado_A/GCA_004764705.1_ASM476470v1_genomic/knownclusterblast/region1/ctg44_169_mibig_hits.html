@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ARU08062.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001448.5">BGC0001448.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>98.6</td>
+              <td>186.0</td>
+              <td>4.8e-57</td>
+          </tr>
+    
+          <tr>
+              <td>AAN85484.1</td>
+              <td>RNA_polymerase_ECF-type_sigma_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001101.5">BGC0001101.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>36.0</td>
+              <td>98.3</td>
+              <td>170.0</td>
+              <td>5.96e-51</td>
+          </tr>
+    
+          <tr>
+              <td>PHM31512.1</td>
+              <td>RNA_polymerase_factor_sigma-70</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001868.4">BGC0001868.4</a></td>
+              <td>other:phenazine</td>
+              <td>29.0</td>
+              <td>99.0</td>
+              <td>144.0</td>
+              <td>1.04e-40</td>
+          </tr>
+    
+          <tr>
+              <td>WP_040253470.1</td>
+              <td>sigma-70_family_RNA_polymerase_sigma_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001596.3">BGC0001596.3</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>26.0</td>
+              <td>99.3</td>
+              <td>91.0</td>
+              <td>7e-21</td>
+          </tr>
+    
+          <tr>
+              <td>AIT42114.1</td>
+              <td>putative_sigma_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001221.5">BGC0001221.5</a></td>
+              <td>other:phenazine</td>
+              <td>26.0</td>
+              <td>107.2</td>
+              <td>86.0</td>
+              <td>5.32e-19</td>
+          </tr>
+    
+          <tr>
+              <td>ATV95614.1</td>
+              <td>RNA_polymerase_sigma-70_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001503.4">BGC0001503.4</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>78.8</td>
+              <td>60.0</td>
+              <td>7.13e-10</td>
+          </tr>
+    
+          <tr>
+              <td>QDA77038.1</td>
+              <td>ECF_subfamily_RNA_polymerase_sigma-24_subunit</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002025.4">BGC0002025.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>26.0</td>
+              <td>55.5</td>
+              <td>48.0</td>
+              <td>2.8e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

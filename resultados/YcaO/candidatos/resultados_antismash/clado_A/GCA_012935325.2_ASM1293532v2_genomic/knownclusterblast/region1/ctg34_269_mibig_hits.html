@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAU39365.1</td>
+              <td>4&#39;-phosphopantetheinyl_transferase_Sfp</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000381.5">BGC0000381.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>45.0</td>
+              <td>93.9</td>
+              <td>172.0</td>
+              <td>1.02e-53</td>
+          </tr>
+    
+          <tr>
+              <td>BAH43769.1</td>
+              <td>probable_4&#39;-phosphopantetheinyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000452.5">BGC0000452.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>100.4</td>
+              <td>162.0</td>
+              <td>1.9e-49</td>
+          </tr>
+    
+          <tr>
+              <td>CUX79059.1</td>
+              <td>4&#39;-phosphopantetheinyl_transferase_sfp</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001715.4">BGC0001715.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>40.0</td>
+              <td>95.6</td>
+              <td>159.0</td>
+              <td>2.54e-48</td>
+          </tr>
+    
+          <tr>
+              <td>CAE02638.1</td>
+              <td>Sfp_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000433.5">BGC0000433.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>95.2</td>
+              <td>157.0</td>
+              <td>7.19e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ14792.1</td>
+              <td>PlpC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000403.5">BGC0000403.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>39.0</td>
+              <td>95.6</td>
+              <td>155.0</td>
+              <td>1.01e-46</td>
+          </tr>
+    
+          <tr>
+              <td>ACM79813.1</td>
+              <td>ZmaS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001059.5">BGC0001059.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>42.0</td>
+              <td>83.4</td>
+              <td>140.0</td>
+              <td>1.57e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ABD14709.1</td>
+              <td>CesP</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000320.5">BGC0000320.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>38.0</td>
+              <td>79.5</td>
+              <td>105.0</td>
+              <td>2.49e-27</td>
+          </tr>
+    
+          <tr>
+              <td>ADD82950.1</td>
+              <td>BatI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001099.5">BGC0001099.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>32.0</td>
+              <td>93.0</td>
+              <td>88.0</td>
+              <td>1.51e-20</td>
+          </tr>
+    
+          <tr>
+              <td>WP_008704340.1</td>
+              <td>4&#39;-phosphopantetheinyl_transferase_superfamily_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001575.4">BGC0001575.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>31.0</td>
+              <td>66.8</td>
+              <td>81.0</td>
+              <td>2.41e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAM12928.2</td>
+              <td>MupN</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000182.5">BGC0000182.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>39.0</td>
+              <td>48.0</td>
+              <td>81.0</td>
+              <td>5.1e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ACI12946.1</td>
+              <td>4&#39;-phosphopantetheinyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000861.5">BGC0000861.5</a></td>
+              <td>other:other</td>
+              <td>32.0</td>
+              <td>79.5</td>
+              <td>78.0</td>
+              <td>1.09e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAB81120.1</td>
+              <td>unknown</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000862.3">BGC0000862.3</a></td>
+              <td>other:other</td>
+              <td>33.0</td>
+              <td>61.6</td>
+              <td>77.0</td>
+              <td>1.65e-16</td>
+          </tr>
+    
+          <tr>
+              <td>MCI2961732.1</td>
+              <td>4&#39;-phosphopantetheinyl_transferase_superfamily_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002648.2">BGC0002648.2</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>58.1</td>
+              <td>77.0</td>
+              <td>2.08e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ABF00130.1</td>
+              <td>polyunsaturated_fatty_acid_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000863.3">BGC0000863.3</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>57.6</td>
+              <td>69.0</td>
+              <td>3.7e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

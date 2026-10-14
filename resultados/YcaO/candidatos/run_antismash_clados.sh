@@ -13,9 +13,9 @@ THREADS=4
 echo "Iniciando análisis masivo con antiSMASH..."
 
 # Recorrer la carpeta del clado
-for dir in clado_D/fastas_clado_D; do
+for dir in clado_A/fastas_clado_A; do
     if [ -d "$dir" ]; then
-        clado_name="clado_D"
+        clado_name="clado_A"
         echo ""
         echo "--------------------------------------------------"
         echo ">>> CLADO ACTUAL: $clado_name"

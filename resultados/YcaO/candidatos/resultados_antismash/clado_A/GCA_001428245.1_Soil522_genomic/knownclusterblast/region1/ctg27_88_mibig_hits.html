@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BCB17058.1</td>
+              <td>putative_glucose-1-phosphateadenylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002523.2">BGC0002523.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>87.1</td>
+              <td>211.0</td>
+              <td>1.58e-64</td>
+          </tr>
+    
+          <tr>
+              <td>ASZ00138.1</td>
+              <td>glucose-1-phosphate_adenylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001785.5">BGC0001785.5</a></td>
+              <td>PKS</td>
+              <td>37.0</td>
+              <td>87.1</td>
+              <td>209.0</td>
+              <td>1.43e-63</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ91668.1</td>
+              <td>putative_adenyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000701.5">BGC0000701.5</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>84.3</td>
+              <td>167.0</td>
+              <td>4.91e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ABA41507.1</td>
+              <td>glucose-1-phosphate_adenylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000722.5">BGC0000722.5</a></td>
+              <td>other:cyclitol+saccharide</td>
+              <td>34.0</td>
+              <td>84.5</td>
+              <td>167.0</td>
+              <td>4.91e-48</td>
+          </tr>
+    
+          <tr>
+              <td>ABC67266.1</td>
+              <td>putative_nucleotidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000723.5">BGC0000723.5</a></td>
+              <td>other:cyclitol+saccharide</td>
+              <td>34.0</td>
+              <td>84.5</td>
+              <td>167.0</td>
+              <td>4.91e-48</td>
+          </tr>
+    
+          <tr>
+              <td>EHN79460.1</td>
+              <td>putative_1-epi-valienol-1,7-bisphosphate-1-adenylyltransferase_ScatR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000804.5">BGC0000804.5</a></td>
+              <td>saccharide</td>
+              <td>32.0</td>
+              <td>83.0</td>
+              <td>155.0</td>
+              <td>1.45e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AEW21762.1</td>
+              <td>nucleotidyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001651.3">BGC0001651.3</a></td>
+              <td>other:other</td>
+              <td>25.0</td>
+              <td>62.1</td>
+              <td>86.0</td>
+              <td>2.05e-18</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88617.1</td>
+              <td>putative_nucleoside-diphosphate-sugar_pyrophosphorylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000327.5">BGC0000327.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>30.0</td>
+              <td>62.6</td>
+              <td>84.0</td>
+              <td>3.85e-18</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94427.1</td>
+              <td>dNTP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001584.5">BGC0001584.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>65.5</td>
+              <td>85.0</td>
+              <td>7.6e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35040.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>22.0</td>
+              <td>95.4</td>
+              <td>82.0</td>
+              <td>8.48e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAS55725.1</td>
+              <td>glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000795.3">BGC0000795.3</a></td>
+              <td>saccharide</td>
+              <td>32.0</td>
+              <td>65.5</td>
+              <td>81.0</td>
+              <td>9.39e-17</td>
+          </tr>
+    
+          <tr>
+              <td>EFG04606.1</td>
+              <td>Staurosporine_biosynthesis_glucose-1-phosphate_thymidyltransferase_StaA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000826.5">BGC0000826.5</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>68.3</td>
+              <td>82.0</td>
+              <td>1.08e-16</td>
+          </tr>
+    
+          <tr>
+              <td>TXD00021.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001877.4">BGC0001877.4</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>65.2</td>
+              <td>81.0</td>
+              <td>1.15e-16</td>
+          </tr>
+    
+          <tr>
+              <td>QBF51764.1</td>
+              <td>glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001856.4">BGC0001856.4</a></td>
+              <td>PKS:Type I</td>
+              <td>25.0</td>
+              <td>65.2</td>
+              <td>81.0</td>
+              <td>1.17e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06657.1</td>
+              <td>dNTP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000965.5">BGC0000965.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>27.0</td>
+              <td>66.0</td>
+              <td>81.0</td>
+              <td>1.55e-16</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98421.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001397.5">BGC0001397.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>66.0</td>
+              <td>81.0</td>
+              <td>1.55e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAL15609.1</td>
+              <td>Sim23</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000270.5">BGC0000270.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>64.4</td>
+              <td>79.0</td>
+              <td>5.18e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AAR99610.1</td>
+              <td>glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000794.5">BGC0000794.5</a></td>
+              <td>saccharide</td>
+              <td>31.0</td>
+              <td>66.0</td>
+              <td>79.0</td>
+              <td>5.43e-16</td>
+          </tr>
+    
+          <tr>
+              <td>BAD08355.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000167.5">BGC0000167.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>68.0</td>
+              <td>79.0</td>
+              <td>9.3e-16</td>
+          </tr>
+    
+          <tr>
+              <td>BAC79029.1</td>
+              <td>NDP-1-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000245.5">BGC0000245.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>67.8</td>
+              <td>78.0</td>
+              <td>1.24e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAP34715.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000078.5">BGC0000078.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>67.3</td>
+              <td>78.0</td>
+              <td>1.25e-15</td>
+          </tr>
+    
+          <tr>
+              <td>QLJ99322.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002088.3">BGC0002088.3</a></td>
+              <td>PKS+saccharide:oligosaccharide</td>
+              <td>25.0</td>
+              <td>68.3</td>
+              <td>78.0</td>
+              <td>1.25e-15</td>
+          </tr>
+    
+          <tr>
+              <td>QKI29066.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002130.3">BGC0002130.3</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>26.0</td>
+              <td>65.7</td>
+              <td>78.0</td>
+              <td>1.25e-15</td>
+          </tr>
+    
+          <tr>
+              <td>UHH90007.1</td>
+              <td>VicA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002634.2">BGC0002634.2</a></td>
+              <td>PKS+NRPS:Type I+other:other</td>
+              <td>24.0</td>
+              <td>65.7</td>
+              <td>77.0</td>
+              <td>2.27e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ52691.1</td>
+              <td>putative_glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000222.5">BGC0000222.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>66.2</td>
+              <td>77.0</td>
+              <td>4.12e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAK83195.1</td>
+              <td>putative_dTDP_glucose_synthetase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000026.5">BGC0000026.5</a></td>
+              <td>saccharide:oligosaccharide</td>
+              <td>25.0</td>
+              <td>67.8</td>
+              <td>76.0</td>
+              <td>7.46e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAP69577.1</td>
+              <td>putative_NDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000226.5">BGC0000226.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>65.7</td>
+              <td>76.0</td>
+              <td>7.46e-15</td>
+          </tr>
+    
+          <tr>
+              <td>BAQ21964.1</td>
+              <td>putative_glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001204.5">BGC0001204.5</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>79.1</td>
+              <td>75.0</td>
+              <td>1.35e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CAI94732.1</td>
+              <td>putative_TDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000141.5">BGC0000141.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>66.2</td>
+              <td>74.0</td>
+              <td>3.06e-14</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43509.1</td>
+              <td>NDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001409.5">BGC0001409.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>86.3</td>
+              <td>74.0</td>
+              <td>4.38e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CAA09637.1</td>
+              <td>putative_dTDP-1-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000227.5">BGC0000227.5</a></td>
+              <td>PKS:Type II</td>
+              <td>26.0</td>
+              <td>65.5</td>
+              <td>73.0</td>
+              <td>7.84e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50774.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000247.5">BGC0000247.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>23.0</td>
+              <td>84.3</td>
+              <td>72.0</td>
+              <td>1.07e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAG22759.1</td>
+              <td>putative_glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000724.5">BGC0000724.5</a></td>
+              <td>saccharide</td>
+              <td>23.0</td>
+              <td>65.7</td>
+              <td>72.0</td>
+              <td>1.43e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAV17010.1</td>
+              <td>dNDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001384.5">BGC0001384.5</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>69.3</td>
+              <td>72.0</td>
+              <td>1.92e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAG50457.1</td>
+              <td>glucose-1-phosphate-thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000780.3">BGC0000780.3</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>64.2</td>
+              <td>71.0</td>
+              <td>2.71e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAI23331.1</td>
+              <td>putative_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000949.5">BGC0000949.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>66.2</td>
+              <td>71.0</td>
+              <td>3.48e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54190.1</td>
+              <td>Pau23</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001731.5">BGC0001731.5</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>65.7</td>
+              <td>70.0</td>
+              <td>3.7e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54243.1</td>
+              <td>PauY23</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001732.5">BGC0001732.5</a></td>
+              <td>other:other</td>
+              <td>28.0</td>
+              <td>65.7</td>
+              <td>70.0</td>
+              <td>3.7e-13</td>
+          </tr>
+    
+          <tr>
+              <td>QHZ32181.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002047.2">BGC0002047.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>64.2</td>
+              <td>70.0</td>
+              <td>3.7e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACN39732.1</td>
+              <td>SibI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000428.5">BGC0000428.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>64.2</td>
+              <td>70.0</td>
+              <td>5.32e-13</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ19062.1</td>
+              <td>putative_glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000288.5">BGC0000288.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>25.0</td>
+              <td>65.5</td>
+              <td>70.0</td>
+              <td>6.25e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AXH03893.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001894.2">BGC0001894.2</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>65.5</td>
+              <td>69.0</td>
+              <td>6.72e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACN29713.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000814.3">BGC0000814.3</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>67.3</td>
+              <td>70.0</td>
+              <td>8.29e-13</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32799.1</td>
+              <td>putative_NDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000263.5">BGC0000263.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>65.5</td>
+              <td>70.0</td>
+              <td>8.34e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AWR88415.1</td>
+              <td>putative_glucose-1-phosphate_adenylyl/_thymidylyltransferas_e</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001522.5">BGC0001522.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>65.7</td>
+              <td>70.0</td>
+              <td>8.38e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ABB05097.1</td>
+              <td>LipDig1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001003.5">BGC0001003.5</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>30.0</td>
+              <td>64.7</td>
+              <td>69.0</td>
+              <td>1.22e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABC02794.1</td>
+              <td>putative_sugar_activating_enzyme</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000809.3">BGC0000809.3</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>65.7</td>
+              <td>69.0</td>
+              <td>1.47e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64840.1</td>
+              <td>PokS1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001061.4">BGC0001061.4</a></td>
+              <td>PKS:Type II aromatic</td>
+              <td>25.0</td>
+              <td>77.8</td>
+              <td>69.0</td>
+              <td>1.49e-12</td>
+          </tr>
+    
+          <tr>
+              <td>QIQ28620.1</td>
+              <td>Nbc24</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002541.2">BGC0002541.2</a></td>
+              <td>other:other</td>
+              <td>25.0</td>
+              <td>65.7</td>
+              <td>69.0</td>
+              <td>2.01e-12</td>
+          </tr>
+    
+          <tr>
+              <td>sipS7</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001452.5">BGC0001452.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>65.7</td>
+              <td>68.0</td>
+              <td>2.7e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAD05455.1</td>
+              <td>putative_glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000782.3">BGC0000782.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>67.0</td>
+              <td>3.21e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CBH32098.1</td>
+              <td>putative_glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000211.5">BGC0000211.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>65.5</td>
+              <td>68.0</td>
+              <td>3.6e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CBA11572.1</td>
+              <td>NDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001046.5">BGC0001046.5</a></td>
+              <td>NRPS:Type I+PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>65.5</td>
+              <td>68.0</td>
+              <td>3.6e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABK27314.1</td>
+              <td>RfbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000790.3">BGC0000790.3</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>66.0</td>
+              <td>67.0</td>
+              <td>4.06e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ABX51873.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000791.3">BGC0000791.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>65.5</td>
+              <td>67.0</td>
+              <td>4.06e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAK27392.1</td>
+              <td>putative_glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000785.3">BGC0000785.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>67.0</td>
+              <td>4.32e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAE17529.1</td>
+              <td>NDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000210.5">BGC0000210.5</a></td>
+              <td>PKS:Type II+saccharide:oligosaccharide</td>
+              <td>24.0</td>
+              <td>67.3</td>
+              <td>67.0</td>
+              <td>4.82e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AUA09469.1</td>
+              <td>Glucose-1-phosphate_thymidylyltransferase_2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002291.3">BGC0002291.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>67.0</td>
+              <td>5.46e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00784.1</td>
+              <td>glucose-1-phosphate_thythymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001568.5">BGC0001568.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>67.0</td>
+              <td>5.51e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf5</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000053.5">BGC0000053.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>67.0</td>
+              <td>6.67e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAC35920.1</td>
+              <td>putative_glucose-1-phosphate_thymidyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000792.3">BGC0000792.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>63.9</td>
+              <td>66.0</td>
+              <td>7.22e-12</td>
+          </tr>
+    
+          <tr>
+              <td>WP_026281939.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase_RfbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001558.5">BGC0001558.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>66.0</td>
+              <td>7.42e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AAP42866.1</td>
+              <td>NanG1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000105.5">BGC0000105.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>66.0</td>
+              <td>8.15e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AXH03903.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001894.2">BGC0001894.2</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>65.5</td>
+              <td>66.0</td>
+              <td>9.8e-12</td>
+          </tr>
+    
+          <tr>
+              <td>KDN80037.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001074.5">BGC0001074.5</a></td>
+              <td>saccharide+PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>66.0</td>
+              <td>9.98e-12</td>
+          </tr>
+    
+          <tr>
+              <td>ANY10596.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001773.4">BGC0001773.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>66.0</td>
+              <td>9.98e-12</td>
+          </tr>
+    
+          <tr>
+              <td>EDN75906.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002302.2">BGC0002302.2</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>64.9</td>
+              <td>65.0</td>
+              <td>1.85e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QLD23488.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002085.3">BGC0002085.3</a></td>
+              <td>saccharide:oligosaccharide</td>
+              <td>25.0</td>
+              <td>65.2</td>
+              <td>66.0</td>
+              <td>2.07e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AFU65911.1</td>
+              <td>DacS1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000216.5">BGC0000216.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>65.2</td>
+              <td>66.0</td>
+              <td>2.36e-11</td>
+          </tr>
+    
+          <tr>
+              <td>WP_053138495.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase_RfbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002033.4">BGC0002033.4</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>63.1</td>
+              <td>65.0</td>
+              <td>2.45e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34515.1</td>
+              <td>SsfS1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000269.5">BGC0000269.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>24.0</td>
+              <td>65.7</td>
+              <td>65.0</td>
+              <td>2.76e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QVQ68780.1</td>
+              <td>mmyD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002129.4">BGC0002129.4</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>63.7</td>
+              <td>65.0</td>
+              <td>2.79e-11</td>
+          </tr>
+    
+          <tr>
+              <td>OWA25225.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001438.5">BGC0001438.5</a></td>
+              <td>PKS+saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>64.7</td>
+              <td>65.0</td>
+              <td>2.8e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ88197.1</td>
+              <td>putative_glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000151.5">BGC0000151.5</a></td>
+              <td>PKS:Type I+saccharide:hybrid/tailoring</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>64.0</td>
+              <td>3.23e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAC68682.1</td>
+              <td>alpha-D-glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000898.5">BGC0000898.5</a></td>
+              <td>saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>64.0</td>
+              <td>3.29e-11</td>
+          </tr>
+    
+          <tr>
+              <td>EDY42541.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000212.5">BGC0000212.5</a></td>
+              <td>PKS:Type II</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>64.0</td>
+              <td>4.38e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABV98193.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000827.3">BGC0000827.3</a></td>
+              <td>other:other</td>
+              <td>26.0</td>
+              <td>64.9</td>
+              <td>64.0</td>
+              <td>4.97e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AAC63614.1</td>
+              <td>RmlA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000773.3">BGC0000773.3</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>64.4</td>
+              <td>63.0</td>
+              <td>8.04e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AOZ61197.1</td>
+              <td>Glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001762.3">BGC0001762.3</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>63.9</td>
+              <td>63.0</td>
+              <td>1.05e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ADG29294.1</td>
+              <td>putative_glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000796.3">BGC0000796.3</a></td>
+              <td>saccharide</td>
+              <td>25.0</td>
+              <td>64.4</td>
+              <td>62.0</td>
+              <td>1.26e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAA16191.1</td>
+              <td>glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000774.4">BGC0000774.4</a></td>
+              <td>saccharide:lipopolysaccharide</td>
+              <td>28.0</td>
+              <td>66.2</td>
+              <td>62.0</td>
+              <td>1.47e-10</td>
+          </tr>
+    
+          <tr>
+              <td>QFU19847.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002431.3">BGC0002431.3</a></td>
+              <td>PKS+saccharide</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>62.0</td>
+              <td>1.6e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_19</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001931.2">BGC0001931.2</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>62.9</td>
+              <td>62.0</td>
+              <td>2.08e-10</td>
+          </tr>
+    
+          <tr>
+              <td>QKV49798.1</td>
+              <td>glucose-1-phosphate_adenylyl/thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002526.3">BGC0002526.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>64.2</td>
+              <td>62.0</td>
+              <td>2.08e-10</td>
+          </tr>
+    
+          <tr>
+              <td>CAA07386.1</td>
+              <td>StrD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000690.5">BGC0000690.5</a></td>
+              <td>saccharide</td>
+              <td>24.0</td>
+              <td>67.5</td>
+              <td>62.0</td>
+              <td>2.11e-10</td>
+          </tr>
+    
+          <tr>
+              <td>MUL41471.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase_RfbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002045.3">BGC0002045.3</a></td>
+              <td>PKS:Type II</td>
+              <td>28.0</td>
+              <td>64.7</td>
+              <td>62.0</td>
+              <td>2.75e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ABB69738.1</td>
+              <td>PlaA4</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000654.4">BGC0000654.4</a></td>
+              <td>terpene:Diterpene+saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>62.0</td>
+              <td>2.77e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AJO72746.1</td>
+              <td>Glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001381.5">BGC0001381.5</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>64.7</td>
+              <td>61.0</td>
+              <td>4.53e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61899.1</td>
+              <td>Lom65</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000240.5">BGC0000240.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>48.2</td>
+              <td>61.0</td>
+              <td>4.6e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BAB72036.1</td>
+              <td>AclY</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000191.5">BGC0000191.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>61.0</td>
+              <td>4.63e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ94397.1</td>
+              <td>TDP_glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000040.5">BGC0000040.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>75.8</td>
+              <td>61.0</td>
+              <td>5.02e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BBM96646.1</td>
+              <td>glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002452.2">BGC0002452.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>61.0</td>
+              <td>5.02e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AVO00809.1</td>
+              <td>May10</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001661.5">BGC0001661.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>64.2</td>
+              <td>61.0</td>
+              <td>6.07e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ABW87811.1</td>
+              <td>SpcD</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000715.5">BGC0000715.5</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>48.5</td>
+              <td>61.0</td>
+              <td>6.21e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AKA59080.1</td>
+              <td>NDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001619.5">BGC0001619.5</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>61.0</td>
+              <td>6.4e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAF67515.1</td>
+              <td>NovV</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000834.5">BGC0000834.5</a></td>
+              <td>saccharide:hybrid/tailoring+other:aminocoumarin</td>
+              <td>26.0</td>
+              <td>48.7</td>
+              <td>61.0</td>
+              <td>6.49e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AAF73461.1</td>
+              <td>putative_dTDP-1-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000193.3">BGC0000193.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>64.7</td>
+              <td>60.0</td>
+              <td>1.12e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ACK77763.1</td>
+              <td>putative_NDP-glucose_phosphate_nucleotidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000727.3">BGC0000727.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>64.2</td>
+              <td>60.0</td>
+              <td>1.22e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAU93787.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000054.5">BGC0000054.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>64.4</td>
+              <td>59.0</td>
+              <td>1.56e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QDQ37914.1</td>
+              <td>glucose-1-P_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001979.4">BGC0001979.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>63.9</td>
+              <td>59.0</td>
+              <td>2.02e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QLQ40538.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase_RfbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002097.3">BGC0002097.3</a></td>
+              <td>NRPS:Type I+PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>25.0</td>
+              <td>64.9</td>
+              <td>59.0</td>
+              <td>2.71e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ABM21420.1</td>
+              <td>sugar_biosynthesis_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000766.3">BGC0000766.3</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>64.2</td>
+              <td>59.0</td>
+              <td>2.75e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AKT74256.1</td>
+              <td>TxnB2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002141.3">BGC0002141.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>63.9</td>
+              <td>58.0</td>
+              <td>3.58e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AAD40709.1</td>
+              <td>glucose-1-phosphate_thymidyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001412.3">BGC0001412.3</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>66.2</td>
+              <td>58.0</td>
+              <td>3.71e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70909.1</td>
+              <td>dTDP-1-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001693.3">BGC0001693.3</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>48.2</td>
+              <td>58.0</td>
+              <td>4.8e-09</td>
+          </tr>
+    
+          <tr>
+              <td>CAB65204.1</td>
+              <td>RmlA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000775.3">BGC0000775.3</a></td>
+              <td>saccharide</td>
+              <td>24.0</td>
+              <td>65.5</td>
+              <td>57.0</td>
+              <td>6.48e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAQ25480.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001288.5">BGC0001288.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>64.2</td>
+              <td>57.0</td>
+              <td>8.68e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71460.1</td>
+              <td>putative_TDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000203.3">BGC0000203.3</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>63.9</td>
+              <td>57.0</td>
+              <td>8.9e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAL90291.1</td>
+              <td>putative_glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002021.3">BGC0002021.3</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>64.2</td>
+              <td>57.0</td>
+              <td>1.2e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAV55992.1</td>
+              <td>dTDP-1-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001597.4">BGC0001597.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>65.2</td>
+              <td>56.0</td>
+              <td>1.6e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54680.1</td>
+              <td>Glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000241.5">BGC0000241.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>48.2</td>
+              <td>56.0</td>
+              <td>2.07e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CAB01949.1</td>
+              <td>ExpA7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000801.5">BGC0000801.5</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>65.2</td>
+              <td>56.0</td>
+              <td>2.11e-08</td>
+          </tr>
+    
+          <tr>
+              <td>QTA30608.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002143.2">BGC0002143.2</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>64.2</td>
+              <td>55.0</td>
+              <td>4.61e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAD45556.1</td>
+              <td>SpcK</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000716.5">BGC0000716.5</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>64.2</td>
+              <td>55.0</td>
+              <td>5.35e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09478.1</td>
+              <td>LobD6</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001183.5">BGC0001183.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>63.9</td>
+              <td>55.0</td>
+              <td>5.4e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AKG06391.1</td>
+              <td>pyrophosphorylase_DesIII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001830.3">BGC0001830.3</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>64.7</td>
+              <td>54.0</td>
+              <td>6.8e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAG29804.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000833.4">BGC0000833.4</a></td>
+              <td>saccharide:hybrid/tailoring+other:aminocoumarin</td>
+              <td>24.0</td>
+              <td>64.2</td>
+              <td>54.0</td>
+              <td>6.87e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AGI99503.1</td>
+              <td>sugar_nucleotidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001004.5">BGC0001004.5</a></td>
+              <td>PKS:Type I</td>
+              <td>25.0</td>
+              <td>63.9</td>
+              <td>54.0</td>
+              <td>6.95e-08</td>
+          </tr>
+    
+          <tr>
+              <td>QFU80908.1</td>
+              <td>sugar_nucleotidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002550.2">BGC0002550.2</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>63.9</td>
+              <td>54.0</td>
+              <td>6.95e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ABB72064.1</td>
+              <td>RmlA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000365.4">BGC0000365.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>26.0</td>
+              <td>65.7</td>
+              <td>54.0</td>
+              <td>1.17e-07</td>
+          </tr>
+    
+          <tr>
+              <td>WP_029025939.1</td>
+              <td>glucose-1-phosphate_thymidylyltransferase_RfbA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000198.5">BGC0000198.5</a></td>
+              <td>PKS:Type II+saccharide:hybrid/tailoring</td>
+              <td>24.0</td>
+              <td>63.4</td>
+              <td>53.0</td>
+              <td>1.62e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94789.1</td>
+              <td>CalS7</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000033.5">BGC0000033.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>56.2</td>
+              <td>53.0</td>
+              <td>1.65e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ACB46493.1</td>
+              <td>sugar_nucleotidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000082.5">BGC0000082.5</a></td>
+              <td>PKS</td>
+              <td>24.0</td>
+              <td>64.4</td>
+              <td>53.0</td>
+              <td>2.22e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAN65244.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000832.4">BGC0000832.4</a></td>
+              <td>saccharide:hybrid/tailoring+other:aminocoumarin</td>
+              <td>25.0</td>
+              <td>64.2</td>
+              <td>52.0</td>
+              <td>2.93e-07</td>
+          </tr>
+    
+          <tr>
+              <td>BAC57039.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000102.5">BGC0000102.5</a></td>
+              <td>PKS</td>
+              <td>25.0</td>
+              <td>48.7</td>
+              <td>51.0</td>
+              <td>9.19e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ACB37734.1</td>
+              <td>glucose-1-phosphate_thymidyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000162.5">BGC0000162.5</a></td>
+              <td>PKS</td>
+              <td>22.0</td>
+              <td>63.7</td>
+              <td>51.0</td>
+              <td>9.28e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ77690.1</td>
+              <td>ChlC1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000036.5">BGC0000036.5</a></td>
+              <td>PKS:Type I+saccharide:oligosaccharide</td>
+              <td>21.0</td>
+              <td>65.2</td>
+              <td>51.0</td>
+              <td>1.16e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77683.1</td>
+              <td>RmlA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000363.4">BGC0000363.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>64.2</td>
+              <td>50.0</td>
+              <td>1.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52669.1</td>
+              <td>dTDP-glucose_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001073.5">BGC0001073.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>23.0</td>
+              <td>65.7</td>
+              <td>50.0</td>
+              <td>2.24e-06</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ77703.1</td>
+              <td>RmlA_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000364.4">BGC0000364.4</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>64.2</td>
+              <td>49.0</td>
+              <td>2.85e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

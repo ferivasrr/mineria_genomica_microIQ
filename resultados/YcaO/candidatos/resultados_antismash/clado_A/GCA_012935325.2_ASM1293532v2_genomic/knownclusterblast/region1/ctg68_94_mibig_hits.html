@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACX83635.1</td>
+              <td>putative_flavodoxin</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000221.5">BGC0000221.5</a></td>
+              <td>PKS</td>
+              <td>52.0</td>
+              <td>99.5</td>
+              <td>192.0</td>
+              <td>5.11e-62</td>
+          </tr>
+    
+          <tr>
+              <td>AKC91619.1</td>
+              <td>quinone_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001302.5">BGC0001302.5</a></td>
+              <td>other:other</td>
+              <td>50.0</td>
+              <td>99.0</td>
+              <td>191.0</td>
+              <td>1.21e-61</td>
+          </tr>
+    
+          <tr>
+              <td>CAX48663.1</td>
+              <td>putative_WrbA_NAD(P)H:quinone_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001080.5">BGC0001080.5</a></td>
+              <td>other:phenazine</td>
+              <td>46.0</td>
+              <td>97.5</td>
+              <td>160.0</td>
+              <td>3.6e-49</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46614.1</td>
+              <td>TflA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001959.4">BGC0001959.4</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>103.5</td>
+              <td>112.0</td>
+              <td>2.7e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AZS52692.1</td>
+              <td>flavodoxin_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001972.4">BGC0001972.4</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>99.0</td>
+              <td>100.0</td>
+              <td>1.55e-24</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

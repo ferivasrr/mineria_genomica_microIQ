@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAV48836.1</td>
+              <td>amino_acid_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000016.4">BGC0000016.4</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>98.7</td>
+              <td>289.0</td>
+              <td>3.02e-92</td>
+          </tr>
+    
+          <tr>
+              <td>BAI70374.1</td>
+              <td>proline_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000896.5">BGC0000896.5</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>91.8</td>
+              <td>261.0</td>
+              <td>7.54e-82</td>
+          </tr>
+    
+          <tr>
+              <td>ESU09202.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002594.2">BGC0002594.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>84.5</td>
+              <td>228.0</td>
+              <td>7.67e-68</td>
+          </tr>
+    
+          <tr>
+              <td>BBI47417.1</td>
+              <td>transporter</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002258.3">BGC0002258.3</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>95.8</td>
+              <td>182.0</td>
+              <td>4.73e-51</td>
+          </tr>
+    
+          <tr>
+              <td>EAA59570.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000057.5">BGC0000057.5</a></td>
+              <td>PKS:Iterative type I</td>
+              <td>25.0</td>
+              <td>93.3</td>
+              <td>139.0</td>
+              <td>1.29e-35</td>
+          </tr>
+    
+          <tr>
+              <td>QMS79054.1</td>
+              <td>lysine/arginine_permease</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002198.3">BGC0002198.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>23.0</td>
+              <td>82.6</td>
+              <td>77.0</td>
+              <td>1.03e-14</td>
+          </tr>
+    
+          <tr>
+              <td>SPE99801.1</td>
+              <td>putative_amino_acid_permease_YhdG</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002567.2">BGC0002567.2</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>64.2</td>
+              <td>51.0</td>
+              <td>1.62e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAX19701.1</td>
+              <td>EpsB</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000764.3">BGC0000764.3</a></td>
+              <td>saccharide</td>
+              <td>39.0</td>
+              <td>98.7</td>
+              <td>153.0</td>
+              <td>3.58e-46</td>
+          </tr>
+    
+          <tr>
+              <td>AAA64641.1</td>
+              <td>type_1_capsule_synthesis_gene</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000758.4">BGC0000758.4</a></td>
+              <td>saccharide:exopolysaccharide</td>
+              <td>35.0</td>
+              <td>96.0</td>
+              <td>140.0</td>
+              <td>5.82e-41</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47061.1</td>
+              <td>putative_transmembrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000733.3">BGC0000733.3</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>97.8</td>
+              <td>93.0</td>
+              <td>2.11e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47044.1</td>
+              <td>putative_transmembrane_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000732.3">BGC0000732.3</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>97.8</td>
+              <td>92.0</td>
+              <td>5.28e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ACO05913.1</td>
+              <td>CpsC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000763.5">BGC0000763.5</a></td>
+              <td>saccharide</td>
+              <td>30.0</td>
+              <td>89.8</td>
+              <td>91.0</td>
+              <td>7.19e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ALI93251.1</td>
+              <td>chain-length_determining_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001380.3">BGC0001380.3</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>88.1</td>
+              <td>80.0</td>
+              <td>6.84e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AMD57700.1</td>
+              <td>chain-length_determining_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001765.3">BGC0001765.3</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>88.1</td>
+              <td>80.0</td>
+              <td>6.84e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
