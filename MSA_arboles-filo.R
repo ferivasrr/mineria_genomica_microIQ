@@ -174,3 +174,4 @@ write.csv(genomas_filtrados_clado_D, file = "resultados/YcaO/candidatos/clado_D/
 #Para extraer los genomas directo de la terminal 
 ids_assembly_clado_D <- genomas_filtrados_clado_D$assembly
 writeLines(ids_assembly_clado_D, "resultados/YcaO/candidatos/clado_D/ids_assembly_clado_D.txt")
+
