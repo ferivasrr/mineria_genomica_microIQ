@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EDY04301.1</td>
+              <td>two_component_transcriptional_regulator,_LuxR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000516.4">BGC0000516.4</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>33.0</td>
+              <td>92.6</td>
+              <td>114.0</td>
+              <td>2.69e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QKO28692.1</td>
+              <td>LuxR_family_DNA-binding_response_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002315.2">BGC0002315.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>93.1</td>
+              <td>80.0</td>
+              <td>4.43e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAG32542.1</td>
+              <td>SalR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000548.4">BGC0000548.4</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>27.0</td>
+              <td>96.3</td>
+              <td>74.0</td>
+              <td>5.51e-16</td>
+          </tr>
+    
+          <tr>
+              <td>QXJ21796.1</td>
+              <td>response_regulator_transcription_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002370.2">BGC0002370.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>95.4</td>
+              <td>73.0</td>
+              <td>1.95e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ADB02831.1</td>
+              <td>AzicR2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000202.5">BGC0000202.5</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>90.3</td>
+              <td>62.0</td>
+              <td>1.19e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AJS09398.1</td>
+              <td>Response_regulator_LuxR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001150.5">BGC0001150.5</a></td>
+              <td>PKS:Type II</td>
+              <td>23.0</td>
+              <td>94.5</td>
+              <td>59.0</td>
+              <td>2.92e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ABP73639.1</td>
+              <td>SalRII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000145.5">BGC0000145.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>21.0</td>
+              <td>90.8</td>
+              <td>56.0</td>
+              <td>2.16e-09</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53504.1</td>
+              <td>regulatory_protein,_LuxR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001041.4">BGC0001041.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>21.0</td>
+              <td>90.8</td>
+              <td>56.0</td>
+              <td>2.16e-09</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

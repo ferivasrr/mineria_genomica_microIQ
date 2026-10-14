@@ -115,7 +115,7 @@ metadata_query <- metadata_ncbi_completa_YcaO |>
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Selección de candidatos del clado A
 clado_a_candidatos <- c("Brevibacillus aydinogluensis", "Paenibacillus cymbidii", "Paenibacillus sp. J2R1T-4",
-"Paenibacillus sp. P4_E11", "Paenibacillus sp. PL91", "Paenibacillus sp. Soil522", "Paenibacillus paridis", "Paenibacillus sp. P4_A7",
+"Paenibacillus sp. PL91", "Paenibacillus sp. Soil522", "Paenibacillus paridis", "Paenibacillus sp. P4_A7",
 "Cohnella kolymensis", "Cohnella pontilimi", "Cohnella candida")
 
 #Filtrar las filas de esos candidatos

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AYM52858.1</td>
+              <td>chalcone/stilbene_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001964.2">BGC0001964.2</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>99.2</td>
+              <td>273.0</td>
+              <td>1.52e-89</td>
+          </tr>
+    
+          <tr>
+              <td>ABF87000.1</td>
+              <td>chalcone/stilbene_synthase_family_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001831.3">BGC0001831.3</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>99.2</td>
+              <td>261.0</td>
+              <td>6.6e-85</td>
+          </tr>
+    
+          <tr>
+              <td>ONK09688.1</td>
+              <td>Alpha-pyrone_synthesis_polyketide_synthase-like_Pks11</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001647.3">BGC0001647.3</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>99.7</td>
+              <td>253.0</td>
+              <td>1.4e-81</td>
+          </tr>
+    
+          <tr>
+              <td>BAG17301.1</td>
+              <td>type-III_PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000282.3">BGC0000282.3</a></td>
+              <td>PKS:Type III</td>
+              <td>41.0</td>
+              <td>100.3</td>
+              <td>248.0</td>
+              <td>6.27e-80</td>
+          </tr>
+    
+          <tr>
+              <td>ACC40920.1</td>
+              <td>chalcone_synthase,_Pks10</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001665.3">BGC0001665.3</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>87.0</td>
+              <td>232.0</td>
+              <td>1.93e-73</td>
+          </tr>
+    
+          <tr>
+              <td>ACC40924.1</td>
+              <td>chalcone_synthase,_Pks11_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001665.3">BGC0001665.3</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>98.6</td>
+              <td>230.0</td>
+              <td>7.66e-73</td>
+          </tr>
+    
+          <tr>
+              <td>AMB48450.1</td>
+              <td>type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001357.3">BGC0001357.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>105.9</td>
+              <td>181.0</td>
+              <td>2.03e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AFV96143.1</td>
+              <td>type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001064.5">BGC0001064.5</a></td>
+              <td>PKS:Type I</td>
+              <td>30.0</td>
+              <td>105.9</td>
+              <td>179.0</td>
+              <td>5.61e-53</td>
+          </tr>
+    
+          <tr>
+              <td>ARU81123.1</td>
+              <td>CylI</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001566.3">BGC0001566.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>105.9</td>
+              <td>179.0</td>
+              <td>5.61e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AQA28564.1</td>
+              <td>type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001663.3">BGC0001663.3</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>105.9</td>
+              <td>179.0</td>
+              <td>1.13e-52</td>
+          </tr>
+    
+          <tr>
+              <td>CAC01488.1</td>
+              <td>putative_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002127.3">BGC0002127.3</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>96.9</td>
+              <td>172.0</td>
+              <td>2.56e-50</td>
+          </tr>
+    
+          <tr>
+              <td>QBC65480.1</td>
+              <td>type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001962.3">BGC0001962.3</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>97.7</td>
+              <td>171.0</td>
+              <td>7.59e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CAM00568.1</td>
+              <td>putative_type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000902.4">BGC0000902.4</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>97.7</td>
+              <td>165.0</td>
+              <td>1.87e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AAL78053.1</td>
+              <td>RppA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000285.5">BGC0000285.5</a></td>
+              <td>PKS:Type III+saccharide:oligosaccharide</td>
+              <td>30.0</td>
+              <td>97.7</td>
+              <td>163.0</td>
+              <td>7.22e-47</td>
+          </tr>
+    
+          <tr>
+              <td>EFG10559.1</td>
+              <td>Type_III_PKS,_putative_chalcone_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001310.5">BGC0001310.5</a></td>
+              <td>PKS:Type III</td>
+              <td>29.0</td>
+              <td>98.0</td>
+              <td>157.0</td>
+              <td>1.53e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ22690.1</td>
+              <td>chalcone_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001186.4">BGC0001186.4</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>103.1</td>
+              <td>152.0</td>
+              <td>1.76e-42</td>
+          </tr>
+    
+          <tr>
+              <td>ATL73040.1</td>
+              <td>dihydroxyphenylacetic_acid_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001807.4">BGC0001807.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>30.0</td>
+              <td>100.8</td>
+              <td>146.0</td>
+              <td>2.94e-40</td>
+          </tr>
+    
+          <tr>
+              <td>TXL86007.1</td>
+              <td>type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002034.3">BGC0002034.3</a></td>
+              <td>other:other</td>
+              <td>27.0</td>
+              <td>105.1</td>
+              <td>145.0</td>
+              <td>9.9e-40</td>
+          </tr>
+    
+          <tr>
+              <td>QEO32865.1</td>
+              <td>CepA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002332.2">BGC0002332.2</a></td>
+              <td>PKS:Type III</td>
+              <td>31.0</td>
+              <td>101.1</td>
+              <td>142.0</td>
+              <td>1.16e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AGC09524.1</td>
+              <td>chalcone/stilbene_synthase_domain_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001183.5">BGC0001183.5</a></td>
+              <td>PKS</td>
+              <td>30.0</td>
+              <td>90.4</td>
+              <td>139.0</td>
+              <td>9.2e-38</td>
+          </tr>
+    
+          <tr>
+              <td>CAQ52620.1</td>
+              <td>type_III_polyketide_synthase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001066.5">BGC0001066.5</a></td>
+              <td>PKS:Type I</td>
+              <td>29.0</td>
+              <td>103.1</td>
+              <td>137.0</td>
+              <td>3.81e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ADC96652.1</td>
+              <td>type_III_PKS</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001076.5">BGC0001076.5</a></td>
+              <td>other:nucleoside</td>
+              <td>27.0</td>
+              <td>96.3</td>
+              <td>124.0</td>
+              <td>3.94e-32</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

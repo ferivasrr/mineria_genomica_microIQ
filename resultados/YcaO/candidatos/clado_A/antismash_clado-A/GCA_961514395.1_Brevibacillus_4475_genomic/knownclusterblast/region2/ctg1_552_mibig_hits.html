@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACR33054.1</td>
+              <td>monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000495.5">BGC0000495.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>40.0</td>
+              <td>100.3</td>
+              <td>212.0</td>
+              <td>4.05e-66</td>
+          </tr>
+    
+          <tr>
+              <td>AVI57424.1</td>
+              <td>AbmE1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001694.4">BGC0001694.4</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>99.1</td>
+              <td>207.0</td>
+              <td>5.7e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46694.1</td>
+              <td>luciferase-like_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001177.4">BGC0001177.4</a></td>
+              <td>PKS:Type II</td>
+              <td>35.0</td>
+              <td>106.0</td>
+              <td>201.0</td>
+              <td>5.83e-62</td>
+          </tr>
+    
+          <tr>
+              <td>AEK75507.1</td>
+              <td>luciferase/monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000001.5">BGC0000001.5</a></td>
+              <td>PKS:Type I</td>
+              <td>38.0</td>
+              <td>97.3</td>
+              <td>199.0</td>
+              <td>2.37e-61</td>
+          </tr>
+    
+          <tr>
+              <td>AHL46727.1</td>
+              <td>luciferase-like_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001179.5">BGC0001179.5</a></td>
+              <td>PKS:Type II</td>
+              <td>38.0</td>
+              <td>99.7</td>
+              <td>199.0</td>
+              <td>2.87e-61</td>
+          </tr>
+    
+          <tr>
+              <td>KPC82018.1</td>
+              <td>FMN-linked_alkanal_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002560.3">BGC0002560.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>35.0</td>
+              <td>101.2</td>
+              <td>191.0</td>
+              <td>4.61e-58</td>
+          </tr>
+    
+          <tr>
+              <td>BBM95976.1</td>
+              <td>monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002558.2">BGC0002558.2</a></td>
+              <td>PKS</td>
+              <td>32.0</td>
+              <td>110.4</td>
+              <td>174.0</td>
+              <td>3.36e-51</td>
+          </tr>
+    
+          <tr>
+              <td>BAV57084.1</td>
+              <td>FMN-linked_alkanal_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001514.5">BGC0001514.5</a></td>
+              <td>other:other</td>
+              <td>46.0</td>
+              <td>46.4</td>
+              <td>146.0</td>
+              <td>1.69e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AAG52987.1</td>
+              <td>putative_alpha-chain_alkanal_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000136.5">BGC0000136.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>53.3</td>
+              <td>74.0</td>
+              <td>2.82e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
