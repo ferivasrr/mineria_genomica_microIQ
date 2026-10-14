@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AMQ23503.1</td>
+              <td>FAD-binding_monooxygenase_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002584.2">BGC0002584.2</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>32.0</td>
+              <td>89.3</td>
+              <td>130.0</td>
+              <td>9.06e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CCC55915.1</td>
+              <td>putative_FAD_dependent_monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000973.5">BGC0000973.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>29.0</td>
+              <td>90.8</td>
+              <td>107.0</td>
+              <td>2.26e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ15457.1</td>
+              <td>putative_hydroxylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001036.5">BGC0001036.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>95.7</td>
+              <td>106.0</td>
+              <td>2.85e-25</td>
+          </tr>
+    
+          <tr>
+              <td>EPH46595.1</td>
+              <td>putative_Digeranylgeranylglycerophospholipid_reductase_1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001519.5">BGC0001519.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>27.0</td>
+              <td>96.7</td>
+              <td>103.0</td>
+              <td>3.47e-24</td>
+          </tr>
+    
+          <tr>
+              <td>EDT06077.1</td>
+              <td>monooxygenase_FAD-binding</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001897.4">BGC0001897.4</a></td>
+              <td>PKS</td>
+              <td>29.0</td>
+              <td>91.8</td>
+              <td>94.0</td>
+              <td>1.22e-20</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ78329.1</td>
+              <td>OxyE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000254.5">BGC0000254.5</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>78.5</td>
+              <td>50.0</td>
+              <td>1.81e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AKQ20698.1</td>
+              <td>monooxygenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001337.5">BGC0001337.5</a></td>
+              <td>other:other</td>
+              <td>23.0</td>
+              <td>83.1</td>
+              <td>49.0</td>
+              <td>5.59e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

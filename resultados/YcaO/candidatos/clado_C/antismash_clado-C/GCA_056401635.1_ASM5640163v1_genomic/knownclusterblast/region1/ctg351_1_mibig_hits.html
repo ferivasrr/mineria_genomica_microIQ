@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>EDY04301.1</td>
+              <td>two_component_transcriptional_regulator,_LuxR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000516.4">BGC0000516.4</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>33.0</td>
+              <td>94.8</td>
+              <td>119.0</td>
+              <td>5.36e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AHJ59541.1</td>
+              <td>response_regulator_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000502.5">BGC0000502.5</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>29.0</td>
+              <td>97.6</td>
+              <td>114.0</td>
+              <td>2e-31</td>
+          </tr>
+    
+          <tr>
+              <td>QKO28692.1</td>
+              <td>LuxR_family_DNA-binding_response_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002315.2">BGC0002315.2</a></td>
+              <td>PKS</td>
+              <td>26.0</td>
+              <td>95.3</td>
+              <td>88.0</td>
+              <td>5.05e-21</td>
+          </tr>
+    
+          <tr>
+              <td>QXJ21796.1</td>
+              <td>response_regulator_transcription_factor</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002370.2">BGC0002370.2</a></td>
+              <td>NRPS:Type I</td>
+              <td>24.0</td>
+              <td>97.6</td>
+              <td>79.0</td>
+              <td>9.2e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAG32542.1</td>
+              <td>SalR</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000548.4">BGC0000548.4</a></td>
+              <td>ribosomal:RiPP:Lanthipeptide</td>
+              <td>28.0</td>
+              <td>98.6</td>
+              <td>78.0</td>
+              <td>1.79e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAP03103.1</td>
+              <td>putative_2-component_system_response_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000874.5">BGC0000874.5</a></td>
+              <td>other:other</td>
+              <td>25.0</td>
+              <td>97.2</td>
+              <td>76.0</td>
+              <td>1.37e-16</td>
+          </tr>
+    
+          <tr>
+              <td>CEG06577.1</td>
+              <td>LuxR_family_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001928.2">BGC0001928.2</a></td>
+              <td>other:other</td>
+              <td>25.0</td>
+              <td>91.0</td>
+              <td>75.0</td>
+              <td>2.24e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AQW35080.1</td>
+              <td>two-component_response_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001675.5">BGC0001675.5</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>96.7</td>
+              <td>73.0</td>
+              <td>1.46e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AOT85886.1</td>
+              <td>response_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001787.3">BGC0001787.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>26.0</td>
+              <td>99.1</td>
+              <td>67.0</td>
+              <td>1.28e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AJS09398.1</td>
+              <td>Response_regulator_LuxR_family</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001150.5">BGC0001150.5</a></td>
+              <td>PKS:Type II</td>
+              <td>22.0</td>
+              <td>94.3</td>
+              <td>57.0</td>
+              <td>1.31e-09</td>
+          </tr>
+    
+          <tr>
+              <td>AVX51112.1</td>
+              <td>nysRIII</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001709.5">BGC0001709.5</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>24.5</td>
+              <td>48.0</td>
+              <td>2.73e-06</td>
+          </tr>
+    
+          <tr>
+              <td>BAC41336.1</td>
+              <td>transcription_regulator_like_protein_EpsA</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000761.5">BGC0000761.5</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>27.4</td>
+              <td>47.0</td>
+              <td>5.54e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

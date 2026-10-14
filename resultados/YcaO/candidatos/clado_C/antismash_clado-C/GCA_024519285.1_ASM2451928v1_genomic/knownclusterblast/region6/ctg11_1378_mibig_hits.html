@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AJO72699.1</td>
+              <td>TetR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001381.5">BGC0001381.5</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>98.4</td>
+              <td>125.0</td>
+              <td>6.44e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AAL78056.1</td>
+              <td>ORFE</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000285.5">BGC0000285.5</a></td>
+              <td>PKS:Type III+saccharide:oligosaccharide</td>
+              <td>34.0</td>
+              <td>96.8</td>
+              <td>114.0</td>
+              <td>8.07e-32</td>
+          </tr>
+    
+          <tr>
+              <td>QXL90826.1</td>
+              <td>TetR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002426.3">BGC0002426.3</a></td>
+              <td>NRPS:Type I</td>
+              <td>37.0</td>
+              <td>94.7</td>
+              <td>112.0</td>
+              <td>3.31e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AUI41036.1</td>
+              <td>TetR_family_transcriptional_regulator</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001512.5">BGC0001512.5</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>94.7</td>
+              <td>108.0</td>
+              <td>1.25e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AEI98670.1</td>
+              <td>Ctc1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000209.5">BGC0000209.5</a></td>
+              <td>PKS</td>
+              <td>33.0</td>
+              <td>100.0</td>
+              <td>99.0</td>
+              <td>1.23e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ctg3_2</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001853.3">BGC0001853.3</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>28.0</td>
+              <td>103.2</td>
+              <td>87.0</td>
+              <td>2.53e-21</td>
+          </tr>
+    
+          <tr>
+              <td>CAM56780.1</td>
+              <td>regulatory_protein_E</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000354.5">BGC0000354.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>29.0</td>
+              <td>97.9</td>
+              <td>75.0</td>
+              <td>1.7e-16</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,208 @@
+LOCUS       JBFUIX010000351.1       2229 bp    DNA              UNK 01-JAN-1980
+DEFINITION  JBFUIX010000351.1 Paenibacillus sp. P4_E11 SCAFFOLD_350, whole
+            genome shotgun sequence.
+ACCESSION   JBFUIX010000351
+VERSION     JBFUIX010000351.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version     :: 8.0.4-4dacfe77a2
+            Run date    :: 2026-10-13 20:44:13
+            NOTE :: This is a single region extracted from a larger record!
+            Orig. start :: 0
+            Orig. end   :: 2229
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     region          1..2229
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="terpene-precursor"
+                     /region_number="1"
+                     /rules="(PT_FPPS_like and not PT_HPP)"
+                     /tool="antismash"
+     cand_cluster    1..2229
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(PT_FPPS_like and not PT_HPP)"
+                     /kind="single"
+                     /product="terpene-precursor"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..2229
+                     /aStool="rule-based-clusters"
+                     /category="terpene"
+                     /contig_edge="True"
+                     /core_location="[755:1697](+)"
+                     /cutoff="10000"
+                     /detection_rule="(PT_FPPS_like and not PT_HPP)"
+                     /neighbourhood="10000"
+                     /product="terpene-precursor"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      756..1697
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="10000"
+                     /detection_rule="(PT_FPPS_like and not PT_HPP)"
+                     /neighbourhood="10000"
+                     /product="terpene-precursor"
+                     /protocluster_number="1"
+     CDS             114..752
+                     /gene_functions="regulatory (smcogs) SMCOG1016: LuxR family
+                     DNA-binding response regulator"
+                     /gene_kind="regulatory"
+                     /locus_tag="ctg351_1"
+                     /transl_table=11
+                     /translation="MKVLVVDDHPLFAQATKQLLEQIENIEVVGVVGSALLCIDAIRTH
+                     SPDIIFLDYQLPDQFGTEIAAEIKRDFPHVHIVIFTGKDINDLMNNFLELQVSGILSKE
+                     SSERTIIQLVHCIMNNHTMIPLSLFHQLRKVSKKPSVEVVLTPDEVQIMSMLVKGETHE
+                     QIAAQIHISKRSVDNYLKKIYQKLGVQSRIQAIEKFVQSDYYVHTGKGD"
+     PFAM_domain     120..455
+                     /aSDomain="Response_reg"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00072.27"
+                     /db_xref="GO:0000160"
+                     /description="Response regulator receiver domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg351_1_0001"
+                     /evalue="2.20E-22"
+                     /gene_ontologies="GO:0000160: phosphorelay signal
+                     transduction system"
+                     /label="ctg351_1"
+                     /locus_tag="ctg351_1"
+                     /protein_end="114"
+                     /protein_start="2"
+                     /score="79.5"
+                     /tool="antismash"
+                     /translation="VLVVDDHPLFAQATKQLLEQIENIEVVGVVGSALLCIDAIRTHSP
+                     DIIFLDYQLPDQFGTEIAAEIKRDFPHVHIVIFTGKDINDLMNNFLELQVSGILSKESS
+                     ERTIIQLV"
+     PFAM_domain     543..704
+                     /aSDomain="GerE"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00196.22"
+                     /db_xref="GO:0006355"
+                     /description="Bacterial regulatory proteins, luxR family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg351_1_0002"
+                     /evalue="1.20E-16"
+                     /gene_ontologies="GO:0006355: regulation of DNA-templated
+                     transcription"
+                     /label="ctg351_1"
+                     /locus_tag="ctg351_1"
+                     /protein_end="197"
+                     /protein_start="143"
+                     /score="60.1"
+                     /tool="antismash"
+                     /translation="VLTPDEVQIMSMLVKGETHEQIAAQIHISKRSVDNYLKKIYQKLG
+                     VQSRIQAIE"
+     CDS             756..1697
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     terpene-precursor: PT_FPPS_like"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1182: Polyprenyl synthetase"
+                     /gene_kind="biosynthetic"
+                     /locus_tag="ctg351_2"
+                     /sec_met_domain="PT_FPPS_like (E-value: 3.7e-26, bitscore:
+                     79.4, seeds: 145, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MIAETIRVLDRVADRYTSDSELNGLLKQFFQQKDKEQSIWGELTK
+                     ATHDLFGGSHAMIEEAAAVTEMLLLALDVVDDLQDGDNPEMPWMLCGAPYALNTVLSLV
+                     FASIGELTRVNAEIQNNGGHGIIDLQIVSNMISIAIQGQHQDISNTVHTEQDYITMIHQ
+                     KSGSLLKLACYIGYSAAGMSNPAVRERMDEFAETIGIISQIXNDVRDITRWDLKNDLLQ
+                     KKKTLPVLYLLADEEDIFGPFRDYYEGRIDRDQFLLHKMACMTYIEQSGCIEYSNIIQT
+                     LFLNRAEELLESLDADPQMKAKFRALTLGSHC"
+     PFAM_domain     921..1457
+                     /aSDomain="polyprenyl_synt"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00348.20"
+                     /db_xref="GO:0008299"
+                     /description="Polyprenyl synthetase"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg351_2_0003"
+                     /evalue="5.80E-16"
+                     /gene_ontologies="GO:0008299: isoprenoid biosynthetic
+                     process"
+                     /label="ctg351_2"
+                     /locus_tag="ctg351_2"
+                     /protein_end="234"
+                     /protein_start="55"
+                     /score="58.5"
+                     /tool="antismash"
+                     /translation="AMIEEAAAVTEMLLLALDVVDDLQDGDNPEMPWMLCGAPYALNTV
+                     LSLVFASIGELTRVNAEIQNNGGHGIIDLQIVSNMISIAIQGQHQDISNTVHTEQDYIT
+                     MIHQKSGSLLKLACYIGYSAAGMSNPAVRERMDEFAETIGIISQIXNDVRDITRWDLKN
+                     DLLQKKKTLPVLYLLA"
+     CDS             complement(1726..2229)
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1178: cobalamin synthesis protein/P47K family protein"
+                     /gene_kind="biosynthetic-additional"
+                     /locus_tag="ctg351_3"
+                     /transl_table=11
+                     /translation="MVLNKIDLVTEDQLIACRELTASWNGHAAVVETVRCDFDLVAVWA
+                     LSANISEDHARSEHGPDRHEHRHDEGKGHHHTHNHVMAYTHYMDKPIDSERFEQLMNDM
+                     PEDVYRAKGILTFTDTSARFMFQYAYRQLDFMKIMPQREVPDVAVFIGEHFDAELLKRK
+                     LEEL"
+     PFAM_domain     complement(1732..1971)
+                     /aSDomain="CobW_C"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF07683.17"
+                     /description="Cobalamin synthesis protein cobW C-terminal
+                     domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg351_3_0004"
+                     /evalue="1.70E-14"
+                     /label="ctg351_3"
+                     /locus_tag="ctg351_3"
+                     /protein_end="166"
+                     /protein_start="86"
+                     /score="53.6"
+                     /tool="antismash"
+                     /translation="YMDKPIDSERFEQLMNDMPEDVYRAKGILTFTDTSARFMFQYAYR
+                     QLDFMKIMPQREVPDVAVFIGEHFDAELLKRKLEE"
+ORIGIN
+        1 atataaggtt tgattacgct acactgttat taatccaata attcccttta ttgtcacacg
+       61 atttgttcgt gaatcatcca cattcgaaga ggtgaatcta cgtgagcaat acaatgaagg
+      121 tgcttgttgt ggatgatcac cctttgtttg cacaagctac caaacaactg ctggagcaga
+      181 ttgagaacat cgaagtagtc ggtgtcgtag gaagtgcact tctttgcatt gatgccattc
+      241 gaactcacag tcctgacatt atattcctcg actatcaatt gcccgatcaa ttcggaacag
+      301 aaatcgctgc agagatcaag cgagacttcc cacacgtaca tatcgtcatc ttcaccggaa
+      361 aagatatcaa tgatctcatg aacaattttc tggaactgca agtcagcggc atcttgtcca
+      421 aggaatccag tgagcgaaca attattcagc tcgtacactg tatcatgaac aaccatacga
+      481 tgatcccctt gtccctattc catcaattaa ggaaagtttc gaagaaacca tcagtagagg
+      541 tggtgctgac acctgacgaa gtgcagatta tgtctatgct agtgaagggt gagacgcatg
+      601 aacagatcgc cgcgcagatc cacatcagca aacgatctgt cgacaattat ttgaagaaaa
+      661 tatatcagaa gctcggcgtc cagtcccgta tccaagcgat tgagaaattc gttcagagcg
+      721 actattacgt tcatacaggt aaaggagatt aaggaatgat tgcggaaacg atacgggtac
+      781 tggaccgggt agcagaccga tatacgtcag atagcgagct gaatggactg ctcaaacaat
+      841 ttttccaaca gaaggacaag gaacagtcca tttggggaga gctgactaag gcaacacacg
+      901 atttgttcgg gggctcccat gctatgatcg aagaagcggc tgctgtaaca gaaatgctgt
+      961 tattggcgct cgacgttgtg gatgacctgc aggatggcga taacccggag atgccgtgga
+     1021 tgctctgtgg tgcaccctat gccttgaata ccgtactctc ccttgtattt gcttccatag
+     1081 gcgagctaac cagggtaaat gcggaaattc agaacaatgg gggccacggt ataatagatt
+     1141 tgcagatcgt cagcaacatg atttccatag ccatacaagg acaacatcaa gacataagta
+     1201 acacagttca cacggaacaa gattatatta caatgatcca ccagaagtct ggctccttac
+     1261 tgaagcttgc ctgttatatc ggatattccg ccgccggcat gtccaaccca gctgtaaggg
+     1321 agcgcatgga tgagttcgct gagacgatcg gcatcatcag tcaaatcngc aacgatgtac
+     1381 gtgacattac acgatgggat ttgaagaatg atctgcttca gaagaagaag acattgcctg
+     1441 tgttgtacct actggctgac gaggaagaca tcttcggtcc gttccgcgac tattacgaag
+     1501 gacgcatcga tcgagatcaa ttcctgctgc ataagatggc ctgcatgacc tacatcgagc
+     1561 aatccgggtg catcgaatat tcgaacatca tccaaacctt attccttaat cgtgctgaag
+     1621 agctgctgga atcgctagat gccgatcccc agatgaaagc gaaattccgt gctctcaccc
+     1681 taggttccca ttgttgactg aattctgatc attgctatct acgtcttaca gctcctccag
+     1741 cttacgcttt aacagctccg catcgaaatg ctcgccgatg aatacagcta catcgggtac
+     1801 ttcccgttgc ggcatgatct tcatgaaatc aagctgcctg taagcgtatt ggaacatgaa
+     1861 tcgggcagat gtatctgtga aagtcaatat tcctttggct cgatagacat cctcaggcat
+     1921 gtcgttcatc aactgttcga agcgttcgct gtcaattggc ttgtccatat aatgcgtata
+     1981 cgccatcaca tggttgtgtg tatgatgatg gccttttccc tcgtcatgtc ggtgttcgtg
+     2041 acgatcagga ccatgctcac tacgagcatg gtcttcgctt atgttggcgc ttaaggccca
+     2101 cactgcaacc agatcgaagt cgcagcgcac agtctcaaca acagcagcat ggccattcca
+     2161 ggatgcagta agttccctgc aagcaataag ctgatcctca gttaccagat cgatcttatt
+     2221 caatacaat
+//

@@ -1,0 +1,390 @@
+LOCUS       JBFUIX010000192.1       5349 bp    DNA              UNK 01-JAN-1980
+DEFINITION  JBFUIX010000192.1 Paenibacillus sp. P4_E11 SCAFFOLD_191, whole
+            genome shotgun sequence.
+ACCESSION   JBFUIX010000192
+VERSION     JBFUIX010000192.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+COMMENT     ##antiSMASH-Data-START##
+            Version     :: 8.0.4-4dacfe77a2
+            Run date    :: 2026-10-13 20:44:13
+            NOTE :: This is a single region extracted from a larger record!
+            Orig. start :: 0
+            Orig. end   :: 5349
+            ##antiSMASH-Data-END##
+FEATURES             Location/Qualifiers
+     region          1..5349
+                     /candidate_cluster_numbers="1"
+                     /contig_edge="True"
+                     /product="proteusin"
+                     /region_number="1"
+                     /rules="(PoyD or TIGR03793)"
+                     /tool="antismash"
+     cand_cluster    1..5349
+                     /candidate_cluster_number="1"
+                     /contig_edge="True"
+                     /detection_rules="(PoyD or TIGR03793)"
+                     /kind="single"
+                     /product="proteusin"
+                     /protoclusters="1"
+                     /tool="antismash"
+     protocluster    1..5349
+                     /aStool="rule-based-clusters"
+                     /category="RiPP"
+                     /contig_edge="True"
+                     /core_location="[3079:3965](-)"
+                     /cutoff="20000"
+                     /detection_rule="(PoyD or TIGR03793)"
+                     /neighbourhood="10000"
+                     /product="proteusin"
+                     /protocluster_number="1"
+                     /tool="antismash"
+     proto_core      complement(3080..3965)
+                     /aStool="rule-based-clusters"
+                     /tool="antismash"
+                     /cutoff="20000"
+                     /detection_rule="(PoyD or TIGR03793)"
+                     /neighbourhood="10000"
+                     /product="proteusin"
+                     /protocluster_number="1"
+     CDS             complement(3..2042)
+                     /NRPS_PKS="Domain: PKS_KS(Iterative-KS) (9-366). E-value:
+                     3.2e-45. Score: 146.7. Matches aSDomain:
+                     nrpspksdomains_ctg192_1_PKS_KS.1"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) t2fas"
+                     /gene_functions="biosynthetic-additional
+                     (rule-based-clusters) ketoacyl-synt"
+                     /gene_functions="biosynthetic-additional (smcogs)
+                     SMCOG1022: Beta-ketoacyl synthase"
+                     /gene_kind="biosynthetic-additional"
+                     /locus_tag="ctg192_1"
+                     /sec_met_domain="t2fas (E-value: 2.6e-91, bitscore: 294.7,
+                     seeds: 8, tool: rule-based-clusters)"
+                     /sec_met_domain="ketoacyl-synt (E-value: 4.5e-34, bitscore:
+                     106.5, seeds: 77, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MTTQIQQVAVTGMGIMCALGDSFDQVYAQMMEGRTGIGAVERFPT
+                     TRFQSGIGAEIKHYDPNFHFSGDERHKYDLCAQYAILAVRRALDDSRVGELHHKDRTGL
+                     ALGTCNGGIVSLEEQWTIEHLDEARTARYPFYQQGDHVADYYKLNGPVVTINTACAASG
+                     NAIGYAYDMIRWGYADRMIAGGSDPLSHSVYAGFNVLRALNPQPTSPFGSQYGLSLGEG
+                     AAFLVLEPLYRAIERGATIYAEICGYGMSNDAHHETAPEPEGRGIQIAVQMALQQSGVT
+                     PHHIEYINAHGTGTQANDRAEISGLRSVFADRLPQIPLSSSKAYFGHNLGAAAAIEFAT
+                     SLYAIRHGYLPATLHHDAPREGCEDANIIANQMIAGVPAYMLNSNSAFGGHNVSIVART
+                     RNISVNNPSNAPSPMMVRRVGIVGIGTVCAIGAHKGTLLPAFNGYEAADEPFIFSLKEF
+                     ANQLYERRMNRLCQSSIGAAAMALEDAGWKTDGEDGLRTGFIYGTSRGSTDSIGKFLNS
+                     VFTSGPEFASSIHFPYTVINSVAGKTSEKLGLRGFGSSISSGGNEGLLAALHGCGIIRS
+                     GVHERCLIGVGDERSELSTKIDKAKGLDSSRFDRAEGSICIALSELSYAAENGLRVYAE
+                     LRGFGTTFGGGIGSSDGEDALGFCMRDAIEQAALAADQIDFVLLN"
+     CDS_motif       complement(111..143)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_ctg192_1_0003"
+                     /evalue="9.90E+01"
+                     /label="PKSI-KS_m5"
+                     /locus_tag="ctg192_1"
+                     /protein_end="644"
+                     /protein_start="633"
+                     /score="-2.8"
+                     /tool="antismash"
+                     /translation="AELRGFGTTFG"
+     PFAM_domain     complement(279..650)
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00109.29"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg192_1_0003"
+                     /evalue="8.50E-08"
+                     /label="ctg192_1"
+                     /locus_tag="ctg192_1"
+                     /protein_end="588"
+                     /protein_start="464"
+                     /score="32.2"
+                     /tool="antismash"
+                     /translation="RRMNRLCQSSIGAAAMALEDAGWKTDGEDGLRTGFIYGTSRGSTD
+                     SIGKFLNSVFTSGPEFASSIHFPYTVINSVAGKTSEKLGLRGFGSSISSGGNEGLLAAL
+                     HGCGIIRSGVHERCLIGVGD"
+     aSDomain        complement(945..2015)
+                     /ASF="found active site histidines: True"
+                     /aSDomain="PKS_KS"
+                     /aSTool="nrps_pks_domains"
+                     /database="nrpspksdomains.hmm"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksdomains_ctg192_1_PKS_KS.1"
+                     /domain_subtypes="Iterative-KS"
+                     /evalue="3.20E-45"
+                     /label="ctg192_1_PKS_KS.1"
+                     /locus_tag="ctg192_1"
+                     /protein_end="366"
+                     /protein_start="9"
+                     /score="146.7"
+                     /tool="antismash"
+                     /translation="VTGMGIMCALGDSFDQVYAQMMEGRTGIGAVERFPTTRFQSGIGA
+                     EIKHYDPNFHFSGDERHKYDLCAQYAILAVRRALDDSRVGELHHKDRTGLALGTCNGGI
+                     VSLEEQWTIEHLDEARTARYPFYQQGDHVADYYKLNGPVVTINTACAASGNAIGYAYDM
+                     IRWGYADRMIAGGSDPLSHSVYAGFNVLRALNPQPTSPFGSQYGLSLGEGAAFLVLEPL
+                     YRAIERGATIYAEICGYGMSNDAHHETAPEPEGRGIQIAVQMALQQSGVTPHHIEYINA
+                     HGTGTQANDRAEISGLRSVFADRLPQIPLSSSKAYFGHNLGAAAAIEFATSLYAIRHGY
+                     LPATLHHDAPREGCEDA"
+     PFAM_domain     complement(975..1319)
+                     /aSDomain="Ketoacyl-synt_C"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF02801.25"
+                     /description="Beta-ketoacyl synthase, C-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg192_1_0002"
+                     /evalue="1.10E-32"
+                     /label="ctg192_1"
+                     /locus_tag="ctg192_1"
+                     /protein_end="356"
+                     /protein_start="241"
+                     /score="112.7"
+                     /tool="antismash"
+                     /translation="YAEICGYGMSNDAHHETAPEPEGRGIQIAVQMALQQSGVTPHHIE
+                     YINAHGTGTQANDRAEISGLRSVFADRLPQIPLSSSKAYFGHNLGAAAAIEFATSLYAI
+                     RHGYLPATLHH"
+     CDS_motif       complement(1137..1184)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_ctg192_1_0002"
+                     /evalue="8.10E-03"
+                     /label="PKSI-KS_m5"
+                     /locus_tag="ctg192_1"
+                     /protein_end="302"
+                     /protein_start="286"
+                     /score="9.1"
+                     /tool="antismash"
+                     /translation="YINAHGTGTQANDRAE"
+     PFAM_domain     complement(1341..2024)
+                     /aSDomain="ketoacyl-synt"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00109.29"
+                     /description="Beta-ketoacyl synthase, N-terminal domain"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg192_1_0001"
+                     /evalue="1.80E-30"
+                     /label="ctg192_1"
+                     /locus_tag="ctg192_1"
+                     /protein_end="234"
+                     /protein_start="6"
+                     /score="106.5"
+                     /tool="antismash"
+                     /translation="QVAVTGMGIMCALGDSFDQVYAQMMEGRTGIGAVERFPTTRFQSG
+                     IGAEIKHYDPNFHFSGDERHKYDLCAQYAILAVRRALDDSRVGELHHKDRTGLALGTCN
+                     GGIVSLEEQWTIEHLDEARTARYPFYQQGDHVADYYKLNGPVVTINTACAASGNAIGYA
+                     YDMIRWGYADRMIAGGSDPLSHSVYAGFNVLRALNPQPTSPFGSQYGLSLGEGAAFLVL
+                     EPLYRA"
+     CDS_motif       complement(1554..1595)
+                     /aSTool="nrps_pks_domains"
+                     /database="abmotifs"
+                     /detection="hmmscan"
+                     /domain_id="nrpspksmotif_ctg192_1_0001"
+                     /evalue="3.10E-03"
+                     /label="PKSI-KS_m3"
+                     /locus_tag="ctg192_1"
+                     /protein_end="163"
+                     /protein_start="149"
+                     /score="10.3"
+                     /tool="antismash"
+                     /translation="GPVVTINTACAASG"
+     CDS             complement(2058..2954)
+                     /locus_tag="ctg192_2"
+                     /transl_table=11
+                     /translation="MYQLIHLDGSNSARYEALTFQHLAPLLQRIDGDPTILAIGAEELS
+                     LIPTSSDERRPXGLVVARWIPNTKKAEVVSFFVNPTFRRIGVATSLLNLLESELRALGC
+                     RENRFVYYSGKSITPILEAFLQKNEWSVPVLEAKVYRADIRIAEAPWLRKTRLPHPLRC
+                     LLWSDCPESAKINLKQSAGERYPHFLSPFKEDFRRESSNSIVLMNEAEIVGWCITGRLA
+                     QDTVLYDSVFVNEEYRNSGCAFIMLAQSINLQLEQNIPYAMFTVNQITPYMIRIVDRWL
+                     TPYTNRISEKRAALKPL"
+     PFAM_domain     complement(2637..2801)
+                     /aSDomain="Acetyltransf_1"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00583.28"
+                     /db_xref="GO:0016747"
+                     /description="Acetyltransferase (GNAT) family"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg192_2_0004"
+                     /evalue="4.10E-07"
+                     /gene_ontologies="GO:0016747: acyltransferase activity,
+                     transferring groups other than amino-acyl groups"
+                     /label="ctg192_2"
+                     /locus_tag="ctg192_2"
+                     /protein_end="106"
+                     /protein_start="51"
+                     /score="30.4"
+                     /tool="antismash"
+                     /translation="DERRPXGLVVARWIPNTKKAEVVSFFVNPTFRRIGVATSLLNLLE
+                     SELRALGCRE"
+     CDS             complement(3080..3499)
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     proteusin: TIGR03793"
+                     /gene_kind="biosynthetic"
+                     /locus_tag="ctg192_3"
+                     /sec_met_domain="TIGR03793 (E-value: 2.1e-17, bitscore:
+                     51.3, seeds: 15, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSWTQEEIQATVQQVMTKAGSDEQFKALCVSDIRAAVKQVTGKEI
+                     PAEFKLNVVDGASYHATIVLAAVKSSEDELSETELEAVAGGSKSSVTETFNDIGGAITG
+                     AANTVGNAVTDTANNFGNKLETATDRLATRVQNTI"
+     CDS             complement(3543..3965)
+                     /gene_functions="biosynthetic (rule-based-clusters)
+                     proteusin: TIGR03793"
+                     /gene_kind="biosynthetic"
+                     /locus_tag="ctg192_4"
+                     /sec_met_domain="TIGR03793 (E-value: 9.5e-18, bitscore:
+                     52.3, seeds: 15, tool: rule-based-clusters)"
+                     /transl_table=11
+                     /translation="MSWTQEEIQATVQQVLTKASSDDQFKALCLSDIRSAVKQATGKEI
+                     PAEFKLNVVDGASYHATIVLPAVKASEDELSETELEAVAGGSKSSVTETFNDIGGAITG
+                     AANTVGGAVTGAANTVADSVTGGTLTFINNIQSPIK"
+     aSDomain        complement(3708..3932)
+                     /aSDomain="TIGR03793"
+                     /aSTool="tigrfam"
+                     /description="TOMM_pelo: NHLP leader peptide domain"
+                     /detection="hmmscan"
+                     /domain_id="TIGRFam_ctg192_4_0001"
+                     /evalue="7.00E-15"
+                     /identifier="TIGR03793"
+                     /label="ctg192_4"
+                     /locus_tag="ctg192_4"
+                     /protein_end="86"
+                     /protein_start="11"
+                     /score="52.6"
+                     /tool="antismash"
+                     /translation="VQQVLTKASSDDQFKALCLSDIRSAVKQATGKEIPAEFKLNVVDG
+                     ASYHATIVLPAVKASEDELSETELEAVAGG"
+     CDS             complement(4070..5347)
+                     /gene_functions="transport (smcogs) SMCOG1288: ABC
+                     transporter related protein"
+                     /gene_kind="transport"
+                     /locus_tag="ctg192_5"
+                     /transl_table=11
+                     /translation="MFSSFNFFLLFYYDVKLALIAAVLVLISMSVTVGVGISQIRYQRK
+                     LLSIQGKISGTVLQIINGIAKFRTAAAEKRAFFLWARLFGEQKQTAYQAHMVENAHGVF
+                     HAIFPTITSIILFYMVASGDTSFSAGKFIAFFAAFSSFLGSMLGMSSAIISVVQIVPVY
+                     ERAKPILQTVPEVHEALDDPGELTGAIEVRHLHFRYRADQPMVVNDISLQIRPGEFIAL
+                     VGASGCGKSTLLRLLLAFEKPESGTIYYDGQDMKMLDVRALRSQLGVVLQNGKLMSGDI
+                     FSNIVGSSNLTIDHAWEAARMAGMDGDIRQMPMGMHTVVSEGGSTLSGGQRQRLLIARA
+                     IARKPNIILFDEATSALDNRTQAIVSESLEKLQATRIVIAHRLSTIMNADRIYVLDKGR
+                     IVQSGTYTELIGEDGLFAELAKRQLA"
+     PFAM_domain     complement(4283..4726)
+                     /aSDomain="ABC_tran"
+                     /aSTool="clusterhmmer"
+                     /database="35.0"
+                     /db_xref="PF00005.30"
+                     /db_xref="GO:0005524"
+                     /description="ABC transporter"
+                     /detection="hmmscan"
+                     /domain_id="clusterhmmer_ctg192_5_0005"
+                     /evalue="5.90E-33"
+                     /gene_ontologies="GO:0005524: ATP binding"
+                     /label="ctg192_5"
+                     /locus_tag="ctg192_5"
+                     /protein_end="355"
+                     /protein_start="207"
+                     /score="114.4"
+                     /tool="antismash"
+                     /translation="NDISLQIRPGEFIALVGASGCGKSTLLRLLLAFEKPESGTIYYDG
+                     QDMKMLDVRALRSQLGVVLQNGKLMSGDIFSNIVGSSNLTIDHAWEAARMAGMDGDIRQ
+                     MPMGMHTVVSEGGSTLSGGQRQRLLIARAIARKPNIILFDEATS"
+ORIGIN
+        1 gaattcagca ggacaaaatc gatctgatct gcagcaagag cagcctgttc aatcgcgtca
+       61 cgcatacaaa agccaagagc atcctcccca tcggagcttc caataccccc tccaaaggtc
+      121 gttccgaatc cccgcagctc ggcgtacacc cgtaatccgt tctccgcagc atagcttaac
+      181 tcggataatg cgatgcatat actgccttct gctcgatcga atcggctgga atccagtcct
+      241 ttggccttat caatcttggt ggatagctcg gaacgctcat cgcctacccc gatcaaacag
+      301 cgttcgtgta ccccgctacg aatgatgccg cagccatgca acgctgctag cagtccttcg
+      361 ttgcccccag agctgatcga gctaccgaag ccgcgcaatc ctaacttctc agacgtcttg
+      421 cctgcaacgg agttgatgac ggtgtacgga aaatgaatgc tgctagcaaa ttccggtccg
+      481 gatgtgaaga cgctgttcag aaacttgcca atgctgtccg tactgccgcg tgaggttccg
+      541 tatataaacc ctgttcgaag tccgtcctca ccgtccgtct tccagccggc atcttctagc
+      601 gccatagctg ccgccccgat gctcgattgg cacagccgat tcattctgcg ctcatatagt
+      661 tggttggcga actctttcaa cgagaatatg aatggttcat ctgctgcctc atatccgttg
+      721 aacgctggca gcaatgttcc tttatgggcg cctatggcgc aaaccgtacc tataccgact
+      781 atgccgactc gccttaccat catgggtgaa ggggcattcg acggattgtt gacggaaata
+      841 ttccttgttc gagctacaat ggacacatta tgtccaccga aagcagagtt gctattgagc
+      901 atataggctg gtacgccggc tatcatctga ttagcgataa tattcgcgtc ctcgcagcct
+      961 tctcgtggag catcatggtg taatgtagct ggaagatacc catgccgaat tgcatatagt
+     1021 gaggttgcga attcaatggc agctgctgct cccaagttat gtccgaagta tgccttgctg
+     1081 gaactgagtg gaatttgtgg tagtcgatct gcgaagacgg accgtaagcc gctgatctcg
+     1141 gcacggtcat tcgcctgtgt ccctgtgcca tgcgcattga tatattcgat atgatgtgga
+     1201 gtaacgccgg attgctgcag cgccatctga acagcgatct gaatgccgcg tccttccggt
+     1261 tcgggtgcgg tctcatgatg ggcatcattg ctcatcccat agccgcaaat ctctgcatag
+     1321 atcgtagcgc cacgctcgat cgctcgatag agcggctcca atactaagaa ggcagcacct
+     1381 tcacccaagc ttagaccata ttggctgccg aatggcgaag ttggctgtgg gttcagcgca
+     1441 cgcagtacgt taaaacccgc gtacacggag tgcgacaagg ggtccgaacc acccgcgatc
+     1501 attctgtcgg catatcccca acgtatcata tcgtaggcgt agccgattgc gttgccactg
+     1561 gcggcacaag ccgtgttgat cgttacgact ggaccgttca gcttataata gtcggccaca
+     1621 tgatcccctt gctgatagaa cggatatcgg gctgttcttg cttcatccag atgctcaatc
+     1681 gtccattgct cctccaagga tacgatgcct ccattgcaag tccctagagc aaggcccgtt
+     1741 ctatccttat ggtggagttc ccccacacga ctatcatcca acgcccgtcg tacggcaagt
+     1801 atcgcatatt gcgcgcacag atcgtatttg tggcgctcat cgccgctgaa gtggaagttc
+     1861 gggtcataat gcttgatttc ggcaccaatc ccactttgga atcgagtggt agggaatcgt
+     1921 tcaacagctc caatcccggt acgaccttcc atcatctgag catacacttg gtcaaatgag
+     1981 tccccgagcg cacacatgat gcccatgcct gttactgcga cttgctgaat ctgtgttgtc
+     2041 acaagtgctt cctccaatca caatggcttg agtgctgcac gtttctccga tattcgattc
+     2101 gtatacggag taagccagcg atccacaatt cggatcatgt agggagtaat ctgattcaca
+     2161 gtgaacatcg cgtaaggaat gttttgttcc agctgcaaat tgatagattg agcgagcata
+     2221 atgaaagcgc aaccggaatt acgatactct tcgttaacga acacgctatc atacaggacg
+     2281 gtatcctgtg cgagtcgacc tgtgatgcac caaccgacga tctccgcttc attcattagc
+     2341 actatactat tactagactc gcgccggaaa tcttccttga atggggatag aaaatgcgga
+     2401 tatcgttcac ccgccgattg cttcaaattg atcttcgccg actccgggca atcgctccac
+     2461 aacaagcatc gtagaggatg cggtaatcgg gttttcctca accaaggggc ctctgcgatt
+     2521 cgtatgtccg cacgatatac tttagcttcc aaaacaggca cggaccattc gtttttttgc
+     2581 aaaaaggctt ctaatatcgg tgtgattgat tttccagaat aatatacaaa ccgattttct
+     2641 ctgcatccaa gagcccttaa ctccgattcc aataagttca gcagagaagt agcgacaccg
+     2701 atccttctga acgtaggatt cacgaagaaa gatacaactt cggccttctt cgtattcgga
+     2761 atccaacgtg caaccacgag gccnatcgga cgtcgttcat cactagatgt agggattaag
+     2821 gagagctcct cagcccctat agcgaggatt gttggatccc cgtcaattcg ctgtagtaag
+     2881 ggagctaagt gctggaaggt taacgcctcg taacgagcgg aattgctgcc atcaagatga
+     2941 atcaattggt acaagccagc acctccatag ctagcatgaa tagaacgaac ctatcccacc
+     3001 aaagctgcaa tgaaaccccg actgctcggg gttttcattg caaatgatgt agacaagatt
+     3061 ataagcgacc agcttgttac tagatagtat tttgaacgcg ggttgctaac ctatcagttg
+     3121 cagtttccag cttgttgcca aaattgttag ctgtatctgt aacggcattt ccaactgtgt
+     3181 tagctgcacc tgtaatagcg ccaccgatat cattgaacgt ttctgtgaca gagcttttgc
+     3241 ttccgccagc aactgcttcc agttcggttt cggacaactc atcctcggac gacttaacag
+     3301 cagccagtac gattgtagcg tggtatgatg cgccgtcaac tacgttcagc ttgaactcgg
+     3361 ccggaatttc tttgccggtt acttgtttta ctgctgcacg aatgtcgctc acgcacaggg
+     3421 ccttgaactg ttcatccgaa cctgccttgg tcataacttg ctgtacagtt gcttgaattt
+     3481 cttcttgagt ccagctcata aattaattcc tcccaaaact tgattttgaa cactatgaat
+     3541 gattacttaa taggactttg aatgttattg ataaacgtaa gggttccacc tgttacagag
+     3601 tcggccactg tattagctgc acctgtaaca gcacctccaa ccgtgttggc tgcaccagta
+     3661 atagcgccgc cgatatcatt gaatgtttct gtgacggaac tcttgcttcc gccagccact
+     3721 gcttccaact cggtttcgga caattcatcc tcggatgcct taacagcagg cagtacgatt
+     3781 gttgcgtggt acgatgcgcc gtcaactacg ttcagcttga actcggccgg aatttccttg
+     3841 ccagttgctt gcttaactgc ggagcgaatg tcgctcagac acaatgcctt gaactgatcg
+     3901 tccgaacttg ctttcgttaa tacttgttgt acggttgctt gaatttcctc ttgagtccag
+     3961 ctcatgaata aatcctccaa taaatgattt ttgccttaca acaatcattg tatcaggtca
+     4021 atatcaaacc ctactgaagc taacttaaaa tctagttaaa gtttcatagt taggctaatt
+     4081 gccgtttcgc aagttctgca aacaacccgt cttcaccgat caattcggtg tatgttcccg
+     4141 attgtacaat acgtccttta tccagtacgt agatccgatc cgcattcata atggtgctta
+     4201 gtcggtgtgc aattacaatt cgggtagctt gcagtttctc caggctctcg ctgacgatcg
+     4261 cttgagtccg gttgtcaagt gcgctcgtag cttcatcgaa cagaatgata ttcggcttcc
+     4321 tcgcgatcgc tcttgcgatc agtagtcgct gacgttgtcc accagatagt gtcgatcctc
+     4381 cttcggatac taccgtatgc atacccatcg gcatttgccg aatatcgcca tccataccgg
+     4441 ccatacgtgc cgcttcccaa gcgtgatcga tcgtcaagtt ggaagaaccg acaatgttcg
+     4501 agaagatgtc gccagacatc agcttaccat tctgcagaac aacgcccaat tggctgcgca
+     4561 aggcacgaac gtcgagcatc ttcatatcct gcccgtcata atagatcgtg ccggattccg
+     4621 gcttctcgaa ggcaagcaac aagcggagca gagtagattt cccgcaaccc gaagcaccaa
+     4681 ctagagcgat aaattcacct ggccgaattt gaagtgaaat atcattcact accatcggct
+     4741 ggtcagctct ataacggaaa tgtagatgcc gaacttcaat ggctcctgtt aattcacctg
+     4801 ggtcatccaa cgcttcgtga acttctggaa cagtctgcag gatcggcttc gctctctcgt
+     4861 acacaggtac gatctgaaca acggatataa tcgcgctaga catacctaac atagatccaa
+     4921 gaaaggagga gaatgcagca aagaatgcaa tgaacttacc cgcactgaac gatgtatccc
+     4981 ctgaagcgac catatagaac aagataattg acgtaatcgt aggaaatatt gcatgaaata
+     5041 cgccatgagc attctcgacc atatgagctt gatacgccgt ttgcttctgc tctccgaata
+     5101 acctcgccca gagaaagaac gctcgtttct ctgccgctgc cgtccggaac ttggcgatac
+     5161 cattaatgat ttgcaggacg gttccggata ttttcccttg aatgctgagt agtttccgtt
+     5221 gatagcgaat ttggctaatc cctacgccca ctgtcactga catggagatc aagactagaa
+     5281 ccgcggcaat caaggctaac ttcacatcgt aatagaagag caaaaagaag ttaaaggaag
+     5341 agaatatcc
+//
