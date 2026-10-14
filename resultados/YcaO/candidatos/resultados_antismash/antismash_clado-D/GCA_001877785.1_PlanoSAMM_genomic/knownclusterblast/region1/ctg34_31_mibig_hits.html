@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ACM07424.1</td>
+              <td>CrtNa</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000645.3">BGC0000645.3</a></td>
+              <td>terpene</td>
+              <td>65.0</td>
+              <td>96.3</td>
+              <td>666.0</td>
+              <td>1.46e-239</td>
+          </tr>
+    
+          <tr>
+              <td>CAA79956.1</td>
+              <td></td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000648.3">BGC0000648.3</a></td>
+              <td>terpene</td>
+              <td>34.0</td>
+              <td>98.8</td>
+              <td>290.0</td>
+              <td>6.71e-92</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ73136.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000640.3">BGC0000640.3</a></td>
+              <td>terpene</td>
+              <td>34.0</td>
+              <td>97.0</td>
+              <td>265.0</td>
+              <td>2.07e-82</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ73130.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000639.3">BGC0000639.3</a></td>
+              <td>terpene</td>
+              <td>32.0</td>
+              <td>98.4</td>
+              <td>265.0</td>
+              <td>2.13e-82</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ73142.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000641.3">BGC0000641.3</a></td>
+              <td>terpene</td>
+              <td>32.0</td>
+              <td>97.0</td>
+              <td>263.0</td>
+              <td>1.17e-81</td>
+          </tr>
+    
+          <tr>
+              <td>AAZ73149.1</td>
+              <td>phytoene_desaturase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000642.3">BGC0000642.3</a></td>
+              <td>terpene</td>
+              <td>33.0</td>
+              <td>97.0</td>
+              <td>257.0</td>
+              <td>1.37e-79</td>
+          </tr>
+    
+          <tr>
+              <td>ACM07425.1</td>
+              <td>CrtNc</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000645.3">BGC0000645.3</a></td>
+              <td>terpene</td>
+              <td>30.0</td>
+              <td>95.1</td>
+              <td>219.0</td>
+              <td>3.28e-65</td>
+          </tr>
+    
+          <tr>
+              <td>CAA79958.1</td>
+              <td>hydroxyneurosporene_dehydrogenase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000648.3">BGC0000648.3</a></td>
+              <td>terpene</td>
+              <td>26.0</td>
+              <td>100.0</td>
+              <td>139.0</td>
+              <td>1.29e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AWO77088.1</td>
+              <td>NAD(P)/FAD-dependent_oxidoreductase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001556.5">BGC0001556.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>23.0</td>
+              <td>105.1</td>
+              <td>49.0</td>
+              <td>7.72e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

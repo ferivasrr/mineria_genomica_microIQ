@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADC45549.1</td>
+              <td>5-carboxymethyl-2-hydroxymuconate_delta-isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000093.5">BGC0000093.5</a></td>
+              <td>PKS:Type I</td>
+              <td>45.0</td>
+              <td>74.4</td>
+              <td>184.0</td>
+              <td>8.52e-57</td>
+          </tr>
+    
+          <tr>
+              <td>CAE45678.1</td>
+              <td>putative_2-hydroxyhept-2,4-diene-1,7-dioate_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000031.5">BGC0000031.5</a></td>
+              <td>PKS:Type I</td>
+              <td>39.0</td>
+              <td>75.1</td>
+              <td>144.0</td>
+              <td>1.07e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82347.1</td>
+              <td>putative_2-hydroxyhept-2,4-diene-1,7-dioate_isomerase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001533.5">BGC0001533.5</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>75.1</td>
+              <td>144.0</td>
+              <td>1.07e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAW03331.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000982.5">BGC0000982.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>34.0</td>
+              <td>92.7</td>
+              <td>146.0</td>
+              <td>2.05e-41</td>
+          </tr>
+    
+          <tr>
+              <td>DAC74135.1</td>
+              <td>fumarylacetoacetate-like_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002019.3">BGC0002019.3</a></td>
+              <td>terpene</td>
+              <td>38.0</td>
+              <td>65.7</td>
+              <td>106.0</td>
+              <td>7.73e-27</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

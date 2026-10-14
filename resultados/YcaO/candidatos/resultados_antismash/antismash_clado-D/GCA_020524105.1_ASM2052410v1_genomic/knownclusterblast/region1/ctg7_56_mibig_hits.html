@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>WP_013310331.1</td>
+              <td>alpha-amylase_family_glycosyl_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>75.6</td>
+              <td>182.0</td>
+              <td>4.15e-50</td>
+          </tr>
+    
+          <tr>
+              <td>EHN79424.1</td>
+              <td>alpha-amylase_ScatZ1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000804.5">BGC0000804.5</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>94.0</td>
+              <td>147.0</td>
+              <td>8.68e-37</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ20761.1</td>
+              <td>alpha_amylase_catalytic_domain-containing_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000369.5">BGC0000369.5</a></td>
+              <td>NRPS:Type I+saccharide:hybrid/tailoring</td>
+              <td>27.0</td>
+              <td>64.3</td>
+              <td>112.0</td>
+              <td>1.7e-25</td>
+          </tr>
+    
+          <tr>
+              <td>EHN79427.1</td>
+              <td>alpha-glucosidase_ScatE1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000804.5">BGC0000804.5</a></td>
+              <td>saccharide</td>
+              <td>23.0</td>
+              <td>68.6</td>
+              <td>110.0</td>
+              <td>3.38e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ARE72420.1</td>
+              <td>alpha-glucosidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001510.5">BGC0001510.5</a></td>
+              <td>other:other</td>
+              <td>24.0</td>
+              <td>68.9</td>
+              <td>97.0</td>
+              <td>8.54e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABC87503.1</td>
+              <td>alpha-1,_4-glucosidase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001011.5">BGC0001011.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>25.0</td>
+              <td>67.4</td>
+              <td>89.0</td>
+              <td>3.79e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AAW03335.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000982.5">BGC0000982.5</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>29.0</td>
+              <td>20.8</td>
+              <td>71.0</td>
+              <td>2.4e-12</td>
+          </tr>
+    
+          <tr>
+              <td>WP_013310338.1</td>
+              <td>alpha-amylase_family_glycosyl_hydrolase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001728.4">BGC0001728.4</a></td>
+              <td>NRPS:Type I+PKS</td>
+              <td>32.0</td>
+              <td>21.0</td>
+              <td>70.0</td>
+              <td>4.11e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AYM52855.1</td>
+              <td>isoamylase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001964.2">BGC0001964.2</a></td>
+              <td>PKS</td>
+              <td>22.0</td>
+              <td>53.2</td>
+              <td>56.0</td>
+              <td>7.84e-08</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

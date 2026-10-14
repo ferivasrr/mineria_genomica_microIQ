@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGC24260.1</td>
+              <td>PrlF</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001038.5">BGC0001038.5</a></td>
+              <td>NRPS:Type I+PKS:Type I</td>
+              <td>31.0</td>
+              <td>71.0</td>
+              <td>63.0</td>
+              <td>1.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AHE81000.1</td>
+              <td>PieB2</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001169.5">BGC0001169.5</a></td>
+              <td>PKS:Type I</td>
+              <td>35.0</td>
+              <td>47.0</td>
+              <td>62.0</td>
+              <td>1.97e-11</td>
+          </tr>
+    
+          <tr>
+              <td>QBK46621.1</td>
+              <td>HrsC</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001960.2">BGC0001960.2</a></td>
+              <td>PKS</td>
+              <td>40.0</td>
+              <td>49.5</td>
+              <td>62.0</td>
+              <td>3.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABV97176.1</td>
+              <td>Methyltransferase_type_11</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000137.3">BGC0000137.3</a></td>
+              <td>PKS</td>
+              <td>35.0</td>
+              <td>58.0</td>
+              <td>61.0</td>
+              <td>7.67e-11</td>
+          </tr>
+    
+          <tr>
+              <td>BAC10678.1</td>
+              <td>putative_D-glucose_O-methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000821.5">BGC0000821.5</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>59.5</td>
+              <td>58.0</td>
+              <td>5.25e-10</td>
+          </tr>
+    
+          <tr>
+              <td>ARK19478.1</td>
+              <td>methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001540.5">BGC0001540.5</a></td>
+              <td>other:other</td>
+              <td>37.0</td>
+              <td>53.0</td>
+              <td>57.0</td>
+              <td>8.93e-10</td>
+          </tr>
+    
+          <tr>
+              <td>QES95465.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002453.2">BGC0002453.2</a></td>
+              <td>PKS</td>
+              <td>39.0</td>
+              <td>49.0</td>
+              <td>56.0</td>
+              <td>2.69e-09</td>
+          </tr>
+    
+          <tr>
+              <td>BAJ16473.1</td>
+              <td>methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000058.5">BGC0000058.5</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>60.5</td>
+              <td>56.0</td>
+              <td>4.45e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QFU19832.1</td>
+              <td>methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002431.3">BGC0002431.3</a></td>
+              <td>PKS+saccharide</td>
+              <td>35.0</td>
+              <td>55.5</td>
+              <td>55.0</td>
+              <td>8.11e-09</td>
+          </tr>
+    
+          <tr>
+              <td>QKV49781.1</td>
+              <td>C11-O-methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002526.3">BGC0002526.3</a></td>
+              <td>PKS</td>
+              <td>36.0</td>
+              <td>54.5</td>
+              <td>54.0</td>
+              <td>2.1e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AAG23267.1</td>
+              <td>methyltransferase-like_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000148.3">BGC0000148.3</a></td>
+              <td>PKS:Type I</td>
+              <td>33.0</td>
+              <td>54.5</td>
+              <td>53.0</td>
+              <td>3.77e-08</td>
+          </tr>
+    
+          <tr>
+              <td>AHL44341.1</td>
+              <td>methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000820.5">BGC0000820.5</a></td>
+              <td>other:other</td>
+              <td>36.0</td>
+              <td>51.0</td>
+              <td>52.0</td>
+              <td>4.79e-08</td>
+          </tr>
+    
+          <tr>
+              <td>BAC55213.1</td>
+              <td>methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000825.5">BGC0000825.5</a></td>
+              <td>other:other</td>
+              <td>34.0</td>
+              <td>50.5</td>
+              <td>52.0</td>
+              <td>9.46e-08</td>
+          </tr>
+    
+          <tr>
+              <td>ADR72966.1</td>
+              <td>SAM-dependent_methyltransferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000582.4">BGC0000582.4</a></td>
+              <td>ribosomal:RiPP:Linaridin</td>
+              <td>33.0</td>
+              <td>53.5</td>
+              <td>50.0</td>
+              <td>2.04e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AJI44170.1</td>
+              <td>hypothetical_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001193.5">BGC0001193.5</a></td>
+              <td>NRPS:Type I</td>
+              <td>28.0</td>
+              <td>74.0</td>
+              <td>50.0</td>
+              <td>5.99e-07</td>
+          </tr>
+    
+          <tr>
+              <td>OEI73477.1</td>
+              <td>methyltransferase_type_11</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001520.3">BGC0001520.3</a></td>
+              <td>PKS</td>
+              <td>34.0</td>
+              <td>48.0</td>
+              <td>49.0</td>
+              <td>7.86e-07</td>
+          </tr>
+    
+          <tr>
+              <td>QBA31010.1</td>
+              <td>SinM</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002319.3">BGC0002319.3</a></td>
+              <td>ribosomal:RiPP</td>
+              <td>31.0</td>
+              <td>54.5</td>
+              <td>47.0</td>
+              <td>4.33e-06</td>
+          </tr>
+    
+          <tr>
+              <td>ABQ88342.1</td>
+              <td>methyl_transferase</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0000929.3">BGC0000929.3</a></td>
+              <td>other:other</td>
+              <td>35.0</td>
+              <td>50.5</td>
+              <td>46.0</td>
+              <td>7.95e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

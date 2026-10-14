@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEI40458.1</td>
+              <td>ABC_transporter_substrate_binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002488.3">BGC0002488.3</a></td>
+              <td>other:other</td>
+              <td>68.0</td>
+              <td>99.3</td>
+              <td>716.0</td>
+              <td>2.07e-258</td>
+          </tr>
+    
+          <tr>
+              <td>BAB58629.1</td>
+              <td>oligopeptide_transporter_putative_substrate_binding_domain</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002487.3">BGC0002487.3</a></td>
+              <td>other:other</td>
+              <td>54.0</td>
+              <td>99.8</td>
+              <td>577.0</td>
+              <td>2.69e-203</td>
+          </tr>
+    
+          <tr>
+              <td>AVI57419.1</td>
+              <td>AbmF1</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001694.4">BGC0001694.4</a></td>
+              <td>PKS</td>
+              <td>27.0</td>
+              <td>80.0</td>
+              <td>123.0</td>
+              <td>9.89e-30</td>
+          </tr>
+    
+          <tr>
+              <td>SEG87491.1</td>
+              <td>peptide/nickel_transport_system_substrate-binding_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0002712.2">BGC0002712.2</a></td>
+              <td>PKS</td>
+              <td>28.0</td>
+              <td>83.0</td>
+              <td>122.0</td>
+              <td>1.84e-29</td>
+          </tr>
+    
+          <tr>
+              <td>CCG06121.1</td>
+              <td>putative_oligopeptide_ABC_transporter,_periplasmic_protein</td>
+              <td><a target="_new" href="https://mibig.secondarymetabolites.org/go/BGC0001543.3">BGC0001543.3</a></td>
+              <td>PKS</td>
+              <td>23.0</td>
+              <td>74.1</td>
+              <td>66.0</td>
+              <td>5.21e-11</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>
