@@ -13,7 +13,7 @@
 set -e
 
 # Define your target directory containing the .fna files
-TARGET_DIR="clado_B/fastas_clado_B"
+TARGET_DIR="clado_D/fastas_clado_D"
 
 # Check if the target directory actually exists
 if [ ! -d "$TARGET_DIR" ]; then
