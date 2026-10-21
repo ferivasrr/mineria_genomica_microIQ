@@ -1,0 +1,204 @@
+[13:44:30] This is prokka 1.15.6
+[13:44:30] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[13:44:30] Homepage is https://github.com/tseemann/prokka
+[13:44:30] Local time is Wed Oct 21 13:44:30 2026
+[13:44:30] You are microiq
+[13:44:30] Operating system is linux
+[13:44:30] You have BioPerl 1.7.8
+[13:44:30] System has 16 cores.
+[13:44:30] Will use maximum of 8 cores.
+[13:44:30] Annotating as >>> Bacteria <<<
+[13:44:30] Generating locus_tag from 'clado_B/fastas_clado_B/GCA_004307995.1_ASM430799v1_genomic.fna' contents.
+[13:44:34] Setting --locustag HHPFNBJA from MD5 119f7b3a7bace0508519fb1592be2035
+[13:44:34] Creating new output folder: clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic
+[13:44:34] Running: mkdir -p clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic
+[13:44:34] Using filename prefix: GCA_004307995.1_ASM430799v1_genomic.XXX
+[13:44:34] Setting HMMER_NCPU=1
+[13:44:34] Writing log to: clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic/GCA_004307995.1_ASM430799v1_genomic.log
+[13:44:34] Command: /home/microiq/miniconda3/envs/prokka/bin/prokka --outdir clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic --prefix GCA_004307995.1_ASM430799v1_genomic clado_B/fastas_clado_B/GCA_004307995.1_ASM430799v1_genomic.fna
+[13:44:34] Looking for 'aragorn' - found /home/microiq/miniconda3/envs/prokka/bin/aragorn
+[13:44:34] Determined aragorn version is v1.2 from 'ARAGORN v1.2.41 Dean Laslett'
+[13:44:34] Looking for 'barrnap' - found /home/microiq/miniconda3/envs/prokka/bin/barrnap
+[13:44:34] Determined barrnap version is v1.10 from 'barrnap 1.10.5'
+[13:44:34] Looking for 'blastp' - found /home/microiq/miniconda3/envs/prokka/bin/blastp
+[13:44:35] Determined blastp version is v2.16 from 'blastp: 2.16.0+'
+[13:44:35] Looking for 'cmpress' - found /home/microiq/miniconda3/envs/prokka/bin/cmpress
+[13:44:35] Determined cmpress version is v1.1 from '# INFERNAL 1.1.5 (Sep 2023)'
+[13:44:35] Looking for 'cmscan' - found /home/microiq/miniconda3/envs/prokka/bin/cmscan
+[13:44:35] Determined cmscan version is v1.1 from '# INFERNAL 1.1.5 (Sep 2023)'
+[13:44:35] Looking for 'egrep' - found /usr/bin/egrep
+[13:44:35] Looking for 'find' - found /usr/bin/find
+[13:44:35] Looking for 'grep' - found /usr/bin/grep
+[13:44:35] Looking for 'hmmpress' - found /home/microiq/miniconda3/envs/prokka/bin/hmmpress
+[13:44:35] Determined hmmpress version is v3.4 from '# HMMER 3.4 (Aug 2023); http://hmmer.org/'
+[13:44:35] Looking for 'hmmscan' - found /home/microiq/miniconda3/envs/prokka/bin/hmmscan
+[13:44:35] Determined hmmscan version is v3.4 from '# HMMER 3.4 (Aug 2023); http://hmmer.org/'
+[13:44:35] Looking for 'java' - found /home/microiq/miniconda3/envs/prokka/bin/java
+[13:44:35] Looking for 'makeblastdb' - found /home/microiq/miniconda3/envs/prokka/bin/makeblastdb
+[13:44:35] Determined makeblastdb version is v2.16 from 'makeblastdb: 2.16.0+'
+[13:44:35] Looking for 'minced' - found /home/microiq/miniconda3/envs/prokka/bin/minced
+[13:44:35] Determined minced version is v4.2 from 'minced 0.4.2'
+[13:44:35] Looking for 'parallel' - found /home/microiq/miniconda3/envs/prokka/bin/parallel
+[13:44:35] Determined parallel version is 20260922 from 'GNU parallel 20260922'
+[13:44:35] Looking for 'prodigal' - found /home/microiq/miniconda3/envs/prokka/bin/prodigal
+[13:44:35] Determined prodigal version is v2.6 from 'Prodigal V2.6.3: February, 2016'
+[13:44:35] Looking for 'prokka-genbank_to_fasta_db' - found /home/microiq/miniconda3/envs/prokka/bin/prokka-genbank_to_fasta_db
+[13:44:35] Looking for 'sed' - found /usr/bin/sed
+[13:44:35] Looking for 'tbl2asn' - found /home/microiq/miniconda3/envs/prokka/bin/tbl2asn
+[13:44:35] Determined tbl2asn version is v25.7 from 'tbl2asn 25.7   arguments:'
+[13:44:35] Using genetic code table 11.
+[13:44:35] Loading and checking input file: clado_B/fastas_clado_B/GCA_004307995.1_ASM430799v1_genomic.fna
+[13:44:36] Wrote 82 contigs totalling 9419252 bp.
+[13:44:36] Predicting tRNAs and tmRNAs
+[13:44:36] Running: aragorn -l -gc11  -w clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.fna
+[13:44:38] 1 tRNA-Asp c[200082,200158] 35 (gtc)
+[13:44:38] 1 tRNA-Ser c[262051,262141] 35 (cga)
+[13:44:38] 1 tRNA-Leu [290,374] 35 (gag)
+[13:44:38] 2 tRNA-Leu [385,471] 36 (cag)
+[13:44:38] 3 tRNA-SeC c[170884,170980] 36 (tca)
+[13:44:38] 1 tRNA-Ala c[1081,1153] 34 (ggc)
+[13:44:38] 1 tRNA-Asn [19879,19976] 41 (att)
+[13:44:38] 1 tRNA-Leu [9872,9958] 36 (cag)
+[13:44:38] 1 tRNA-Pro c[1147,1220] 35 (cgg)
+[13:44:38] 2 tRNA-Arg c[1239,1315] 35 (cct)
+[13:44:38] 3 tRNA-Arg [15403,15477] 31 (gcg)
+[13:44:38] 1 tRNA-Gly [40751,40821] 33 (ccc)
+[13:44:38] 1 tRNA-Lys [207089,207160] 33 (ctt)
+[13:44:38] 1 tmRNA c[32560,32920] 92,130 GKQQQNYAFAA**
+[13:44:38] 2 tRNA-Arg [45803,45877] 34 (ccg)
+[13:44:38] 3 tRNA-Lys c[87136,87211] 34 (ttt)
+[13:44:38] 4 tRNA-Tyr c[87226,87310] 35 (gta)
+[13:44:38] 5 tRNA-Phe c[87324,87397] 34 (gaa)
+[13:44:38] 6 tRNA-Asp c[87440,87516] 35 (gtc)
+[13:44:38] 7 tRNA-Thr c[87538,87613] 34 (tgt)
+[13:44:38] 8 tRNA-Val c[87620,87695] 34 (tac)
+[13:44:38] 9 tRNA-Met c[87767,87843] 35 (cat)
+[13:44:38] 10 tRNA-Ser c[87863,87952] 36 (gct)
+[13:44:38] 1 tRNA-Asn [536,611] 34 (gtt)
+[13:44:38] 2 tRNA-Ser [650,740] 37 (gga)
+[13:44:38] 3 tRNA-Val [786,861] 34 (tac)
+[13:44:38] 4 tRNA-Met [879,955] 35 (cat)
+[13:44:38] 5 tRNA-Asp [973,1049] 35 (gtc)
+[13:44:38] 6 tRNA-Thr [1214,1288] 33 (cgt)
+[13:44:38] 7 tRNA-Tyr [1298,1383] 35 (gta)
+[13:44:38] 8 tRNA-His [1392,1467] 34 (gtg)
+[13:44:38] 9 tRNA-Gln [1483,1556] 34 (ttg)
+[13:44:38] 10 tRNA-Lys [1567,1640] 34 (ttt)
+[13:44:38] 11 tRNA-Gly [1657,1731] 33 (gcc)
+[13:44:38] 12 tRNA-Gly [1814,1888] 33 (gcc)
+[13:44:38] 13 tRNA-Arg [1892,1968] 35 (acg)
+[13:44:38] 14 tRNA-Leu [1989,2071] 35 (caa)
+[13:44:38] 15 tRNA-Pro [2082,2158] 35 (tgg)
+[13:44:38] 16 tRNA-Gly [2211,2284] 33 (tcc)
+[13:44:38] 17 tRNA-Arg [2291,2365] 35 (tct)
+[13:44:38] 1 tRNA-Leu c[66926,67008] 34 (gag)
+[13:44:38] 2 tRNA-Lys c[67021,67094] 34 (ttt)
+[13:44:38] 3 tRNA-Glu c[67153,67227] 34 (ttc)
+[13:44:38] 4 tRNA-Ser c[67598,67687] 36 (gct)
+[13:44:38] 5 tRNA-Asn c[67692,67767] 34 (gtt)
+[13:44:38] 1 tRNA-Met [34403,34478] 36 (cat)
+[13:44:38] 1 tRNA-Phe [47734,47809] 34 (gaa)
+[13:44:38] 2 tRNA-His [47812,47886] 34 (gtg)
+[13:44:38] 3 tRNA-Gln [47893,47967] 34 (ttg)
+[13:44:38] 4 tRNA-Leu [47969,48055] 34 (caa)
+[13:44:38] 5 tRNA-Lys [48108,48183] 34 (ttt)
+[13:44:38] 6 tRNA-Tyr [48189,48272] 35 (gta)
+[13:44:38] 1 tRNA-Asn [353,428] 34 (gtt)
+[13:44:39] 2 tRNA-Thr [430,505] 34 (ggt)
+[13:44:39] 3 tRNA-Glu [512,583] 34 (ttc)
+[13:44:39] 4 tRNA-Val [596,671] 34 (tac)
+[13:44:39] 5 tRNA-Thr [678,753] 34 (tgt)
+[13:44:39] 6 tRNA-Gln [760,834] 33 (ttg)
+[13:44:39] 7 tRNA-Lys [840,913] 34 (ttt)
+[13:44:39] 8 tRNA-Leu [924,1006] 36 (tag)
+[13:44:39] 9 tRNA-Gly [1013,1087] 33 (gcc)
+[13:44:39] 10 tRNA-Arg [1094,1170] 35 (acg)
+[13:44:39] 11 tRNA-Pro [1178,1254] 35 (tgg)
+[13:44:39] 12 tRNA-Gly [1262,1335] 33 (tcc)
+[13:44:39] 1 tRNA-Asn [422,497] 34 (gtt)
+[13:44:39] 2 tRNA-Ser [502,594] 37 (gga)
+[13:44:39] 3 tRNA-Glu [606,677] 34 (ttc)
+[13:44:39] 4 tRNA-Val [690,765] 34 (tac)
+[13:44:39] 5 tRNA-Met [782,858] 35 (cat)
+[13:44:39] 6 tRNA-Asp [873,949] 35 (gtc)
+[13:44:39] 7 tRNA-Phe [1009,1084] 34 (gaa)
+[13:44:39] 8 tRNA-Thr [1097,1172] 34 (tgt)
+[13:44:39] 9 tRNA-Tyr [1182,1266] 35 (gta)
+[13:44:39] 10 tRNA-Trp [1276,1349] 33 (cca)
+[13:44:39] 11 tRNA-His [1360,1435] 34 (gtg)
+[13:44:39] 12 tRNA-Gln [1445,1518] 34 (ttg)
+[13:44:39] 13 tRNA-Gly [1524,1598] 33 (gcc)
+[13:44:39] 14 tRNA-Cys [1624,1697] 33 (gca)
+[13:44:39] 15 tRNA-Leu [1707,1795] 35 (taa)
+[13:44:39] 16 tRNA-Arg [1818,1894] 35 (acg)
+[13:44:39] 17 tRNA-Leu [1922,2004] 36 (caa)
+[13:44:39] 1 tRNA-Ser [6486,6574] 36 (tga)
+[13:44:39] 1 tRNA-Pro c[84749,84824] 36 (ggg)
+[13:44:39] 1 tRNA-Ile [380,456] 35 (gat)
+[13:44:39] 2 tRNA-Ala [546,621] 34 (tgc)
+[13:44:39] 1 tRNA-Met [142169,142245] 35 (cat)
+[13:44:39] 2 tRNA-Met [142266,142342] 35 (cat)
+[13:44:39] 3 tRNA-Leu [142371,142456] 35 (taa)
+[13:44:39] 4 tRNA-Val [147766,147838] 34 (gac)
+[13:44:39] 5 tRNA-Val [151233,151305] 34 (gac)
+[13:44:39] Found 90 tRNAs
+[13:44:39] Predicting Ribosomal RNAs
+[13:44:39] Running Barrnap with 8 threads
+[13:44:46] 1 SIRE01000004.1 1 16S ribosomal RNA
+[13:44:46] 2 SIRE01000012.1 287204 16S ribosomal RNA
+[13:44:46] 3 SIRE01000022.1 173583 16S ribosomal RNA
+[13:44:46] 4 SIRE01000023.1 1 16S ribosomal RNA
+[13:44:46] 5 SIRE01000027.1 1 16S ribosomal RNA
+[13:44:46] 6 SIRE01000038.1 374 5S ribosomal RNA
+[13:44:46] 7 SIRE01000040.1 11 5S ribosomal RNA
+[13:44:46] 8 SIRE01000040.1 63293 16S ribosomal RNA
+[13:44:46] 9 SIRE01000042.1 60478 16S ribosomal RNA
+[13:44:46] 10 SIRE01000046.1 191 5S ribosomal RNA
+[13:44:46] 11 SIRE01000050.1 310 5S ribosomal RNA
+[13:44:46] 12 SIRE01000052.1 266 5S ribosomal RNA
+[13:44:46] 13 SIRE01000052.1 26060 16S ribosomal RNA
+[13:44:46] 14 SIRE01000055.1 255 5S ribosomal RNA
+[13:44:46] 15 SIRE01000071.1 1537 16S ribosomal RNA
+[13:44:46] 16 SIRE01000072.1 36 16S ribosomal RNA
+[13:44:46] 17 SIRE01000079.1 1 16S ribosomal RNA
+[13:44:46] 18 SIRE01000079.1 229 5S ribosomal RNA
+[13:44:46] Found 18 rRNAs
+[13:44:46] Skipping ncRNA search, enable with --rfam if desired.
+[13:44:46] Total of 107 tRNA + rRNA features
+[13:44:46] Searching for CRISPR repeats
+[13:44:47] CRISPR1 SIRE01000017.1 3913 with 14 spacers
+[13:44:47] CRISPR2 SIRE01000044.1 57364 with 5 spacers
+[13:44:47] CRISPR3 SIRE01000005.1 8728 with 15 spacers
+[13:44:47] CRISPR4 SIRE01000005.1 69812 with 6 spacers
+[13:44:47] CRISPR5 SIRE01000005.1 71523 with 16 spacers
+[13:44:47] Found 5 CRISPRs
+[13:44:47] Predicting coding sequences
+[13:44:47] Contigs total 9419252 bp, so using single mode
+[13:44:47] Running: prodigal -i clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.fna -c -m -g 11 -p single -f sco -q
+[13:44:54] Excluding CDS which overlaps existing RNA (tRNA) at SIRE01000012.1:261691..262167 on - strand
+[13:44:54] Excluding CDS which overlaps existing RNA (tRNA) at SIRE01000014.1:170869..171036 on + strand
+[13:44:55] Excluding CDS which overlaps existing RNA (tRNA) at SIRE01000017.1:19850..22165 on + strand
+[13:44:56] Excluding CDS which overlaps existing RNA (tRNA) at SIRE01000022.1:14656..15705 on + strand
+[13:44:58] Excluding CDS which overlaps existing RNA (repeat_region) at SIRE01000005.1:9159..9644 on - strand
+[13:44:58] Excluding CDS which overlaps existing RNA (repeat_region) at SIRE01000005.1:71597..71785 on - strand
+[13:44:58] Excluding CDS which overlaps existing RNA (repeat_region) at SIRE01000005.1:72531..72665 on - strand
+[13:44:58] Excluding CDS which overlaps existing RNA (rRNA) at SIRE01000052.1:137..346 on + strand
+[13:44:59] Excluding CDS which overlaps existing RNA (rRNA) at SIRE01000072.1:99..392 on - strand
+[13:44:59] Found 7951 CDS
+[13:44:59] Connecting features back to sequences
+[13:44:59] Not using genus-specific database. Try --usegenus to enable it.
+[13:44:59] Annotating CDS, please be patient.
+[13:44:59] Will use 8 CPUs for similarity searching.
+[13:45:01] There are still 7951 unannotated CDS left (started with 7951)
+[13:45:01] Will use blast to search against /home/microiq/miniconda3/envs/prokka/db/kingdom/Bacteria/IS with 8 CPUs
+[13:45:01] Running: cat clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.IS\.tmp\.38791\.faa | parallel --gnu --plain -j 8 --block 175760 --recstart '>' --pipe blastp -query - -db /home/microiq/miniconda3/envs/prokka/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.IS\.tmp\.38791\.blast 2> /dev/null
+[13:45:20] Deleting unwanted file: clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic/GCA_004307995.1_ASM430799v1_genomic.IS.tmp.38791.faa
+[13:45:20] Deleting unwanted file: clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic/GCA_004307995.1_ASM430799v1_genomic.IS.tmp.38791.blast
+[13:45:22] There are still 7914 unannotated CDS left (started with 7951)
+[13:45:22] Will use blast to search against /home/microiq/miniconda3/envs/prokka/db/kingdom/Bacteria/AMR with 8 CPUs
+[13:45:22] Running: cat clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.AMR\.tmp\.38791\.faa | parallel --gnu --plain -j 8 --block 175203 --recstart '>' --pipe blastp -query - -db /home/microiq/miniconda3/envs/prokka/db/kingdom/Bacteria/AMR -evalue 1e-300 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.AMR\.tmp\.38791\.blast 2> /dev/null
+[13:45:56] Deleting unwanted file: clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic/GCA_004307995.1_ASM430799v1_genomic.AMR.tmp.38791.faa
+[13:45:56] Deleting unwanted file: clado_B/fastas_clado_B/prokka/GCA_004307995.1_ASM430799v1_genomic/GCA_004307995.1_ASM430799v1_genomic.AMR.tmp.38791.blast
+[13:45:58] There are still 7906 unannotated CDS left (started with 7951)
+[13:45:58] Will use blast to search against /home/microiq/miniconda3/envs/prokka/db/kingdom/Bacteria/sprot with 8 CPUs
+[13:45:58] Running: cat clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.sprot\.tmp\.38791\.faa | parallel --gnu --plain -j 8 --block 174731 --recstart '>' --pipe blastp -query - -db /home/microiq/miniconda3/envs/prokka/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > clado_B\/fastas_clado_B\/prokka\/GCA_004307995\.1_ASM430799v1_genomic\/GCA_004307995\.1_ASM430799v1_genomic\.sprot\.tmp\.38791\.blast 2> /dev/null
