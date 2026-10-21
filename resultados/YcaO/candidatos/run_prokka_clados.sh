@@ -45,3 +45,9 @@ for file in "$TARGET_DIR"/*.fna; do
 done
 
 echo "All Prokka annotations completed successfully!"
+
+# After the analysis, run this in the terminal to have a directory just with the 
+# .gbk files to use it for rodeo
+# you're in the currect directory fastas_clado_x with the prokka directory
+# mkdir prokka_gbk
+#find prokka -type f -name "*.gbk" -exec cp {} prokka_gbk/ \;
