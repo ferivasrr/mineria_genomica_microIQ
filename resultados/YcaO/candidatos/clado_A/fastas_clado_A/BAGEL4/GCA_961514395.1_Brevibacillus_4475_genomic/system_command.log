@@ -1,0 +1,9 @@
+/Users/fernandarivasromero/Library/CloudStorage/OneDrive-Personal/Documentos/Maestria/UNAM/Documentos/avances/mineria_genomica_microIQ/BAGEL4/bagel4_AOI_identification_hmm_rules.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -dna clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic/OY5691181.0.fna -queryname OY5691181.0
+/data/bagel4/bagel4_AOI_identification_blast_bacteriocins.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -translate true -dna clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic/OY5691181.0.fna -queryname OY5691181.0
+/data/bagel4/bagel4_AOI_merge.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -dna clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic/OY5691181.0.fna -queryname OY5691181.0
+/data/bagel4/bagel4_AOI_annotation.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -model false -dna clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic/OY5691181.0.AOI.fna -queryname OY5691181.0
+/data/bagel4/bagel4_promoterprediction.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -dna clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic/OY5691181.0.AOI.fna
+/data/bagel4/bagel4_transterm.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -dna clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic/OY5691181.0.AOI.fna
+/data/bagel4/bagel4_promoter_term_2_json.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -queryname OY5691181.0
+/data/bagel4/bagel4_GeneTable_2_json.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic -table OY5691181.0.GeneTables
+/data/bagel4/bagel4_clean_tmpfiles.pl -s clado_A/fastas_clado_A/bagel4/GCA_961514395.1_Brevibacillus_4475_genomic

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	function toggleTable(my_table_name) {
+		var lTable = document.getElementById(my_table_name);
+		lTable.style.display = (lTable.style.display == "table") ? "none" : "table";
+	}
+
+	//$( window ).on( "load", function() {
+	$( document ).ready(function() {
+		console.log( "window loaded" );
+		$('table').each(function() { $(this).hide(); });
+		$('#SummaryTable').show() ;
+		$('#ResultsTable').show() ;
+		$('.display').hide() ;
+
+	});
+</script>
+
+<style>
+table {
+    border-collapse: collapse; }
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; }
+th {
+    background-color: #003333;
+    color: white; }
+tr {
+	color=#E0FFFF; }
+tr:hover{background-color:yellow;}
+
+</style>
+<TABLE id=SummaryTable width=50%>
+	<tr><th>Run summary</th><th></th></tr>
+	<tr><td>Number of files analyzed</td><td>2</td></tr>
+	<tr><td>Number of DNA fragments analyzed</td><td>100</td></tr>
+	<tr><td>Total bases in all DNA</td><td>6360904</td></tr>
+	<tr><td>Number of AOI's <b>A</b>reas <b>O</b>f <b>I</b>nterest)</td><td>100</td></tr>
+</TABLE><br>
+<TABLE id=ResultsTable width=80%>
+	<tr><th>AOI</th><th>start</th><th>end</th><th>Class</th><th>Fasta header</th></tr>
+</TABLE>
