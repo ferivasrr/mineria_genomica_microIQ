@@ -40,7 +40,17 @@ print(candidatos_finales %>% select(Accession, Tax.Name, Length))
 # cada vez que se corra el código. Sólo necesitas correr las lineas 43-45 si quieres 
 # los candidatos que ya se seleccionaron para la búsqueda en BLASTp 
 
-saveRDS(candidatos_finales, "raw-data/YcaO-selection/candidatos-seleccionados-YcaO.rsd")
+# Modifiqué el código por error y ahora mis candidatos salen diferentes, pero los que 
+# seleccioné estan en el objeto candidatos_interpro
+
+candidatos_finales_interpro <- c('Bacillus gobiensis','Brevibacillus formosus','Halobacillus rhizosphaerae',
+  'Neobacillus novalis','Polycladomyces zharkentensis')
+
+candidatos_finales_interpro <- candidatos_filtrados %>%
+  filter(Tax.Name %in% candidatos_finales_interpro) %>%
+  select(Accession, Tax.Name, Length)
+
+saveRDS(candidatos_finales_interpro, "raw-data/YcaO-selection/candidatos-seleccionados-YcaO.rsd")
 candidatos_finales_fijos <- readRDS("raw-data/YcaO-selection/candidatos-seleccionados-YcaO.rsd")
 view(candidatos_finales_fijos)
 
