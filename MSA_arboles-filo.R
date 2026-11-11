@@ -106,7 +106,7 @@ secuencias_query <- readRDS(file = "raw-data/YcaO-selection/candidatos-seleccion
 secuencias_query
 
 metadata_query <- metadata_ncbi_completa_YcaO |>
-  mutate(query = if_else(metadata_ncbi_completa_YcaO$accession %in% c("MBN2909913.1", "WP_310192601.1", "WP_053602024.1", "WP_173617751.1", "WP_411789310.1"), 'query', 'no'))
+  mutate(query = if_else(metadata_ncbi_completa_YcaO$accession %in% c("MBN2909913.1", "WP_310192601.1", "WP_053602024.1", "WP_173617751.1", "WP_411789310.1"), 'Secuencia concenso (query)', 'Secuencia obtenida de BLASTP'))
 
 ####################################
 ############ CANDIDADOS ############
