@@ -41,7 +41,7 @@ print(candidatos_finales %>% select(Accession, Tax.Name, Length))
 # los candidatos que ya se seleccionaron para la búsqueda en BLASTp 
 
 # Modifiqué el código por error y ahora mis candidatos salen diferentes, pero los que 
-# seleccioné estan en el objeto candidatos_interpro
+# seleccioné estan en el objeto candidatos_finales_interpro
 
 candidatos_finales_interpro <- c('Bacillus gobiensis','Brevibacillus formosus','Halobacillus rhizosphaerae',
   'Neobacillus novalis','Polycladomyces zharkentensis')

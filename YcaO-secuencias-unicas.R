@@ -1,8 +1,8 @@
 # Este es un código para eliminas las secuencias repetidas del fasta a partir
 # del blastp realizado a las especies que se descargaron de InterPro (se 
-# encuentran en el archivo `raw-data/YcaO-selection/blast-YcaO`)
+# encuentran en el archivo `raw-data/YcaO-selection/blast-YcaO/`)
 
-# Despues de obtener los datos limpios de hace el alineamiento con 
+# Despues de obtener los datos limpios se hace el alineamiento con 
 # MSA_arboles-filo.R
 
 # Librerías requeridas
